@@ -686,42 +686,101 @@
     footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
     .footer-phone { font-size: 0.85rem; color: var(--gold); font-weight: 700; text-decoration: none; }
 
-    /* ── IFRAME PREVIEW ── */
-    .iframe-wrapper {
-      position: relative;
-      width: 100%;
-      height: 340px;
-      overflow: hidden;
+    /* ── PORTFOLIO PREVIEW ── */
+    .portfolio-preview {
+      width: 100%; height: 340px;
+      background: var(--dark);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      cursor: pointer; text-decoration: none;
+    }
+    .portfolio-preview:hover .preview-overlay { opacity: 1; }
+    .preview-overlay {
+      position: absolute; inset: 0;
+      background: rgba(240,192,64,0.15);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.25s;
+    }
+    .preview-overlay span {
+      background: var(--gold); color: var(--black);
+      padding: 0.6rem 1.4rem; border-radius: 3px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem; letter-spacing: 2px;
+    }
+    /* Plumber preview */
+    .preview-plumber-bg {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #071524 0%, #0b1e35 100%);
+      display: flex; flex-direction: column;
+    }
+    .pp-nav { background: #071524; padding: 0.6rem 1.2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #2196f3; }
+    .pp-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: #fff; letter-spacing: 2px; }
+    .pp-logo span { color: #2196f3; }
+    .pp-btn { background: #2196f3; color: #fff; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; }
+    .pp-hero { padding: 1.5rem 1.2rem; flex: 1; }
+    .pp-tag { display: inline-block; background: rgba(33,150,243,0.15); border: 1px solid rgba(33,150,243,0.3); color: #2196f3; padding: 0.15rem 0.5rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .pp-h1 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: #fff; line-height: 1; }
+    .pp-h1 span { color: #2196f3; display: block; }
+    .pp-sub { font-size: 0.6rem; color: rgba(255,255,255,0.55); margin-top: 0.35rem; line-height: 1.5; max-width: 280px; }
+    .pp-actions { margin-top: 0.6rem; display: flex; gap: 0.4rem; }
+    .pp-cta { background: #2196f3; color: #fff; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; text-transform: uppercase; }
+    .pp-ghost { border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; text-transform: uppercase; }
+    .pp-trust { background: #2196f3; padding: 0.35rem 1.2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .pp-trust span { font-size: 0.48rem; font-weight: 700; color: #fff; text-transform: uppercase; }
+    .pp-services { background: #f4f7fa; padding: 0.7rem 1.2rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.35rem; }
+    .pp-svc { background: #fff; padding: 0.35rem 0.5rem; border-radius: 2px; border-left: 2px solid #2196f3; }
+    .pp-svc-t { font-size: 0.5rem; font-weight: 700; color: #0b1e35; text-transform: uppercase; }
+    .pp-svc-d { font-size: 0.43rem; color: #7a8a9a; margin-top: 0.1rem; }
+    /* Electrician preview */
+    .preview-electric-bg {
+      width: 100%; height: 100%;
       background: #0a1628;
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
     }
-    .iframe-wrapper iframe {
-      width: 200%;
-      height: 200%;
-      border: none;
-      transform: scale(0.5);
-      transform-origin: top left;
-      pointer-events: none;
+    .pe-lines { position: absolute; inset: 0; background-image: repeating-linear-gradient(-55deg, transparent, transparent 40px, rgba(245,168,0,0.05) 40px, rgba(245,168,0,0.05) 41px); }
+    .pe-nav { position: relative; background: rgba(10,22,40,0.97); padding: 0.6rem 1.2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f5a800; z-index: 1; }
+    .pe-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: #fff; letter-spacing: 2px; }
+    .pe-logo span { color: #f5a800; }
+    .pe-btn { background: #f5a800; color: #0a1628; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; }
+    .pe-hero { padding: 1.5rem 1.2rem; flex: 1; position: relative; z-index: 1; }
+    .pe-tag { display: inline-block; background: rgba(245,168,0,0.15); border: 1px solid rgba(245,168,0,0.4); color: #f5a800; padding: 0.15rem 0.5rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .pe-h1 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: #fff; line-height: 1; }
+    .pe-h1 span { color: #f5a800; display: block; }
+    .pe-sub { font-size: 0.6rem; color: rgba(255,255,255,0.55); margin-top: 0.35rem; line-height: 1.5; max-width: 280px; }
+    .pe-actions { margin-top: 0.6rem; display: flex; gap: 0.4rem; }
+    .pe-cta { background: #f5a800; color: #0a1628; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; text-transform: uppercase; }
+    .pe-ghost { border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; text-transform: uppercase; }
+    .pe-trust { background: #f5a800; padding: 0.35rem 1.2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; position: relative; z-index: 1; }
+    .pe-trust span { font-size: 0.48rem; font-weight: 700; color: #0a1628; text-transform: uppercase; }
+    .pe-services { background: #f4f6fa; padding: 0.7rem 1.2rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.35rem; }
+    .pe-svc { background: #fff; padding: 0.35rem 0.5rem; border-radius: 2px; border-left: 2px solid #f5a800; }
+    .pe-svc-t { font-size: 0.5rem; font-weight: 700; color: #0a1628; text-transform: uppercase; }
+    .pe-svc-d { font-size: 0.43rem; color: #7a8a9a; margin-top: 0.1rem; }
+    /* Painter preview */
+    .preview-painter-bg {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #12122a 0%, #1a1a2e 100%);
+      display: flex; flex-direction: column;
     }
-    .iframe-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .iframe-overlay:hover { background: rgba(0,0,0,0.05); }
-    .iframe-overlay span {
-      background: rgba(240,192,64,0.9);
-      color: #000;
-      padding: 0.5rem 1rem;
-      border-radius: 3px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-    }
+    .ppa-nav { background: #12122a; padding: 0.6rem 1.2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e8472a; }
+    .ppa-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: #fff; letter-spacing: 2px; }
+    .ppa-logo span { color: #e8472a; }
+    .ppa-btn { background: #e8472a; color: #fff; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; }
+    .ppa-hero { padding: 1.5rem 1.2rem; flex: 1; }
+    .ppa-tag { display: inline-block; background: rgba(232,71,42,0.15); border: 1px solid rgba(232,71,42,0.3); color: #e8472a; padding: 0.15rem 0.5rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .ppa-h1 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: #fff; line-height: 1; }
+    .ppa-h1 span { color: #e8472a; display: block; }
+    .ppa-sub { font-size: 0.6rem; color: rgba(255,255,255,0.55); margin-top: 0.35rem; line-height: 1.5; max-width: 280px; }
+    .ppa-actions { margin-top: 0.6rem; display: flex; gap: 0.4rem; }
+    .ppa-cta { background: #e8472a; color: #fff; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; text-transform: uppercase; }
+    .ppa-ghost { border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 0.25rem 0.7rem; border-radius: 2px; font-size: 0.55rem; font-weight: 700; text-transform: uppercase; }
+    .ppa-trust { background: #e8472a; padding: 0.35rem 1.2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .ppa-trust span { font-size: 0.48rem; font-weight: 700; color: #fff; text-transform: uppercase; }
+    .ppa-services { background: #f4f7fa; padding: 0.7rem 1.2rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.35rem; }
+    .ppa-svc { background: #fff; padding: 0.35rem 0.5rem; border-radius: 2px; border-left: 2px solid #e8472a; }
+    .ppa-svc-t { font-size: 0.5rem; font-weight: 700; color: #1a1a2e; text-transform: uppercase; }
+    .ppa-svc-d { font-size: 0.43rem; color: #7a8a9a; margin-top: 0.1rem; }
 
     /* ── SCROLL REVEAL ── */
     .reveal { opacity: 1; transform: none; }
@@ -907,14 +966,29 @@
   <p class="portfolio-sub">Every site is custom-built for the trade and the local market — not a generic template slapped with a logo.</p>
   <div class="portfolio-grid reveal">
 
-    <!-- Plumber card - iframe preview -->
+    <!-- Plumber card -->
     <div class="portfolio-card">
-      <div class="iframe-wrapper">
-        <iframe src="https://zaokret-dev.github.io/1pageonly/plumber" scrolling="no" title="BoltWorks Plumbing - Denver CO"></iframe>
-        <div class="iframe-overlay" onclick="this.style.display='none'; this.previousElementSibling.style.pointerEvents='all'">
-          <span>👆 Click to interact</span>
+      <a href="https://zaokret-dev.github.io/1pageonly/plumber" target="_blank" class="portfolio-preview">
+        <div class="preview-plumber-bg">
+          <div class="pp-nav"><div class="pp-logo">Bolt<span>Works</span></div><div class="pp-btn">☎ Call Now</div></div>
+          <div class="pp-hero">
+            <div class="pp-tag">Denver's #1 Plumber</div>
+            <div class="pp-h1">No Leak Too Big. <span>No Job Too Small.</span></div>
+            <div class="pp-sub">Licensed & insured plumbing across Denver, Aurora & Lakewood. Water heaters, drain cleaning & 24/7 emergency.</div>
+            <div class="pp-actions"><div class="pp-cta">Free Estimate</div><div class="pp-ghost">☎ (720) 555-0174</div></div>
+          </div>
+          <div class="pp-trust"><span>✔ CO Licensed</span><span>⚡ Same-Day</span><span>🛡 Insured</span><span>📋 Free Quote</span></div>
+          <div class="pp-services">
+            <div class="pp-svc"><div class="pp-svc-t">Water Heaters</div><div class="pp-svc-d">All brands, same day</div></div>
+            <div class="pp-svc"><div class="pp-svc-t">Drain Cleaning</div><div class="pp-svc-d">Any drain, fast</div></div>
+            <div class="pp-svc"><div class="pp-svc-t">Emergency</div><div class="pp-svc-d">24/7 burst pipes</div></div>
+            <div class="pp-svc"><div class="pp-svc-t">Repiping</div><div class="pp-svc-d">Copper & PEX</div></div>
+            <div class="pp-svc"><div class="pp-svc-t">Sewer Lines</div><div class="pp-svc-d">Inspect & repair</div></div>
+            <div class="pp-svc"><div class="pp-svc-t">Inspections</div><div class="pp-svc-d">Pre-sale reports</div></div>
+          </div>
         </div>
-      </div>
+        <div class="preview-overlay"><span>👆 VIEW FULL SITE</span></div>
+      </a>
       <div class="portfolio-label">
         <div class="portfolio-label-name">BoltWorks Plumbing — Denver, CO</div>
         <div class="portfolio-label-tag">Plumber</div>
@@ -922,14 +996,30 @@
       <div class="portfolio-note">Local SEO · Contact Form · Google Maps · Mobile Ready</div>
     </div>
 
-    <!-- Electrician card - iframe preview -->
+    <!-- Electrician card -->
     <div class="portfolio-card">
-      <div class="iframe-wrapper">
-        <iframe src="https://zaokret-dev.github.io/1pageonly/electrician" scrolling="no" title="Apex Electric - Phoenix AZ"></iframe>
-        <div class="iframe-overlay" onclick="this.style.display='none'; this.previousElementSibling.style.pointerEvents='all'">
-          <span>👆 Click to interact</span>
+      <a href="https://zaokret-dev.github.io/1pageonly/electrician" target="_blank" class="portfolio-preview">
+        <div class="preview-electric-bg">
+          <div class="pe-lines"></div>
+          <div class="pe-nav"><div class="pe-logo">Apex<span>Electric</span></div><div class="pe-btn">☎ Call Now</div></div>
+          <div class="pe-hero">
+            <div class="pe-tag">Phoenix's Trusted Electrician</div>
+            <div class="pe-h1">Power Done <span>Right. First Time.</span></div>
+            <div class="pe-sub">Licensed & insured electrical services across Phoenix, Scottsdale & Tempe. Panel upgrades, EV chargers & 24/7 emergency.</div>
+            <div class="pe-actions"><div class="pe-cta">Free Estimate</div><div class="pe-ghost">☎ (602) 555-0193</div></div>
+          </div>
+          <div class="pe-trust"><span>✔ AZ Licensed</span><span>⚡ Same-Day</span><span>🛡 Insured</span><span>📋 Free Quote</span></div>
+          <div class="pe-services">
+            <div class="pe-svc"><div class="pe-svc-t">Panel Upgrades</div><div class="pe-svc-d">200A, up to code</div></div>
+            <div class="pe-svc"><div class="pe-svc-t">Rewiring</div><div class="pe-svc-d">Full & partial</div></div>
+            <div class="pe-svc"><div class="pe-svc-t">EV Chargers</div><div class="pe-svc-d">All brands</div></div>
+            <div class="pe-svc"><div class="pe-svc-t">Lighting</div><div class="pe-svc-d">Interior & exterior</div></div>
+            <div class="pe-svc"><div class="pe-svc-t">Emergency</div><div class="pe-svc-d">24/7 service</div></div>
+            <div class="pe-svc"><div class="pe-svc-t">Inspections</div><div class="pe-svc-d">Pre-sale reports</div></div>
+          </div>
         </div>
-      </div>
+        <div class="preview-overlay"><span>👆 VIEW FULL SITE</span></div>
+      </a>
       <div class="portfolio-label">
         <div class="portfolio-label-name">Apex Electric — Phoenix, AZ</div>
         <div class="portfolio-label-tag">Electrician</div>
@@ -937,14 +1027,29 @@
       <div class="portfolio-note">Panel Upgrades · EV Chargers · Emergency Service</div>
     </div>
 
-    <!-- Painter card - iframe preview -->
+    <!-- Painter card -->
     <div class="portfolio-card">
-      <div class="iframe-wrapper">
-        <iframe src="https://zaokret-dev.github.io/1pageonly/painter" scrolling="no" title="BrushKing Painting - Austin TX"></iframe>
-        <div class="iframe-overlay" onclick="this.style.display='none'; this.previousElementSibling.style.pointerEvents='all'">
-          <span>👆 Click to interact</span>
+      <a href="https://zaokret-dev.github.io/1pageonly/painter" target="_blank" class="portfolio-preview">
+        <div class="preview-painter-bg">
+          <div class="ppa-nav"><div class="ppa-logo">Brush<span>King</span></div><div class="ppa-btn">☎ Call Now</div></div>
+          <div class="ppa-hero">
+            <div class="ppa-tag">Austin's Trusted Painter</div>
+            <div class="ppa-h1">Fresh Coat. <span>Flawless Finish.</span></div>
+            <div class="ppa-sub">Licensed & insured painting across Austin, Round Rock & Cedar Park. Interior, exterior & cabinet painting.</div>
+            <div class="ppa-actions"><div class="ppa-cta">Free Estimate</div><div class="ppa-ghost">☎ (512) 555-0174</div></div>
+          </div>
+          <div class="ppa-trust"><span>✔ TX Licensed</span><span>🎨 Free Consult</span><span>📋 Free Quote</span><span>⭐ 5-Star</span></div>
+          <div class="ppa-services">
+            <div class="ppa-svc"><div class="ppa-svc-t">Interior</div><div class="ppa-svc-d">Walls & ceilings</div></div>
+            <div class="ppa-svc"><div class="ppa-svc-t">Exterior</div><div class="ppa-svc-d">Full repaints</div></div>
+            <div class="ppa-svc"><div class="ppa-svc-t">Cabinets</div><div class="ppa-svc-d">Kitchen refresh</div></div>
+            <div class="ppa-svc"><div class="ppa-svc-t">Commercial</div><div class="ppa-svc-d">Office & retail</div></div>
+            <div class="ppa-svc"><div class="ppa-svc-t">Staining</div><div class="ppa-svc-d">Decks & fences</div></div>
+            <div class="ppa-svc"><div class="ppa-svc-t">Drywall</div><div class="ppa-svc-d">Repair & texture</div></div>
+          </div>
         </div>
-      </div>
+        <div class="preview-overlay"><span>👆 VIEW FULL SITE</span></div>
+      </a>
       <div class="portfolio-label">
         <div class="portfolio-label-name">BrushKing Painting — Austin, TX</div>
         <div class="portfolio-label-tag">Painter</div>
