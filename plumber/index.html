@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoltWorks Plumbing | Licensed Plumber Denver CO | Free Estimates</title>
+  <meta name="description" content="BoltWorks Plumbing — licensed & insured plumber in Denver, CO. Water heaters, drain cleaning, repiping, emergency service 24/7. Call (720) 555-0174 for a free estimate." />
+  <link rel="canonical" href="https://www.boltworksplumbing.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="US-CO" />
+  <meta name="geo.placename" content="Denver, Colorado" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "BoltWorks Plumbing",
+    "telephone": "+17205550174",
+    "email": "info@boltworksplumbing.com",
+    "description": "Licensed and insured plumber in Denver, CO. Specializing in water heaters, drain cleaning, repiping, and 24/7 emergency plumbing service.",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Denver"},
+      {"@type": "City", "name": "Aurora"},
+      {"@type": "City", "name": "Lakewood"},
+      {"@type": "City", "name": "Englewood"},
+      {"@type": "City", "name": "Arvada"}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "87"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0b1e35;
+      --navy2: #0f2a47;
+      --blue: #1565c0;
+      --blue2: #1976d2;
+      --white: #ffffff;
+      --light: #f0f4f8;
+      --gray: #64748b;
+      --text: #1e293b;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Sans 3', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 66px;
+      border-bottom: 3px solid var(--blue);
+    }
+    .nav-logo { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: var(--white); }
+    .nav-logo span { color: #42a5f5; }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-phone { color: #42a5f5; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+    .nav-cta {
+      background: var(--blue); color: var(--white);
+      padding: 0.5rem 1.25rem; border-radius: 3px;
+      font-weight: 700; font-size: 0.85rem; letter-spacing: 1px;
+      text-transform: uppercase; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--blue2); }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex; align-items: center;
+      padding: 100px 5% 60px;
+      position: relative; overflow: hidden;
+    }
+    .hero-pipes {
+      position: absolute; right: 0; top: 0; bottom: 0; width: 50%;
+      background: linear-gradient(135deg, var(--navy2) 0%, #071524 100%);
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .hero-pipe-lines {
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(33,150,243,0.05) 40px, rgba(33,150,243,0.05) 41px),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(33,150,243,0.05) 40px, rgba(33,150,243,0.05) 41px);
+    }
+    .hero-content { position: relative; max-width: 620px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(33,150,243,0.15); border: 1px solid rgba(33,150,243,0.4);
+      color: #42a5f5; padding: 0.35rem 1rem; border-radius: 2px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 700; line-height: 1; color: var(--white);
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    h1 span { color: #42a5f5; display: block; }
+    .hero-sub {
+      margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.75;
+      color: rgba(255,255,255,0.65); max-width: 500px;
+    }
+    .hero-actions {
+      margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--blue); color: var(--white);
+      padding: 0.95rem 2rem; border-radius: 3px;
+      font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(21,101,192,0.4);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--blue2); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent; color: var(--white);
+      padding: 0.95rem 2rem; border-radius: 3px;
+      border: 2px solid rgba(255,255,255,0.25);
+      font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: #42a5f5; color: #42a5f5; }
+    .hero-stats {
+      margin-top: 3rem; display: flex; gap: 3rem; flex-wrap: wrap;
+    }
+    .stat-num { font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700; color: #42a5f5; line-height: 1; }
+    .stat-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.2rem; }
+
+    /* TRUST BAR */
+    #trust {
+      background: var(--blue); padding: 1rem 5%;
+      display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
+    }
+    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--white); }
+
+    /* SECTIONS */
+    section { padding: 90px 5%; }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+    h2 { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; text-transform: uppercase; color: var(--navy); line-height: 1.05; }
+    h2.light { color: var(--white); }
+
+    /* SERVICES */
+    #services { background: var(--light); }
+    .services-grid {
+      margin-top: 3rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;
+    }
+    .service-card {
+      background: var(--white); border-radius: 6px; padding: 2rem 1.75rem;
+      border-left: 4px solid var(--blue);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(21,101,192,0.15); }
+    .service-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+    .service-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; color: var(--navy); }
+    .service-card p { margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.65; color: var(--gray); }
+
+    /* WHY US */
+    #why { background: var(--navy2); }
+    .why-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+    .why-item { text-align: center; padding: 2rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; }
+    .why-num { font-family: 'Oswald', sans-serif; font-size: 3.5rem; font-weight: 700; color: #42a5f5; line-height: 1; }
+    .why-title { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--white); margin-top: 0.4rem; }
+    .why-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 0.4rem; line-height: 1.6; }
+
+    /* REVIEWS */
+    #reviews { background: var(--white); }
+    .reviews-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .review-card { border: 1.5px solid #e2e8f0; border-radius: 6px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
+    .review-card:hover { border-color: var(--blue); box-shadow: 0 4px 20px rgba(21,101,192,0.1); }
+    .stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 0.9rem; }
+    .review-text { font-size: 0.95rem; line-height: 1.7; color: var(--text); font-style: italic; }
+    .reviewer { margin-top: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .reviewer-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--navy); color: #42a5f5; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1rem; }
+    .reviewer-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+    .reviewer-loc { font-size: 0.78rem; color: var(--gray); }
+
+    /* CONTACT */
+    #contact { background: var(--navy); position: relative; overflow: hidden; }
+    .contact-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    @media (max-width: 768px) { .contact-inner { grid-template-columns: 1fr; gap: 3rem; } }
+    .contact-info p { margin-top: 1rem; color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.7; }
+    .contact-details { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .contact-row { display: flex; align-items: center; gap: 0.9rem; }
+    .contact-row .icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(33,150,243,0.15); border: 1px solid rgba(33,150,243,0.3); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .contact-row .info-label { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: #42a5f5; font-weight: 700; }
+    .contact-row .info-val { color: var(--white); font-size: 0.9rem; margin-top: 0.1rem; }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+    .contact-form input, .contact-form select, .contact-form textarea {
+      background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: 3px; padding: 0.85rem 1rem; color: var(--white);
+      font-family: 'Source Sans 3', sans-serif; font-size: 0.9rem; width: 100%;
+      transition: border-color 0.2s;
+    }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.35); }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: #42a5f5; }
+    .contact-form select option { background: var(--navy); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      background: var(--blue); color: var(--white); border: none; cursor: pointer;
+      padding: 1rem; border-radius: 3px; font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .form-submit:hover { background: var(--blue2); transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { background: #060f1e; padding: 2rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-logo { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--white); letter-spacing: 2px; }
+    .footer-logo span { color: #42a5f5; }
+    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+    .footer-lic { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 600px) { .nav-phone { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Bolt<span>Works</span></div>
+  <div class="nav-right">
+    <a href="tel:+17205550174" class="nav-phone">☎ (720) 555-0174</a>
+    <a href="#contact" class="nav-cta">Free Estimate</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-pipes"><div class="hero-pipe-lines"></div></div>
+  <div class="hero-content">
+    <div class="hero-badge">💧 Denver's Trusted Plumber</div>
+    <h1>No Leak Too Big. <span>No Job Too Small.</span></h1>
+    <p class="hero-sub">Licensed & insured plumbing for homeowners across Denver, Aurora & Lakewood. Water heaters, drain cleaning, pipe repair & 24/7 emergency callouts.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+      <a href="tel:+17205550174" class="btn-ghost">☎ (720) 555-0174</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">18+</div><div class="stat-label">Years in Denver</div></div>
+      <div><div class="stat-num">1,400+</div><div class="stat-label">Jobs Completed</div></div>
+      <div><div class="stat-num">5★</div><div class="stat-label">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<div id="trust">
+  <div class="trust-item">✔ CO Licensed & Insured</div>
+  <div class="trust-item">⚡ Same-Day Service</div>
+  <div class="trust-item">🛡 Satisfaction Guaranteed</div>
+  <div class="trust-item">📋 Free Estimates</div>
+  <div class="trust-item">🕐 24/7 Emergency</div>
+</div>
+
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2>Plumbing Services<br>Denver CO Can Count On</h2>
+  <div class="services-grid">
+    <div class="service-card"><span class="service-icon">🔥</span><h3>Water Heater Services</h3><p>Install, repair & replace all brands — tank and tankless. Most jobs done same day with zero mess.</p></div>
+    <div class="service-card"><span class="service-icon">🚿</span><h3>Drain Cleaning Denver</h3><p>Clogged sink, shower or sewer line? We unclog any drain fast using professional hydro-jetting equipment.</p></div>
+    <div class="service-card"><span class="service-icon">🏠</span><h3>Full Home Repiping</h3><p>Old galvanized or polybutylene pipes? We repipe entire homes in copper or PEX — code compliant.</p></div>
+    <div class="service-card"><span class="service-icon">🚨</span><h3>Emergency Plumber Denver</h3><p>Burst pipes, major leaks, no hot water — we're available 24/7. Real people answer the phone every time.</p></div>
+    <div class="service-card"><span class="service-icon">🔧</span><h3>Sewer Line Repair</h3><p>Camera inspection, trenchless repair and full sewer line replacement. We find it fast and fix it right.</p></div>
+    <div class="service-card"><span class="service-icon">🔍</span><h3>Plumbing Inspections</h3><p>Buying or selling a home? We provide thorough plumbing inspections with a detailed written report.</p></div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="section-label">Why BoltWorks</div>
+  <h2 class="light">Why Denver Homeowners<br>Choose Us</h2>
+  <div class="why-grid">
+    <div class="why-item"><div class="why-num">18+</div><div class="why-title">Years Experience</div><div class="why-desc">Serving Denver since 2006. We know Colorado plumbing codes inside and out.</div></div>
+    <div class="why-item"><div class="why-num">$0</div><div class="why-title">Free Estimates</div><div class="why-desc">No trip charge, no pressure. We quote honestly before any work begins.</div></div>
+    <div class="why-item"><div class="why-num">24/7</div><div class="why-title">Emergency Service</div><div class="why-desc">Plumbing emergencies don't wait. Neither do we — real people answer 24/7.</div></div>
+    <div class="why-item"><div class="why-num">100%</div><div class="why-title">Licensed & Insured</div><div class="why-desc">Fully licensed by the State of Colorado. Every job is permitted and inspected.</div></div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-label">Customer Reviews</div>
+  <h2>What Our Customers Say</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Called at 11 PM with a burst pipe flooding my basement. BoltWorks was there within an hour and had everything fixed by 2 AM. Incredible service, fair price."</p>
+      <div class="reviewer"><div class="reviewer-avatar">KM</div><div><div class="reviewer-name">Kevin M.</div><div class="reviewer-loc">Aurora, CO · Google Review</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Replaced our 20-year-old water heater same day. On time, clean, professional. The price was exactly what they quoted — no surprises. Will use again for sure."</p>
+      <div class="reviewer"><div class="reviewer-avatar">JL</div><div><div class="reviewer-name">Jennifer L.</div><div class="reviewer-loc">Lakewood, CO · Google Review</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Had a stubborn drain issue three other plumbers couldn't fix. BoltWorks diagnosed it in 20 minutes with a camera and had it cleared in an hour. Highly recommend."</p>
+      <div class="reviewer"><div class="reviewer-avatar">TR</div><div><div class="reviewer-name">Tom R.</div><div class="reviewer-loc">Denver, CO · Google Review</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="light">Ready to Get<br>Started?</h2>
+      <p>Call us or fill out the form for a free, no-obligation estimate. We respond within 1 hour during business hours.</p>
+      <div class="contact-details">
+        <div class="contact-row"><div class="icon">📞</div><div><div class="info-label">Phone</div><div class="info-val">(720) 555-0174</div></div></div>
+        <div class="contact-row"><div class="icon">📧</div><div><div class="info-label">Email</div><div class="info-val">info@boltworksplumbing.com</div></div></div>
+        <div class="contact-row"><div class="icon">📍</div><div><div class="info-label">Service Area</div><div class="info-val">Denver · Aurora · Lakewood · Englewood · Arvada</div></div></div>
+        <div class="contact-row"><div class="icon">🕐</div><div><div class="info-label">Hours</div><div class="info-val">Mon–Sat 7am–7pm · 24/7 Emergency</div></div></div>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required />
+      </div>
+      <input type="email" placeholder="Email Address" />
+      <select><option value="" disabled selected>Select Service Needed</option><option>Water Heater</option><option>Drain Cleaning</option><option>Repiping</option><option>Emergency Repair</option><option>Sewer Line</option><option>Inspection</option><option>Other</option></select>
+      <textarea placeholder="Briefly describe what you need..."></textarea>
+      <button type="submit" class="form-submit">Send My Free Estimate Request 💧</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Bolt<span>Works</span></div>
+  <p>© 2024 BoltWorks Plumbing LLC · Denver, CO</p>
+  <div class="footer-lic">CO License #PC-12 · 987654</div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = "✔ Request Sent! We'll call you soon.";
+  btn.style.background = '#2ecc71';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
