@@ -686,6 +686,43 @@
     footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
     .footer-phone { font-size: 0.85rem; color: var(--gold); font-weight: 700; text-decoration: none; }
 
+    /* ── IFRAME PREVIEW ── */
+    .iframe-wrapper {
+      position: relative;
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+      background: #0a1628;
+    }
+    .iframe-wrapper iframe {
+      width: 200%;
+      height: 200%;
+      border: none;
+      transform: scale(0.5);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .iframe-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .iframe-overlay:hover { background: rgba(0,0,0,0.05); }
+    .iframe-overlay span {
+      background: rgba(240,192,64,0.9);
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
     /* ── SCROLL REVEAL ── */
     .reveal { opacity: 1; transform: none; }
     .reveal.visible { opacity: 1; transform: none; }
@@ -870,35 +907,12 @@
   <p class="portfolio-sub">Every site is custom-built for the trade and the local market — not a generic template slapped with a logo.</p>
   <div class="portfolio-grid reveal">
 
-    <!-- Plumber card - full preview -->
+    <!-- Plumber card - iframe preview -->
     <div class="portfolio-card">
-      <div class="preview-plumber">
-        <div class="plumber-nav">
-          <div class="plumber-logo">Bolt<span>Works</span></div>
-          <div class="plumber-btn-nav">☎ Call Now</div>
-        </div>
-        <div class="plumber-hero">
-          <div class="plumber-tag">Denver's Trusted Plumber</div>
-          <div class="plumber-h1">No Leak Too Big. <span>No Job Too Small.</span></div>
-          <div class="plumber-sub">Licensed & insured plumbing across Denver, Aurora & Lakewood. Water heaters, drain cleaning, pipe repair & 24/7 emergency.</div>
-          <div class="plumber-actions">
-            <div class="plumber-cta">Get Free Estimate</div>
-            <div class="plumber-ghost">☎ (720) 555-0174</div>
-          </div>
-        </div>
-        <div class="plumber-trust">
-          <span>✔ CO Licensed & Insured</span>
-          <span>⚡ Same-Day Available</span>
-          <span>📋 Free Estimates</span>
-          <span>🕐 24/7 Emergency</span>
-        </div>
-        <div class="plumber-services">
-          <div class="plumber-svc"><div class="plumber-svc-title">Water Heaters</div><div class="plumber-svc-text">All brands, same day</div></div>
-          <div class="plumber-svc"><div class="plumber-svc-title">Drain Cleaning</div><div class="plumber-svc-text">Any drain, fast</div></div>
-          <div class="plumber-svc"><div class="plumber-svc-title">Emergency</div><div class="plumber-svc-text">24/7 burst pipes</div></div>
-          <div class="plumber-svc"><div class="plumber-svc-title">Repiping</div><div class="plumber-svc-text">Copper & PEX</div></div>
-          <div class="plumber-svc"><div class="plumber-svc-title">Sewer Lines</div><div class="plumber-svc-text">Inspect & repair</div></div>
-          <div class="plumber-svc"><div class="plumber-svc-title">Inspections</div><div class="plumber-svc-text">Pre-sale reports</div></div>
+      <div class="iframe-wrapper">
+        <iframe src="https://zaokret-dev.github.io/1pageonly/plumber" scrolling="no" title="BoltWorks Plumbing - Denver CO"></iframe>
+        <div class="iframe-overlay" onclick="this.style.display='none'; this.previousElementSibling.style.pointerEvents='all'">
+          <span>👆 Click to interact</span>
         </div>
       </div>
       <div class="portfolio-label">
@@ -908,11 +922,13 @@
       <div class="portfolio-note">Local SEO · Contact Form · Google Maps · Mobile Ready</div>
     </div>
 
-    <!-- Coming soon - Electrician -->
+    <!-- Electrician card - iframe preview -->
     <div class="portfolio-card">
-      <div class="preview-coming">
-        <div class="coming-icon">⚡</div>
-        <div class="coming-text">Electrician — Phoenix, AZ</div>
+      <div class="iframe-wrapper">
+        <iframe src="https://zaokret-dev.github.io/1pageonly/electrician" scrolling="no" title="Apex Electric - Phoenix AZ"></iframe>
+        <div class="iframe-overlay" onclick="this.style.display='none'; this.previousElementSibling.style.pointerEvents='all'">
+          <span>👆 Click to interact</span>
+        </div>
       </div>
       <div class="portfolio-label">
         <div class="portfolio-label-name">Apex Electric — Phoenix, AZ</div>
@@ -921,35 +937,12 @@
       <div class="portfolio-note">Panel Upgrades · EV Chargers · Emergency Service</div>
     </div>
 
-    <!-- Painter card - full preview -->
+    <!-- Painter card - iframe preview -->
     <div class="portfolio-card">
-      <div class="preview-painter">
-        <div class="painter-nav">
-          <div class="painter-logo">Brush<span>King</span></div>
-          <div class="painter-btn-nav">☎ Call Now</div>
-        </div>
-        <div class="painter-hero">
-          <div class="painter-tag">Austin's Trusted Painter</div>
-          <div class="painter-h1">Fresh Coat. <span>Flawless Finish.</span></div>
-          <div class="painter-sub">Licensed & insured painting across Austin, Round Rock & Cedar Park. Interior, exterior, cabinet painting & free color consultation.</div>
-          <div class="painter-actions">
-            <div class="painter-cta">Get Free Estimate</div>
-            <div class="painter-ghost">☎ (512) 555-0174</div>
-          </div>
-        </div>
-        <div class="painter-trust">
-          <span>✔ TX Licensed & Insured</span>
-          <span>🎨 Free Color Consult</span>
-          <span>📋 Free Estimates</span>
-          <span>⭐ 5-Star Rated</span>
-        </div>
-        <div class="painter-services">
-          <div class="painter-svc"><div class="painter-svc-title">Interior</div><div class="painter-svc-text">Walls, ceilings, trim</div></div>
-          <div class="painter-svc"><div class="painter-svc-title">Exterior</div><div class="painter-svc-text">Full home repaints</div></div>
-          <div class="painter-svc"><div class="painter-svc-title">Cabinets</div><div class="painter-svc-text">Kitchen & bath refresh</div></div>
-          <div class="painter-svc"><div class="painter-svc-title">Commercial</div><div class="painter-svc-text">Office & retail spaces</div></div>
-          <div class="painter-svc"><div class="painter-svc-title">Staining</div><div class="painter-svc-text">Decks, fences, doors</div></div>
-          <div class="painter-svc"><div class="painter-svc-title">Drywall</div><div class="painter-svc-text">Repair & texture match</div></div>
+      <div class="iframe-wrapper">
+        <iframe src="https://zaokret-dev.github.io/1pageonly/painter" scrolling="no" title="BrushKing Painting - Austin TX"></iframe>
+        <div class="iframe-overlay" onclick="this.style.display='none'; this.previousElementSibling.style.pointerEvents='all'">
+          <span>👆 Click to interact</span>
         </div>
       </div>
       <div class="portfolio-label">
@@ -1093,7 +1086,7 @@
   <a href="tel:+17205550138" class="footer-phone">(720) 555-0138</a>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -1105,4 +1098,10 @@
   document.querySelectorAll('.faq-item').forEach(item => {
     item.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
-      document.querySe
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
