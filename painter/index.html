@@ -5,305 +5,261 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BrushKing Painting | Licensed Painter Austin TX | Free Estimates</title>
-  <meta name="description" content="BrushKing Painting — licensed & insured painter in Austin, TX. Interior, exterior, cabinet painting & free color consultation. Call (512) 555-0174 for a free estimate." />
+  <meta name="description" content="BrushKing Painting — licensed & insured painter in Austin, TX. Interior, exterior, cabinet painting & free color consultation. Call (512) 555-0174." />
   <link rel="canonical" href="https://www.brushkingpainting.com/" />
   <meta name="robots" content="index, follow" />
   <meta name="geo.region" content="US-TX" />
   <meta name="geo.placename" content="Austin, Texas" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HousePainter",
-    "name": "BrushKing Painting",
-    "telephone": "+15125550174",
-    "description": "Licensed and insured painting contractor in Austin, TX. Interior, exterior, cabinet painting and commercial painting services.",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Austin",
-      "addressRegion": "TX",
-      "addressCountry": "US"
-    },
-    "areaServed": [
-      {"@type": "City", "name": "Austin"},
-      {"@type": "City", "name": "Round Rock"},
-      {"@type": "City", "name": "Cedar Park"},
-      {"@type": "City", "name": "Pflugerville"},
-      {"@type": "City", "name": "Georgetown"}
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "73"
-    }
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HousePainter","name":"BrushKing Painting","telephone":"+15125550174","description":"Licensed painting contractor in Austin TX. Interior, exterior and cabinet painting.","address":{"@type":"PostalAddress","addressLocality":"Austin","addressRegion":"TX","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"73"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --dark: #1a0a00;
-      --dark2: #2d1200;
-      --rust: #c0392b;
-      --rust2: #e74c3c;
-      --cream: #fdf6ec;
-      --white: #ffffff;
-      --gray: #78716c;
-      --text: #292524;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cream:#faf7f2;
+      --warm:#f0e8da;
+      --dark:#1c1410;
+      --brown:#3d2b1f;
+      --terra:#c4622d;
+      --terra2:#d4703a;
+      --gray:#8a7e74;
+      --lgray:#c8bfb5;
     }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+    html{scroll-behavior:smooth}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
 
     /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: var(--dark);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%; height: 66px;
-      border-bottom: 3px solid var(--rust);
-    }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 800; color: var(--white); letter-spacing: 1px; }
-    .nav-logo span { color: #ff8a65; }
-    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-phone { color: #ff8a65; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
-    .nav-cta { background: var(--rust); color: var(--white); padding: 0.5rem 1.25rem; border-radius: 3px; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
-    .nav-cta:hover { background: var(--rust2); }
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,242,0.95);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:70px;border-bottom:1px solid var(--lgray)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:3px;color:var(--dark);text-transform:uppercase}
+    .nav-logo em{font-style:italic;color:var(--terra)}
+    .nav-right{display:flex;align-items:center;gap:2rem}
+    .nav-phone{color:var(--gray);font-weight:400;text-decoration:none;font-size:0.8rem;letter-spacing:2px}
+    .nav-cta{background:var(--terra);color:var(--cream);padding:0.6rem 1.5rem;font-family:'Jost',sans-serif;font-weight:500;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background 0.3s}
+    .nav-cta:hover{background:var(--brown)}
 
     /* HERO */
-    #hero {
-      min-height: 100vh;
-      background: var(--dark);
-      display: flex; align-items: center;
-      padding: 100px 5% 60px;
-      position: relative; overflow: hidden;
-    }
-    .hero-brush {
-      position: absolute; right: -50px; top: 0; bottom: 0; width: 55%;
-      background: linear-gradient(135deg, var(--dark2) 0%, #1a0500 100%);
-      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    .hero-strokes {
-      position: absolute; inset: 0; pointer-events: none;
-      background-image: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(192,57,43,0.04) 30px, rgba(192,57,43,0.04) 31px);
-    }
-    .hero-content { position: relative; max-width: 600px; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.4);
-      color: #ff8a65; padding: 0.35rem 1rem; border-radius: 2px;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;
-    }
-    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 800; line-height: 1.05; color: var(--white); }
-    h1 span { color: #ff8a65; display: block; }
-    .hero-sub { margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.65); max-width: 500px; }
-    .hero-actions { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--rust); color: var(--white);
-      padding: 0.95rem 2rem; border-radius: 3px;
-      font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700;
-      letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
-      box-shadow: 0 4px 20px rgba(192,57,43,0.4);
-      transition: background 0.2s, transform 0.15s;
-    }
-    .btn-primary:hover { background: var(--rust2); transform: translateY(-2px); }
-    .btn-ghost { background: transparent; color: var(--white); padding: 0.95rem 2rem; border-radius: 3px; border: 2px solid rgba(255,255,255,0.25); font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
-    .btn-ghost:hover { border-color: #ff8a65; color: #ff8a65; }
-    .hero-stats { margin-top: 3rem; display: flex; gap: 3rem; flex-wrap: wrap; }
-    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 800; color: #ff8a65; line-height: 1; }
-    .stat-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.2rem; }
+    #hero{min-height:100vh;background:var(--cream);display:grid;grid-template-columns:1fr 1fr;padding-top:70px}
+    @media(max-width:768px){#hero{grid-template-columns:1fr}.hero-image{display:none}}
+    .hero-content{padding:8% 6%;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--lgray)}
+    .hero-eyebrow{font-size:0.65rem;letter-spacing:5px;text-transform:uppercase;color:var(--terra);margin-bottom:2.5rem}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5.5vw,6rem);font-weight:600;line-height:1.0;color:var(--dark)}
+    h1 em{font-style:italic;color:var(--terra)}
+    h1 .line2{display:block;font-weight:400;font-style:italic}
+    .hero-divider{width:60px;height:1px;background:var(--terra);margin:2.5rem 0}
+    .hero-sub{font-size:0.95rem;line-height:1.9;color:var(--gray);max-width:420px;font-weight:300}
+    .hero-actions{margin-top:3rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+    .btn-primary{background:var(--terra);color:var(--cream);padding:1rem 2.5rem;font-family:'Jost',sans-serif;font-weight:500;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background 0.3s}
+    .btn-primary:hover{background:var(--brown)}
+    .btn-call{color:var(--dark);font-size:0.8rem;letter-spacing:1px;text-decoration:none;border-bottom:1px solid var(--lgray);padding-bottom:0.2rem;transition:border-color 0.3s}
+    .btn-call:hover{border-color:var(--terra);color:var(--terra)}
+    .hero-stats{margin-top:4rem;display:flex;gap:3rem;padding-top:3rem;border-top:1px solid var(--lgray)}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;color:var(--terra);line-height:1}
+    .stat-label{font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:0.3rem}
+
+    /* Hero image side */
+    .hero-image{background:var(--warm);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem}
+    .hero-image-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--warm) 0%,#e8d5c0 50%,#d4bda3 100%)}
+    .hero-image-pattern{position:absolute;inset:0;opacity:0.4;background-image:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(196,98,45,0.06) 20px,rgba(196,98,45,0.06) 21px),repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(196,98,45,0.06) 20px,rgba(196,98,45,0.06) 21px)}
+    .hero-image-text{position:relative;z-index:1}
+    .hero-image-quote{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:400;font-style:italic;color:var(--brown);line-height:1.3}
+    .hero-image-attr{font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--terra);margin-top:1rem}
 
     /* TRUST BAR */
-    #trust { background: var(--rust); padding: 1rem 5%; display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 0.88rem; letter-spacing: 1px; text-transform: uppercase; color: var(--white); }
-
-    /* SECTIONS */
-    section { padding: 90px 5%; }
-    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--rust); margin-bottom: 0.75rem; }
-    h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--dark); line-height: 1.1; }
-    h2.light { color: var(--white); }
+    #trust{background:var(--warm);padding:1.25rem 6%;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;border-top:1px solid var(--lgray);border-bottom:1px solid var(--lgray)}
+    .trust-item{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--brown);display:flex;align-items:center;gap:0.5rem}
+    .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--terra)}
 
     /* SERVICES */
-    #services { background: var(--cream); }
-    .services-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-    .service-card { background: var(--white); border-radius: 8px; padding: 2rem 1.75rem; border-top: 4px solid var(--rust); box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(192,57,43,0.12); }
-    .service-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
-    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--dark); }
-    .service-card p { margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.65; color: var(--gray); }
+    #services{background:var(--cream);padding:100px 6%}
+    .section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4rem;padding-bottom:2rem;border-bottom:1px solid var(--lgray)}
+    h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,4.5rem);font-weight:600;color:var(--dark)}
+    h2 em{font-style:italic;color:var(--terra)}
+    .section-num{font-size:0.65rem;letter-spacing:3px;color:var(--lgray)}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--lgray)}
+    @media(max-width:768px){.services-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.services-grid{grid-template-columns:1fr}}
+    .service-card{background:var(--cream);padding:2.5rem 2rem;transition:background 0.3s}
+    .service-card:hover{background:var(--warm)}
+    .service-num-small{font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--lgray);margin-bottom:1.5rem}
+    .service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--dark);line-height:1.2}
+    .service-card p{font-size:0.82rem;line-height:1.8;color:var(--gray);margin-top:0.75rem;font-weight:300}
+    .service-link{display:inline-block;margin-top:1.5rem;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--terra);border-bottom:1px solid var(--terra);padding-bottom:0.15rem}
 
-    /* WHY US */
-    #why { background: var(--dark2); }
-    .why-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-    .why-item { text-align: center; padding: 2rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; }
-    .why-num { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 800; color: #ff8a65; line-height: 1; }
-    .why-title { font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--white); margin-top: 0.4rem; }
-    .why-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 0.4rem; line-height: 1.6; }
+    /* WHY */
+    #why{background:var(--dark);padding:100px 6%}
+    #why h2{color:var(--cream);margin-bottom:4rem}
+    #why h2 em{color:var(--terra)}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08)}
+    @media(max-width:768px){.why-grid{grid-template-columns:1fr 1fr}}
+    .why-item{background:var(--dark);padding:3rem 2rem;border-bottom:2px solid transparent;transition:border-color 0.3s}
+    .why-item:hover{border-color:var(--terra)}
+    .why-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:600;color:var(--terra);line-height:1}
+    .why-title{font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:1rem}
+    .why-desc{font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:0.5rem;line-height:1.7;font-weight:300}
 
     /* REVIEWS */
-    #reviews { background: var(--white); }
-    .reviews-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .review-card { border: 1.5px solid #e7e5e4; border-radius: 8px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
-    .review-card:hover { border-color: var(--rust); box-shadow: 0 4px 20px rgba(192,57,43,0.1); }
-    .stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 0.9rem; }
-    .review-text { font-size: 0.95rem; line-height: 1.7; color: var(--text); font-style: italic; }
-    .reviewer { margin-top: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
-    .reviewer-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--dark); color: #ff8a65; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1rem; }
-    .reviewer-name { font-weight: 700; font-size: 0.9rem; color: var(--dark); }
-    .reviewer-loc { font-size: 0.78rem; color: var(--gray); }
+    #reviews{background:var(--warm);padding:100px 6%}
+    .reviews-intro{display:grid;grid-template-columns:1fr 2fr;gap:4rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid var(--lgray)}
+    @media(max-width:768px){.reviews-intro{grid-template-columns:1fr}}
+    .reviews-big-num{font-family:'Cormorant Garamond',serif;font-size:8rem;font-weight:400;color:var(--terra);line-height:1}
+    .reviews-intro-text h3{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;font-style:italic;color:var(--dark);line-height:1.2}
+    .reviews-intro-text p{font-size:0.82rem;color:var(--gray);margin-top:1rem;line-height:1.8;font-weight:300}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    @media(max-width:768px){.reviews-grid{grid-template-columns:1fr}}
+    .review-card{padding:2.5rem;background:var(--cream);border-top:2px solid transparent;transition:border-color 0.3s}
+    .review-card:hover{border-color:var(--terra)}
+    .review-stars{color:var(--terra);letter-spacing:2px;font-size:0.8rem;margin-bottom:1rem}
+    .review-text{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;line-height:1.7;color:var(--brown)}
+    .reviewer{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--lgray)}
+    .reviewer-name{font-size:0.75rem;font-weight:500;letter-spacing:1px;color:var(--dark)}
+    .reviewer-loc{font-size:0.65rem;letter-spacing:1px;color:var(--lgray);margin-top:0.2rem}
 
     /* CONTACT */
-    #contact { background: var(--dark); position: relative; }
-    .contact-inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    @media (max-width: 768px) { .contact-inner { grid-template-columns: 1fr; gap: 3rem; } }
-    .contact-info p { margin-top: 1rem; color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.7; }
-    .contact-details { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
-    .contact-row { display: flex; align-items: center; gap: 0.9rem; }
-    .contact-row .icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.3); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .contact-row .info-label { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: #ff8a65; font-weight: 700; }
-    .contact-row .info-val { color: var(--white); font-size: 0.9rem; margin-top: 0.1rem; }
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
-    .contact-form input, .contact-form select, .contact-form textarea { background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 3px; padding: 0.85rem 1rem; color: var(--white); font-family: 'Nunito', sans-serif; font-size: 0.9rem; width: 100%; transition: border-color 0.2s; }
-    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.35); }
-    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: #ff8a65; }
-    .contact-form select option { background: var(--dark); }
-    .contact-form textarea { resize: vertical; min-height: 110px; }
-    .form-submit { background: var(--rust); color: var(--white); border: none; cursor: pointer; padding: 1rem; border-radius: 3px; font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: background 0.2s; }
-    .form-submit:hover { background: var(--rust2); }
+    #contact{background:var(--cream);padding:100px 6%}
+    .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:start}
+    @media(max-width:768px){.contact-inner{grid-template-columns:1fr;gap:4rem}}
+    .contact-info h2{margin-bottom:1.5rem}
+    .contact-info p{font-size:0.88rem;line-height:1.9;color:var(--gray);font-weight:300}
+    .contact-details{margin-top:3rem;display:flex;flex-direction:column;gap:0}
+    .contact-row{padding:1.25rem 0;border-bottom:1px solid var(--lgray);display:grid;grid-template-columns:100px 1fr}
+    .c-label{font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--lgray);padding-top:0.1rem}
+    .c-val{font-size:0.85rem;color:var(--dark);font-weight:400;line-height:1.6}
+    .contact-form{display:flex;flex-direction:column;gap:0}
+    .contact-form input,.contact-form select,.contact-form textarea{background:transparent;border:none;border-bottom:1px solid var(--lgray);padding:1.25rem 0;color:var(--dark);font-family:'Jost',sans-serif;font-size:0.85rem;width:100%;transition:border-color 0.3s;outline:none;font-weight:300}
+    .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--lgray)}
+    .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--terra)}
+    .contact-form select{color:var(--lgray)}
+    .contact-form textarea{resize:none;min-height:120px;margin-top:0.5rem}
+    .form-submit{margin-top:2.5rem;background:var(--terra);color:var(--cream);border:none;padding:1.1rem 2.5rem;font-family:'Jost',sans-serif;font-weight:500;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background 0.3s;align-self:flex-start}
+    .form-submit:hover{background:var(--brown)}
 
     /* FOOTER */
-    footer { background: #0f0500; padding: 2rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; color: var(--white); }
-    .footer-logo span { color: #ff8a65; }
-    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+    footer{background:var(--dark);padding:2.5rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;letter-spacing:3px;color:var(--cream);text-transform:uppercase}
+    .footer-logo em{font-style:italic;color:var(--terra)}
+    footer p{font-size:0.65rem;letter-spacing:1px;color:rgba(255,255,255,0.25)}
 
-    @media (max-width: 600px) { .nav-phone { display: none; } }
+    @media(max-width:600px){.nav-phone{display:none}}
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">Brush<span>King</span></div>
+  <div class="nav-logo">Brush<em>King</em></div>
   <div class="nav-right">
-    <a href="tel:+15125550174" class="nav-phone">☎ (512) 555-0174</a>
+    <a href="tel:+15125550174" class="nav-phone">(512) 555-0174</a>
     <a href="#contact" class="nav-cta">Free Estimate</a>
   </div>
 </nav>
 
 <section id="hero">
-  <div class="hero-brush"><div class="hero-strokes"></div></div>
   <div class="hero-content">
-    <div class="hero-badge">🖌️ Austin's Trusted Painter</div>
-    <h1>Fresh Coat. <span>Flawless Finish.</span></h1>
-    <p class="hero-sub">Licensed & insured painting contractor serving Austin, Round Rock & Cedar Park. Interior, exterior, cabinet painting & free color consultation included.</p>
+    <div class="hero-eyebrow">Austin, Texas · Licensed Painting Contractor</div>
+    <h1>Fresh Coat.<span class="line2">Flawless Finish.</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">We transform Austin homes with precision craftsmanship and premium materials. Interior, exterior, cabinet painting and more — backed by 11 years of trusted service.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Get a Free Estimate</a>
-      <a href="tel:+15125550174" class="btn-ghost">☎ (512) 555-0174</a>
+      <a href="#contact" class="btn-primary">Get Free Estimate</a>
+      <a href="tel:+15125550174" class="btn-call">☎ (512) 555-0174</a>
     </div>
     <div class="hero-stats">
       <div><div class="stat-num">11+</div><div class="stat-label">Years in Austin</div></div>
       <div><div class="stat-num">900+</div><div class="stat-label">Homes Painted</div></div>
-      <div><div class="stat-num">5★</div><div class="stat-label">Google Rating</div></div>
+      <div><div class="stat-num">5.0★</div><div class="stat-label">Google Rating</div></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-image-bg"></div>
+    <div class="hero-image-pattern"></div>
+    <div class="hero-image-text">
+      <div class="hero-image-quote">"The difference between ordinary and extraordinary is that little extra."</div>
+      <div class="hero-image-attr">— Our Promise to Every Client</div>
     </div>
   </div>
 </section>
 
 <div id="trust">
-  <div class="trust-item">✔ TX Licensed & Insured</div>
-  <div class="trust-item">🎨 Free Color Consult</div>
-  <div class="trust-item">📋 Free Estimates</div>
-  <div class="trust-item">⭐ 5-Star Rated</div>
-  <div class="trust-item">🏠 Interior & Exterior</div>
+  <div class="trust-item"><div class="trust-dot"></div> TX Licensed & Insured</div>
+  <div class="trust-item"><div class="trust-dot"></div> Free Color Consultation</div>
+  <div class="trust-item"><div class="trust-dot"></div> Free Estimates</div>
+  <div class="trust-item"><div class="trust-dot"></div> 100% Satisfaction Guarantee</div>
+  <div class="trust-item"><div class="trust-dot"></div> Premium Materials Only</div>
 </div>
 
 <section id="services">
-  <div class="section-label">What We Do</div>
-  <h2>Painting Services<br>Austin TX Homeowners Love</h2>
+  <div class="section-header">
+    <h2>Our <em>Services</em></h2>
+    <div class="section-num">06 SPECIALTIES</div>
+  </div>
   <div class="services-grid">
-    <div class="service-card"><span class="service-icon">🏠</span><h3>Interior Painting</h3><p>Walls, ceilings, trim and doors. We protect your furniture, clean up completely and leave zero mess behind.</p></div>
-    <div class="service-card"><span class="service-icon">🌤️</span><h3>Exterior Painting Austin</h3><p>Full home repaints using premium weatherproof paint. Pressure washing and surface prep included.</p></div>
-    <div class="service-card"><span class="service-icon">🍳</span><h3>Cabinet Painting</h3><p>Transform your kitchen or bathroom cabinets at a fraction of replacement cost. Factory-smooth finish guaranteed.</p></div>
-    <div class="service-card"><span class="service-icon">🏢</span><h3>Commercial Painting</h3><p>Office spaces, retail stores, restaurants. We work around your schedule to minimize business disruption.</p></div>
-    <div class="service-card"><span class="service-icon">🌲</span><h3>Deck & Fence Staining</h3><p>Pressure washing, sanding and premium stain application. Protect your outdoor wood for years to come.</p></div>
-    <div class="service-card"><span class="service-icon">🔨</span><h3>Drywall Repair</h3><p>Holes, cracks, water damage — we patch, texture-match and paint seamlessly. No trace it was ever there.</p></div>
+    <div class="service-card"><div class="service-num-small">01</div><h3>Interior Painting Austin TX</h3><p>Walls, ceilings, trim and doors. We protect your furniture completely and leave zero mess behind after every job.</p><div class="service-link">Learn more →</div></div>
+    <div class="service-card"><div class="service-num-small">02</div><h3>Exterior Painting Austin TX</h3><p>Full home repaints using premium weatherproof paint. Pressure washing and full surface prep always included.</p><div class="service-link">Learn more →</div></div>
+    <div class="service-card"><div class="service-num-small">03</div><h3>Cabinet Painting Austin TX</h3><p>Transform your kitchen or bathroom at a fraction of replacement cost. Factory-smooth finish, guaranteed.</p><div class="service-link">Learn more →</div></div>
+    <div class="service-card"><div class="service-num-small">04</div><h3>Commercial Painting Austin TX</h3><p>Offices, retail and restaurants. We work around your schedule to minimize business disruption completely.</p><div class="service-link">Learn more →</div></div>
+    <div class="service-card"><div class="service-num-small">05</div><h3>Deck & Fence Staining Austin</h3><p>Pressure washing, sanding and premium stain. Protect your outdoor wood investment for years to come.</p><div class="service-link">Learn more →</div></div>
+    <div class="service-card"><div class="service-num-small">06</div><h3>Drywall Repair Austin TX</h3><p>Holes, cracks, water damage — we patch, texture-match and paint seamlessly. No trace it was ever there.</p><div class="service-link">Learn more →</div></div>
   </div>
 </section>
 
 <section id="why">
-  <div class="section-label">Why BrushKing</div>
-  <h2 class="light">Why Austin Homeowners<br>Choose Us</h2>
+  <h2>Why Choose <em>BrushKing</em></h2>
   <div class="why-grid">
-    <div class="why-item"><div class="why-num">11+</div><div class="why-title">Years Experience</div><div class="why-desc">Serving Austin since 2013. We know Texas heat and humidity and choose paints accordingly.</div></div>
-    <div class="why-item"><div class="why-num">$0</div><div class="why-title">Free Estimates</div><div class="why-desc">Free color consultation and detailed written quote before any work starts.</div></div>
-    <div class="why-item"><div class="why-num">100%</div><div class="why-title">Satisfaction</div><div class="why-desc">We don't consider a job done until you're completely happy with the result.</div></div>
-    <div class="why-item"><div class="why-num">900+</div><div class="why-title">Homes Painted</div><div class="why-desc">Over 900 Austin homes painted. We've seen every situation and know how to handle it.</div></div>
+    <div class="why-item"><div class="why-num">11+</div><div class="why-title">Years in Austin</div><div class="why-desc">Serving Austin since 2013. We know Texas heat and choose paints that last.</div></div>
+    <div class="why-item"><div class="why-num">$0</div><div class="why-title">Free Estimates</div><div class="why-desc">Free color consultation and written quote before any work starts.</div></div>
+    <div class="why-item"><div class="why-num">100%</div><div class="why-title">Satisfaction</div><div class="why-desc">We don't consider a job done until you're completely happy.</div></div>
+    <div class="why-item"><div class="why-num">900+</div><div class="why-title">Homes Painted</div><div class="why-desc">Over 900 Austin homes painted. We've seen every situation.</div></div>
   </div>
 </section>
 
 <section id="reviews">
-  <div class="section-label">Customer Reviews</div>
-  <h2>What Our Customers Say</h2>
+  <div class="reviews-intro">
+    <div class="reviews-big-num">5.0</div>
+    <div class="reviews-intro-text">
+      <h3>What Our Clients Say About Us</h3>
+      <p>We've painted over 900 homes across Austin, Round Rock and Cedar Park. Every project, every time, our goal is the same: a finish so perfect you want to show it off to everyone you know.</p>
+    </div>
+  </div>
   <div class="reviews-grid">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"BrushKing painted our entire home interior in 3 days. The prep work was immaculate, the color consultation was so helpful, and the finish is absolutely perfect. Worth every penny."</p>
-      <div class="reviewer"><div class="reviewer-avatar">SH</div><div><div class="reviewer-name">Sarah H.</div><div class="reviewer-loc">Austin, TX · Google Review</div></div></div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Had our kitchen cabinets painted instead of replaced. Saved us $8,000 and they look brand new. The finish is incredibly smooth — you'd never know they weren't factory painted."</p>
-      <div class="reviewer"><div class="reviewer-avatar">MP</div><div><div class="reviewer-name">Mark P.</div><div class="reviewer-loc">Round Rock, TX · Google Review</div></div></div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Exterior repaint on a 2-story home, done in 2 days. On time, professional, and the house looks incredible. My neighbors keep asking who did it. Highly recommend BrushKing."</p>
-      <div class="reviewer"><div class="reviewer-avatar">LT</div><div><div class="reviewer-name">Lisa T.</div><div class="reviewer-loc">Cedar Park, TX · Google Review</div></div></div>
-    </div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"BrushKing painted our entire home interior in 3 days. The prep was immaculate, the color consultation was so helpful, and the finish is absolutely perfect."</p><div class="reviewer"><div class="reviewer-name">Sarah H.</div><div class="reviewer-loc">Austin, TX · Google Review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Had our kitchen cabinets painted instead of replaced. Saved $8,000 and they look brand new. The finish is incredibly smooth — you'd never know they weren't factory painted."</p><div class="reviewer"><div class="reviewer-name">Mark P.</div><div class="reviewer-loc">Round Rock, TX · Google Review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Exterior repaint on a 2-story home, done in 2 days. On time, professional, and the house looks incredible. My neighbors keep asking who did it."</p><div class="reviewer"><div class="reviewer-name">Lisa T.</div><div class="reviewer-loc">Cedar Park, TX · Google Review</div></div></div>
   </div>
 </section>
 
 <section id="contact">
   <div class="contact-inner">
     <div class="contact-info">
-      <div class="section-label">Get In Touch</div>
-      <h2 class="light">Ready for a<br>Fresh Start?</h2>
-      <p>Call us or fill out the form for a free estimate and color consultation. We typically respond within 1 hour.</p>
+      <h2>Let's <em>Begin</em></h2>
+      <p>Every great paint job starts with a conversation. Tell us about your project and we'll come to you for a free estimate and color consultation — no pressure, no obligation.</p>
       <div class="contact-details">
-        <div class="contact-row"><div class="icon">📞</div><div><div class="info-label">Phone</div><div class="info-val">(512) 555-0174</div></div></div>
-        <div class="contact-row"><div class="icon">📧</div><div><div class="info-label">Email</div><div class="info-val">info@brushkingpainting.com</div></div></div>
-        <div class="contact-row"><div class="icon">📍</div><div><div class="info-label">Service Area</div><div class="info-val">Austin · Round Rock · Cedar Park · Pflugerville · Georgetown</div></div></div>
-        <div class="contact-row"><div class="icon">🕐</div><div><div class="info-label">Hours</div><div class="info-val">Mon–Sat 7am–6pm · Free Estimates Anytime</div></div></div>
+        <div class="contact-row"><div class="c-label">Phone</div><div class="c-val">(512) 555-0174</div></div>
+        <div class="contact-row"><div class="c-label">Email</div><div class="c-val">info@brushkingpainting.com</div></div>
+        <div class="contact-row"><div class="c-label">Service Area</div><div class="c-val">Austin · Round Rock · Cedar Park · Pflugerville · Georgetown</div></div>
+        <div class="contact-row"><div class="c-label">Hours</div><div class="c-val">Mon–Sat 7am–6pm · Free Estimates Anytime</div></div>
       </div>
     </div>
     <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <input type="text" placeholder="Your Name" required />
-        <input type="tel" placeholder="Phone Number" required />
-      </div>
-      <input type="email" placeholder="Email Address" />
-      <select><option value="" disabled selected>Select Service Needed</option><option>Interior Painting</option><option>Exterior Painting</option><option>Cabinet Painting</option><option>Commercial Painting</option><option>Deck & Fence Staining</option><option>Drywall Repair</option><option>Other</option></select>
+      <input type="text" placeholder="Your name" required />
+      <input type="tel" placeholder="Phone number" required />
+      <input type="email" placeholder="Email address" />
+      <select><option value="" disabled selected>Select service needed</option><option>Interior Painting</option><option>Exterior Painting</option><option>Cabinet Painting</option><option>Commercial Painting</option><option>Deck & Fence Staining</option><option>Drywall Repair</option><option>Other</option></select>
       <textarea placeholder="Tell us about your project..."></textarea>
-      <button type="submit" class="form-submit">Send My Free Estimate Request 🖌️</button>
+      <button type="submit" class="form-submit">Request Free Estimate</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="footer-logo">Brush<span>King</span></div>
+  <div class="footer-logo">Brush<em>King</em></div>
   <p>© 2024 BrushKing Painting LLC · Austin, TX</p>
-  <div style="font-size:0.75rem;color:rgba(255,255,255,0.25)">TX License #PC-77 · 543210</div>
+  <p>TX License #PC-77 · 543210</p>
 </footer>
 
 <script>
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.form-submit');
-  btn.textContent = "✔ Request Sent! We'll call you soon.";
+  btn.textContent = '✔ Request Sent!';
   btn.style.background = '#2ecc71';
   btn.disabled = true;
 }
