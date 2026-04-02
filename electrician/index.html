@@ -10,132 +10,136 @@
   <meta name="robots" content="index, follow" />
   <meta name="geo.region" content="US-AZ" />
   <meta name="geo.placename" content="Phoenix, Arizona" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Electrician","name":"Apex Electric","telephone":"+16025550193","description":"Licensed electrician in Phoenix AZ. Panel upgrades, rewiring, EV chargers, 24/7 emergency.","address":{"@type":"PostalAddress","addressLocality":"Phoenix","addressRegion":"AZ","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"94"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Electrician","name":"Apex Electric","telephone":"+16025550193","description":"Licensed electrician in Phoenix AZ.","address":{"@type":"PostalAddress","addressLocality":"Phoenix","addressRegion":"AZ","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"94"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --light:#f2f5f9;
-      --white:#ffffff;
-      --dark:#0f1c2e;
-      --navy:#1a3050;
-      --blue:#2563eb;
-      --blue2:#1d4ed8;
-      --steel:#4a7fab;
-      --gray:#7a8fa8;
-      --lgray:#c5d3e0;
+      --bg:#050a14;
+      --bg2:#080f1e;
+      --panel:#0d1829;
+      --cyan:#00d4ff;
+      --cyan2:#00a8cc;
+      --white:#e8f4ff;
+      --gray:#4a6080;
+      --lgray:#7a95b0;
+      --border:rgba(0,212,255,0.2);
     }
     html{scroll-behavior:smooth}
-    body{font-family:'Jost',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden}
+    body{font-family:'Exo 2',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
+
+    /* SCANLINE EFFECT */
+    body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,212,255,0.01) 2px,rgba(0,212,255,0.01) 4px);pointer-events:none;z-index:0}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:70px;border-bottom:1px solid var(--lgray)}
-    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;letter-spacing:2px;color:var(--dark);text-transform:uppercase}
-    .nav-logo em{font-style:italic;color:var(--blue)}
-    .nav-right{display:flex;align-items:center;gap:2rem}
-    .nav-phone{color:var(--gray);text-decoration:none;font-size:0.8rem;letter-spacing:1px;font-weight:400}
-    .nav-cta{background:var(--blue);color:var(--white);padding:0.6rem 1.5rem;font-weight:500;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background 0.3s}
-    .nav-cta:hover{background:var(--blue2)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,10,20,0.95);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:65px;border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:'Exo 2',sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:4px;color:var(--white);text-transform:uppercase}
+    .nav-logo span{color:var(--cyan);text-shadow:0 0 20px rgba(0,212,255,0.8)}
+    .nav-right{display:flex;align-items:center;gap:1.5rem}
+    .nav-phone{color:var(--cyan);text-decoration:none;font-size:0.78rem;letter-spacing:2px;font-family:'Share Tech Mono',monospace}
+    .nav-cta{background:transparent;color:var(--cyan);padding:0.5rem 1.25rem;font-family:'Exo 2',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid var(--cyan);transition:all 0.3s;box-shadow:0 0 10px rgba(0,212,255,0.1)}
+    .nav-cta:hover{background:rgba(0,212,255,0.1);box-shadow:0 0 20px rgba(0,212,255,0.3)}
 
     /* HERO */
-    #hero{min-height:100vh;background:var(--light);display:flex;align-items:center;padding:100px 6% 80px;position:relative;overflow:hidden}
-    .hero-bg-circle{position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.06) 0%,transparent 70%);pointer-events:none}
-    .hero-bg-lines{position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(37,99,235,0.03) 80px,rgba(37,99,235,0.03) 81px),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(37,99,235,0.03) 80px,rgba(37,99,235,0.03) 81px)}
-    .hero-content{position:relative;max-width:680px}
-    .hero-eyebrow{font-size:0.65rem;letter-spacing:5px;text-transform:uppercase;color:var(--blue);margin-bottom:2rem;display:flex;align-items:center;gap:1rem}
-    .hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--blue)}
-    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,6.5rem);font-weight:700;line-height:1.0;color:var(--dark)}
-    h1 em{font-style:italic;color:var(--blue);display:block}
-    .hero-divider{width:60px;height:2px;background:var(--blue);margin:2.5rem 0}
-    .hero-sub{font-size:1rem;line-height:1.9;color:var(--gray);max-width:500px;font-weight:300}
-    .hero-actions{margin-top:3rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-    .btn-primary{background:var(--blue);color:var(--white);padding:1rem 2.5rem;font-weight:500;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background 0.3s}
-    .btn-primary:hover{background:var(--blue2)}
-    .btn-call{color:var(--dark);font-size:0.82rem;letter-spacing:1px;text-decoration:none;border-bottom:1px solid var(--lgray);padding-bottom:0.2rem;transition:border-color 0.3s,color 0.3s}
-    .btn-call:hover{border-color:var(--blue);color:var(--blue)}
-    .hero-stats{margin-top:5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--lgray);padding-top:3rem}
-    @media(max-width:600px){.hero-stats{grid-template-columns:1fr 1fr;gap:2rem}}
-    .stat-item{padding-right:2rem;border-right:1px solid var(--lgray)}
-    .stat-item:last-child{border-right:none}
-    @media(max-width:600px){.stat-item{border-right:none;padding-right:0}}
-    .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--blue);line-height:1}
-    .stat-label{font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:0.4rem}
+    #hero{min-height:100vh;background:var(--bg);display:flex;align-items:center;padding:100px 5% 80px;position:relative;overflow:hidden}
+    .hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.04) 1px,transparent 1px);background-size:50px 50px;pointer-events:none}
+    .hero-glow{position:absolute;top:20%;right:10%;width:500px;height:500px;background:radial-gradient(circle,rgba(0,212,255,0.08) 0%,transparent 70%);pointer-events:none}
+    .hero-glow2{position:absolute;bottom:10%;left:5%;width:300px;height:300px;background:radial-gradient(circle,rgba(0,212,255,0.05) 0%,transparent 70%);pointer-events:none}
+    .hero-content{position:relative;z-index:1;max-width:750px}
+    .hero-tag{display:inline-flex;align-items:center;gap:0.75rem;border:1px solid var(--border);padding:0.4rem 1rem;margin-bottom:2rem;font-family:'Share Tech Mono',monospace;font-size:0.68rem;letter-spacing:3px;color:var(--cyan);text-transform:uppercase}
+    .hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:blink 1.5s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+    h1{font-family:'Exo 2',sans-serif;font-size:clamp(2.8rem,6vw,6rem);font-weight:800;line-height:0.95;letter-spacing:-1px;color:var(--white);text-transform:uppercase}
+    h1 .cyan{color:var(--cyan);text-shadow:0 0 30px rgba(0,212,255,0.5);display:block}
+    h1 .outline{-webkit-text-stroke:1px rgba(0,212,255,0.4);color:transparent;display:block}
+    .hero-sub{margin-top:2rem;font-size:0.95rem;line-height:1.8;color:var(--lgray);max-width:560px;font-weight:300}
+    .hero-actions{margin-top:3rem;display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-primary{background:var(--cyan);color:var(--bg);padding:1rem 2.5rem;font-family:'Exo 2',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all 0.3s;box-shadow:0 0 30px rgba(0,212,255,0.4)}
+    .btn-primary:hover{box-shadow:0 0 50px rgba(0,212,255,0.7);transform:translateY(-2px)}
+    .btn-ghost{background:transparent;color:var(--white);padding:1rem 2rem;font-family:'Share Tech Mono',monospace;font-size:0.78rem;letter-spacing:2px;text-decoration:none;border:1px solid var(--gray);transition:all 0.3s}
+    .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+    .hero-stats{margin-top:5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+    @media(max-width:600px){.hero-stats{grid-template-columns:1fr 1fr}}
+    .stat-box{background:var(--panel);padding:1.75rem 1.5rem;border-bottom:2px solid transparent;transition:border-color 0.3s}
+    .stat-box:hover{border-color:var(--cyan)}
+    .stat-num{font-family:'Exo 2',sans-serif;font-size:2.2rem;font-weight:800;color:var(--cyan);line-height:1;text-shadow:0 0 20px rgba(0,212,255,0.4)}
+    .stat-label{font-family:'Share Tech Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:0.4rem}
 
     /* TRUST */
-    #trust{background:var(--dark);padding:1.25rem 6%;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
-    .trust-item{font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:0.5rem}
-    .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--blue)}
+    #trust{background:var(--panel);padding:1rem 5%;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .trust-item{font-family:'Share Tech Mono',monospace;font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--lgray);display:flex;align-items:center;gap:0.5rem}
+    .trust-item span{color:var(--cyan)}
 
     /* SERVICES */
-    #services{background:var(--white);padding:100px 6%}
-    .section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4rem;padding-bottom:2rem;border-bottom:1px solid var(--lgray);flex-wrap:wrap;gap:1rem}
-    h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4.5vw,4.5rem);font-weight:700;color:var(--dark);line-height:1.05}
-    h2 em{font-style:italic;color:var(--blue)}
-    .section-sub{font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--lgray)}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--lgray)}
-    @media(max-width:768px){.services-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:480px){.services-grid{grid-template-columns:1fr}}
-    .service-card{background:var(--white);padding:2.5rem 2rem;transition:background 0.3s}
-    .service-card:hover{background:var(--light)}
-    .service-num{font-size:0.58rem;letter-spacing:3px;text-transform:uppercase;color:var(--lgray);font-family:'Jost',sans-serif;margin-bottom:1.5rem}
-    .service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--dark);line-height:1.2}
-    .service-card p{font-size:0.82rem;line-height:1.8;color:var(--gray);margin-top:0.75rem;font-weight:300}
-    .service-tag{display:inline-block;margin-top:1.5rem;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--blue);border-bottom:1px solid var(--blue);padding-bottom:0.1rem}
+    #services{background:var(--bg2);padding:100px 5%}
+    .section-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:1rem}
+    h2{font-family:'Exo 2',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--white)}
+    h2 span{color:var(--cyan);text-shadow:0 0 20px rgba(0,212,255,0.4)}
+    .section-code{font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:2px;color:var(--gray)}
+    .services-list{display:flex;flex-direction:column;gap:1px;background:var(--border)}
+    .svc-row{background:var(--panel);display:grid;grid-template-columns:80px 1fr auto;align-items:center;gap:2rem;padding:2rem 2.5rem;transition:background 0.3s;cursor:default}
+    .svc-row:hover{background:rgba(0,212,255,0.04)}
+    .svc-row:hover .svc-arrow{color:var(--cyan)}
+    .svc-num{font-family:'Share Tech Mono',monospace;font-size:0.75rem;color:var(--gray);letter-spacing:2px}
+    .svc-info h3{font-family:'Exo 2',sans-serif;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--white)}
+    .svc-info p{font-size:0.78rem;color:var(--gray);margin-top:0.3rem;line-height:1.6;font-weight:300}
+    .svc-arrow{color:var(--gray);font-size:1.2rem;transition:color 0.3s}
 
     /* WHY */
-    #why{background:var(--dark);padding:100px 6%}
-    #why h2{color:var(--white);margin-bottom:4rem}
-    #why h2 em{color:var(--steel)}
-    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+    #why{background:var(--bg);padding:100px 5%}
+    #why h2{margin-bottom:3rem}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
     @media(max-width:768px){.why-grid{grid-template-columns:1fr 1fr}}
-    .why-item{background:var(--dark);padding:3rem 2rem;border-bottom:2px solid transparent;transition:border-color 0.3s}
-    .why-item:hover{border-color:var(--blue)}
-    .why-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:700;color:var(--blue);line-height:1}
-    .why-title{font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:1rem}
-    .why-desc{font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:0.5rem;line-height:1.7;font-weight:300}
+    .why-card{background:var(--panel);padding:3rem 2rem;position:relative;overflow:hidden;transition:background 0.3s}
+    .why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background 0.3s}
+    .why-card:hover{background:rgba(0,212,255,0.03)}
+    .why-card:hover::before{background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+    .why-num{font-family:'Exo 2',sans-serif;font-size:3.5rem;font-weight:800;color:var(--cyan);line-height:1;text-shadow:0 0 20px rgba(0,212,255,0.3)}
+    .why-title{font-family:'Share Tech Mono',monospace;font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--lgray);margin-top:1rem}
+    .why-desc{font-size:0.78rem;color:var(--gray);margin-top:0.5rem;line-height:1.7;font-weight:300}
 
     /* REVIEWS */
-    #reviews{background:var(--light);padding:100px 6%}
-    .reviews-intro{display:grid;grid-template-columns:auto 1fr;gap:4rem;align-items:end;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid var(--lgray)}
-    @media(max-width:768px){.reviews-intro{grid-template-columns:1fr;gap:2rem}}
-    .reviews-big{font-family:'Cormorant Garamond',serif;font-size:9rem;font-weight:400;color:var(--blue);line-height:1}
-    .reviews-text h3{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;font-style:italic;color:var(--dark);line-height:1.2}
-    .reviews-text p{font-size:0.82rem;color:var(--gray);margin-top:1rem;line-height:1.8;font-weight:300;max-width:480px}
-    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    #reviews{background:var(--bg2);padding:100px 5%}
+    .reviews-top{display:flex;align-items:center;gap:3rem;margin-bottom:4rem;padding-bottom:3rem;border-bottom:1px solid var(--border);flex-wrap:wrap}
+    .reviews-score{font-family:'Exo 2',sans-serif;font-size:7rem;font-weight:800;color:var(--cyan);line-height:1;text-shadow:0 0 40px rgba(0,212,255,0.4)}
+    .reviews-meta h3{font-family:'Exo 2',sans-serif;font-size:1.5rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--white)}
+    .reviews-meta p{font-size:0.8rem;color:var(--lgray);margin-top:0.75rem;line-height:1.7;font-weight:300;max-width:450px}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
     @media(max-width:768px){.reviews-grid{grid-template-columns:1fr}}
-    .review-card{background:var(--white);padding:2.5rem;border-top:2px solid transparent;transition:border-color 0.3s}
-    .review-card:hover{border-color:var(--blue)}
-    .review-stars{color:var(--blue);letter-spacing:2px;font-size:0.8rem;margin-bottom:1rem}
-    .review-text{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;line-height:1.7;color:var(--navy)}
-    .reviewer{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--lgray)}
-    .reviewer-name{font-size:0.75rem;font-weight:600;letter-spacing:1px;color:var(--dark)}
-    .reviewer-loc{font-size:0.62rem;letter-spacing:1px;color:var(--lgray);margin-top:0.2rem}
+    .review-card{background:var(--panel);padding:2.5rem;border-top:2px solid transparent;transition:border-color 0.3s}
+    .review-card:hover{border-color:var(--cyan)}
+    .review-stars{color:var(--cyan);letter-spacing:3px;font-size:0.85rem;margin-bottom:1.25rem;text-shadow:0 0 10px rgba(0,212,255,0.5)}
+    .review-text{font-size:0.85rem;line-height:1.8;color:var(--lgray);font-weight:300}
+    .reviewer{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .reviewer-name{font-family:'Exo 2',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--white)}
+    .reviewer-loc{font-family:'Share Tech Mono',monospace;font-size:0.62rem;letter-spacing:1px;color:var(--gray);margin-top:0.2rem}
 
     /* CONTACT */
-    #contact{background:var(--white);padding:100px 6%}
-    .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:start}
+    #contact{background:var(--bg);padding:100px 5%}
+    .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
     @media(max-width:768px){.contact-inner{grid-template-columns:1fr;gap:4rem}}
-    .contact-info p{font-size:0.88rem;line-height:1.9;color:var(--gray);margin-top:1.5rem;font-weight:300;max-width:380px}
-    .contact-details{margin-top:3rem;display:flex;flex-direction:column}
-    .contact-row{padding:1.25rem 0;border-bottom:1px solid var(--lgray);display:grid;grid-template-columns:90px 1fr}
-    .c-label{font-size:0.58rem;letter-spacing:3px;text-transform:uppercase;color:var(--lgray);padding-top:0.15rem}
-    .c-val{font-size:0.85rem;color:var(--dark);line-height:1.6;font-weight:400}
-    .contact-form{display:flex;flex-direction:column}
-    .contact-form input,.contact-form select,.contact-form textarea{background:transparent;border:none;border-bottom:1px solid var(--lgray);padding:1.25rem 0;color:var(--dark);font-family:'Jost',sans-serif;font-size:0.85rem;width:100%;transition:border-color 0.3s;outline:none;font-weight:300}
-    .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--lgray)}
-    .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--blue)}
-    .contact-form select{color:var(--lgray);cursor:pointer}
-    .contact-form select option{color:var(--dark)}
-    .contact-form textarea{resize:none;min-height:120px;margin-top:0.5rem}
-    .form-submit{margin-top:2.5rem;background:var(--blue);color:var(--white);border:none;padding:1.1rem 2.5rem;font-family:'Jost',sans-serif;font-weight:500;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background 0.3s;align-self:flex-start}
-    .form-submit:hover{background:var(--blue2)}
+    .contact-info p{font-size:0.88rem;line-height:1.9;color:var(--lgray);margin-top:1.5rem;font-weight:300}
+    .contact-details{margin-top:3rem;display:flex;flex-direction:column;gap:0;border:1px solid var(--border)}
+    .contact-row{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:80px 1fr}
+    .contact-row:last-child{border-bottom:none}
+    .c-label{font-family:'Share Tech Mono',monospace;font-size:0.58rem;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
+    .c-val{font-size:0.82rem;color:var(--white);line-height:1.6}
+    .contact-form{display:flex;flex-direction:column;gap:0;border:1px solid var(--border)}
+    .contact-form input,.contact-form select,.contact-form textarea{background:transparent;border:none;border-bottom:1px solid var(--border);padding:1.25rem 1.5rem;color:var(--white);font-family:'Exo 2',sans-serif;font-size:0.85rem;width:100%;transition:border-color 0.3s;outline:none;font-weight:300}
+    .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--gray)}
+    .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--cyan);background:rgba(0,212,255,0.02)}
+    .contact-form select{color:var(--gray);cursor:pointer}
+    .contact-form select option{background:var(--panel);color:var(--white)}
+    .contact-form textarea{resize:none;min-height:120px;border-bottom:none}
+    .form-submit{margin:0;background:var(--cyan);color:var(--bg);border:none;padding:1.25rem;font-family:'Exo 2',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;box-shadow:0 0 20px rgba(0,212,255,0.3)}
+    .form-submit:hover{box-shadow:0 0 40px rgba(0,212,255,0.6)}
 
     /* FOOTER */
-    footer{background:var(--dark);padding:2.5rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;letter-spacing:2px;color:var(--white);text-transform:uppercase}
-    .footer-logo em{font-style:italic;color:var(--steel)}
-    footer p{font-size:0.65rem;letter-spacing:1px;color:rgba(255,255,255,0.25)}
+    footer{background:var(--panel);padding:2.5rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid var(--border)}
+    .footer-logo{font-family:'Exo 2',sans-serif;font-size:1.2rem;font-weight:800;letter-spacing:4px;color:var(--white);text-transform:uppercase}
+    .footer-logo span{color:var(--cyan);text-shadow:0 0 15px rgba(0,212,255,0.6)}
+    footer p{font-family:'Share Tech Mono',monospace;font-size:0.62rem;letter-spacing:1px;color:var(--gray)}
 
     @media(max-width:600px){.nav-phone{display:none}}
   </style>
@@ -143,7 +147,7 @@
 <body>
 
 <nav>
-  <div class="nav-logo">Apex <em>Electric</em></div>
+  <div class="nav-logo">Apex <span>Electric</span></div>
   <div class="nav-right">
     <a href="tel:+16025550193" class="nav-phone">(602) 555-0193</a>
     <a href="#contact" class="nav-cta">Free Estimate</a>
@@ -151,79 +155,79 @@
 </nav>
 
 <section id="hero">
-  <div class="hero-bg-circle"></div>
-  <div class="hero-bg-lines"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Phoenix, Arizona · Licensed Electrician</div>
-    <h1>Power Done <em>Right. First Time.</em></h1>
-    <div class="hero-divider"></div>
-    <p class="hero-sub">Licensed & insured electrical services for homeowners across Phoenix, Scottsdale and Tempe. Panel upgrades, full rewiring, EV chargers and 24/7 emergency response.</p>
+    <div class="hero-tag">Phoenix, AZ · Licensed Electrician · Est. 2010</div>
+    <h1>Power<span class="cyan">Done Right.</span><span class="outline">First Time.</span></h1>
+    <p class="hero-sub">Licensed & insured electrical contractor serving Phoenix, Scottsdale and Tempe. Panel upgrades, full rewiring, EV charger installation and 24/7 emergency response — since 2010.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Get Free Estimate</a>
-      <a href="tel:+16025550193" class="btn-call">☎ (602) 555-0193</a>
+      <a href="tel:+16025550193" class="btn-ghost">☎ (602) 555-0193</a>
     </div>
     <div class="hero-stats">
-      <div class="stat-item"><div class="stat-num">14+</div><div class="stat-label">Years in Phoenix</div></div>
-      <div class="stat-item"><div class="stat-num">1,200+</div><div class="stat-label">Jobs Completed</div></div>
-      <div class="stat-item"><div class="stat-num">5.0★</div><div class="stat-label">Google Rating</div></div>
-      <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Emergency Line</div></div>
+      <div class="stat-box"><div class="stat-num">14+</div><div class="stat-label">Years Active</div></div>
+      <div class="stat-box"><div class="stat-num">1,200+</div><div class="stat-label">Jobs Done</div></div>
+      <div class="stat-box"><div class="stat-num">5.0★</div><div class="stat-label">Google Score</div></div>
+      <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Emergency</div></div>
     </div>
   </div>
 </section>
 
 <div id="trust">
-  <div class="trust-item"><div class="trust-dot"></div> AZ Licensed & Insured</div>
-  <div class="trust-item"><div class="trust-dot"></div> Free Estimates</div>
-  <div class="trust-item"><div class="trust-dot"></div> Same-Day Service</div>
-  <div class="trust-item"><div class="trust-dot"></div> Satisfaction Guaranteed</div>
-  <div class="trust-item"><div class="trust-dot"></div> 24/7 Emergency</div>
+  <div class="trust-item"><span>⚡</span> AZ Licensed & Insured</div>
+  <div class="trust-item"><span>⚡</span> Free Estimates</div>
+  <div class="trust-item"><span>⚡</span> Same-Day Service</div>
+  <div class="trust-item"><span>⚡</span> Satisfaction Guaranteed</div>
+  <div class="trust-item"><span>⚡</span> 24/7 Emergency Line</div>
 </div>
 
 <section id="services">
-  <div class="section-header">
-    <h2>Our <em>Services</em></h2>
-    <div class="section-sub">06 Specialties</div>
+  <div class="section-top">
+    <h2>Our <span>Services</span></h2>
+    <div class="section-code">// 06_SERVICES_AVAILABLE</div>
   </div>
-  <div class="services-grid">
-    <div class="service-card"><div class="service-num">01</div><h3>Panel Upgrades Phoenix AZ</h3><p>Outdated breaker box? We upgrade panels to 200A safely and up to code — fast turnaround, no surprises.</p><div class="service-tag">Learn more →</div></div>
-    <div class="service-card"><div class="service-num">02</div><h3>Home Rewiring Phoenix AZ</h3><p>Full & partial rewiring for older Phoenix homes. Aluminum to copper conversions. Code compliant and inspected.</p><div class="service-tag">Learn more →</div></div>
-    <div class="service-card"><div class="service-num">03</div><h3>EV Charger Install Phoenix AZ</h3><p>Level 2 home charger installation for all major EV brands. Most installs completed in under 4 hours.</p><div class="service-tag">Learn more →</div></div>
-    <div class="service-card"><div class="service-num">04</div><h3>Lighting & Outlets Phoenix AZ</h3><p>Recessed lighting, ceiling fans, GFCI outlets, dimmer switches. Interior and exterior work available.</p><div class="service-tag">Learn more →</div></div>
-    <div class="service-card"><div class="service-num">05</div><h3>Emergency Electrician Phoenix AZ</h3><p>Sparks, outages, tripped breakers — available 24/7. Real people answer the phone every time.</p><div class="service-tag">Learn more →</div></div>
-    <div class="service-card"><div class="service-num">06</div><h3>Electrical Safety Inspection Phoenix</h3><p>Buying or selling a home? We provide thorough electrical inspections with detailed written reports.</p><div class="service-tag">Learn more →</div></div>
+  <div class="services-list">
+    <div class="svc-row"><div class="svc-num">_01</div><div class="svc-info"><h3>Panel Upgrades Phoenix AZ</h3><p>200A upgrades, breaker replacements, full code compliance. Most jobs completed same day.</p></div><div class="svc-arrow">→</div></div>
+    <div class="svc-row"><div class="svc-num">_02</div><div class="svc-info"><h3>Home Rewiring Phoenix AZ</h3><p>Full & partial rewiring, aluminum to copper conversions. All work permitted and inspected.</p></div><div class="svc-arrow">→</div></div>
+    <div class="svc-row"><div class="svc-num">_03</div><div class="svc-info"><h3>EV Charger Install Phoenix AZ</h3><p>Level 2 chargers for all major EV brands. Most installs completed in under 4 hours.</p></div><div class="svc-arrow">→</div></div>
+    <div class="svc-row"><div class="svc-num">_04</div><div class="svc-info"><h3>Lighting & Outlets Phoenix AZ</h3><p>Recessed lighting, ceiling fans, GFCI outlets, dimmers. Interior and exterior available.</p></div><div class="svc-arrow">→</div></div>
+    <div class="svc-row"><div class="svc-num">_05</div><div class="svc-info"><h3>Emergency Electrician Phoenix AZ</h3><p>Sparks, outages, tripped breakers — 24/7 response. Real people answer every call.</p></div><div class="svc-arrow">→</div></div>
+    <div class="svc-row"><div class="svc-num">_06</div><div class="svc-info"><h3>Electrical Safety Inspection Phoenix</h3><p>Thorough home inspections with detailed written reports. Ideal for buyers and sellers.</p></div><div class="svc-arrow">→</div></div>
   </div>
 </section>
 
 <section id="why">
-  <h2>Why Choose <em>Apex Electric</em></h2>
+  <h2>Why Choose <span>Apex Electric</span></h2>
   <div class="why-grid">
-    <div class="why-item"><div class="why-num">14+</div><div class="why-title">Years Experience</div><div class="why-desc">Serving Phoenix since 2010. Local codes, local knowledge, local trust.</div></div>
-    <div class="why-item"><div class="why-num">$0</div><div class="why-title">Free Estimates</div><div class="why-desc">No trip charge, no pressure. Honest quote before any work starts.</div></div>
-    <div class="why-item"><div class="why-num">24/7</div><div class="why-title">Emergency Line</div><div class="why-desc">Electrical emergencies don't wait. Neither do we — real people answer.</div></div>
-    <div class="why-item"><div class="why-num">100%</div><div class="why-title">Licensed & Insured</div><div class="why-desc">AZ ROC licensed. Every job permitted and inspected properly.</div></div>
+    <div class="why-card"><div class="why-num">14+</div><div class="why-title">Years_Experience</div><div class="why-desc">Serving Phoenix since 2010. Local codes, local knowledge, trusted results.</div></div>
+    <div class="why-card"><div class="why-num">$0</div><div class="why-title">Free_Estimates</div><div class="why-desc">No trip charge, no pressure. Honest quote before any work begins.</div></div>
+    <div class="why-card"><div class="why-num">24/7</div><div class="why-title">Emergency_Line</div><div class="why-desc">Electrical emergencies don't wait. Neither do we — real people answer.</div></div>
+    <div class="why-card"><div class="why-num">100%</div><div class="why-title">Licensed_&_Insured</div><div class="why-desc">AZ ROC licensed. Every job permitted and properly inspected.</div></div>
   </div>
 </section>
 
 <section id="reviews">
-  <div class="reviews-intro">
-    <div class="reviews-big">5.0</div>
-    <div class="reviews-text">
-      <h3>What Phoenix Homeowners Say About Us</h3>
-      <p>Over 1,200 jobs completed across Phoenix, Scottsdale and Tempe. Every project, our goal is the same — honest work, fair price, zero surprises. That's why 94 customers gave us a perfect 5-star rating.</p>
+  <div class="reviews-top">
+    <div class="reviews-score">5.0</div>
+    <div class="reviews-meta">
+      <h3>94 Five-Star Reviews</h3>
+      <p>Over 1,200 completed jobs across Greater Phoenix. Homeowners trust us because we show up on time, quote honestly and never cut corners. That's how we've maintained a perfect 5.0 score.</p>
     </div>
   </div>
   <div class="reviews-grid">
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Marcus upgraded our entire panel and added 4 new circuits. Done in one day, passed inspection first try. Price was exactly what he quoted."</p><div class="reviewer"><div class="reviewer-name">Jason T.</div><div class="reviewer-loc">Chandler, AZ · Google Review</div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Called at 9 PM with half the house out. Marcus was here by 10:30, fixed a faulty breaker and was gone by midnight. Absolute lifesaver."</p><div class="reviewer"><div class="reviewer-name">Sandra R.</div><div class="reviewer-loc">Scottsdale, AZ · Google Review</div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Tesla charger install last week. On time, clean, professional. Walked me through everything. Already recommended him to three neighbors."</p><div class="reviewer"><div class="reviewer-name">David K.</div><div class="reviewer-loc">Tempe, AZ · Google Review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Marcus upgraded our entire panel and added 4 new circuits. Done in one day, passed inspection first try. Price was exactly what he quoted."</p><div class="reviewer"><div class="reviewer-name">Jason T.</div><div class="reviewer-loc">Chandler_AZ // Google_Review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Called at 9 PM with half the house out. Marcus was here by 10:30, fixed a faulty breaker and was gone by midnight. Absolute lifesaver."</p><div class="reviewer"><div class="reviewer-name">Sandra R.</div><div class="reviewer-loc">Scottsdale_AZ // Google_Review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Tesla charger install last week. On time, clean, professional. Walked me through everything. Already recommended him to three neighbors."</p><div class="reviewer"><div class="reviewer-name">David K.</div><div class="reviewer-loc">Tempe_AZ // Google_Review</div></div></div>
   </div>
 </section>
 
 <section id="contact">
   <div class="contact-inner">
     <div class="contact-info">
-      <h2>Let's Get <em>Started</em></h2>
-      <p>Call us or fill out the form for a free, no-obligation estimate. We typically respond within 1 hour during business hours — and 24/7 for emergencies.</p>
+      <h2>Initialize <span>Contact</span></h2>
+      <p>Send us a request or call directly. We respond within 1 hour during business hours — and immediately for emergencies. Free estimate, zero obligation.</p>
       <div class="contact-details">
         <div class="contact-row"><div class="c-label">Phone</div><div class="c-val">(602) 555-0193</div></div>
         <div class="contact-row"><div class="c-label">Email</div><div class="c-val">info@apexelectricphx.com</div></div>
@@ -236,25 +240,25 @@
       <input type="text" placeholder="Your name" required />
       <input type="tel" placeholder="Phone number" required />
       <input type="email" placeholder="Email address" />
-      <select><option value="" disabled selected>Select service needed</option><option>Panel Upgrade</option><option>Home Rewiring</option><option>EV Charger Installation</option><option>Lighting & Outlets</option><option>Emergency Repair</option><option>Safety Inspection</option><option>Other</option></select>
-      <textarea placeholder="Briefly describe what you need..."></textarea>
-      <button type="submit" class="form-submit">Send Free Estimate Request</button>
+      <select><option value="" disabled selected>// Select service needed</option><option>Panel Upgrade</option><option>Home Rewiring</option><option>EV Charger Installation</option><option>Lighting & Outlets</option><option>Emergency Repair</option><option>Safety Inspection</option><option>Other</option></select>
+      <textarea placeholder="// Describe what you need..."></textarea>
+      <button type="submit" class="form-submit">⚡ Send Estimate Request</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="footer-logo">Apex <em>Electric</em></div>
+  <div class="footer-logo">Apex <span>Electric</span></div>
   <p>© 2024 Apex Electric LLC · Phoenix, AZ</p>
-  <p>AZ ROC License #CR-11 · 123456</p>
+  <p>AZ_ROC #CR-11 · 123456</p>
 </footer>
 
 <script>
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.form-submit');
-  btn.textContent = '✔ Request Sent!';
-  btn.style.background = '#16a34a';
+  btn.textContent = '✔ Request Transmitted Successfully';
+  btn.style.background = '#00d4ff';
   btn.disabled = true;
 }
 </script>
