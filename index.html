@@ -82,7 +82,7 @@
       font-size: 1.2rem; font-weight: 600; color: var(--white);
       max-width: 480px; line-height: 1.6;
     }
-    .hero-actions { margin-top: 3.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-actions { margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
     .btn-gold {
       background: var(--gold); color: var(--black);
       padding: 1.1rem 2.75rem;
@@ -99,6 +99,12 @@
       transition: border-color 0.2s, color 0.2s;
     }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    @media (max-width: 900px) { .hero-split { grid-template-columns: 1fr; gap: 3rem; } }
+    .hero-left { display: flex; flex-direction: column; }
+    .hero-right { border-left: 1px solid rgba(232,160,32,0.2); padding-left: 4rem; }
+    @media (max-width: 900px) { .hero-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(232,160,32,0.2); padding-top: 2.5rem; } }
+    .hero-right-box { border: 1px solid rgba(232,160,32,0.25); padding: 2.5rem; background: rgba(232,160,32,0.03); }
     .hero-note { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); }
     .hero-note span { color: var(--gold); font-weight: 600; }
 
@@ -385,26 +391,34 @@
 <section id="hero">
   <div class="hero-glow"></div>
   <div class="hero-eyebrow">Websites for Home Service Professionals</div>
-  <div class="hero-h1">
-    Websites That<br>
-    Bring You<br>
-    <span class="gold">More Calls.</span>
+  <div class="hero-split">
+    <div class="hero-left">
+      <div class="hero-h1">
+        Websites That<br>
+        Bring You<br>
+        <span class="gold">More Calls.</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#cta-bottom" class="btn-gold">Get Your Website — $550</a>
+        <a href="#portfolio" class="btn-outline">See Examples ↓</a>
+      </div>
+      <p class="hero-note">One-time payment · No monthly fees · <span>We work with businesses across the US</span></p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-right-box">
+        <p class="hero-sub">
+          We build simple, high-converting websites for
+          <strong>electricians, plumbers, painters, carpenters,
+          HVAC contractors, roofers, remodelers, handymen,</strong>
+          and other home service professionals.
+        </p>
+        <p class="hero-tagline">
+          We specialize in websites that turn visitors into calls.<br>
+          No complicated stuff. Just more customers.
+        </p>
+      </div>
+    </div>
   </div>
-  <p class="hero-sub">
-    We build simple, high-converting websites for
-    <strong>electricians, plumbers, painters, carpenters,
-    HVAC contractors, roofers, remodelers, handymen,</strong>
-    and other home service professionals.
-  </p>
-  <p class="hero-tagline">
-    We specialize in websites that turn visitors into calls.<br>
-    No complicated stuff. Just more customers.
-  </p>
-  <div class="hero-actions">
-    <a href="#cta-bottom" class="btn-gold">Get Your Website — $550</a>
-    <a href="#portfolio" class="btn-outline">See Examples ↓</a>
-  </div>
-  <p class="hero-note">One-time payment · No monthly fees · <span>We work with businesses across the US</span></p>
 </section>
 
 <!-- TRADES -->
@@ -753,31 +767,31 @@
   </div>
   <div class="faq-list">
     <div class="faq-item">
-      <div class="faq-q">Do I need to know anything about websites or technology?<span class="faq-icon">+</span></div>
+      <div class="faq-q" onclick="toggleFaq(this)">Do I need to know anything about websites or technology?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>Not at all. You know your trade — we handle everything else. All we need from you is a 15-minute phone call. We take care of the design, the setup, and getting you live. Zero technical knowledge required.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">How long does it take to get my website live?<span class="faq-icon">+</span></div>
+      <div class="faq-q" onclick="toggleFaq(this)">How long does it take to get my website live?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>We deliver your site for review within 48–72 hours. After you approve it (or request any changes), we go live within 24 hours. Most clients are live within 5 business days from the first call.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">Are there any monthly fees after I pay the one-time fee?<span class="faq-icon">+</span></div>
+      <div class="faq-q" onclick="toggleFaq(this)">Are there any monthly fees after I pay the one-time fee?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>No monthly fees from us — ever. The only ongoing cost is your domain name, which runs about $10–15 per year, paid directly to the domain provider. Hosting is free. No surprises.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">How quickly will I start getting calls from my website?<span class="faq-icon">+</span></div>
+      <div class="faq-q" onclick="toggleFaq(this)">How quickly will I start getting calls from my website?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>It varies, but most clients start seeing organic traffic within 4–8 weeks. If you pair your site with a Google Business Profile (which we help you set up), results often come even faster. Some clients get their first call within the first week.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">What information do you need from me to get started?<span class="faq-icon">+</span></div>
+      <div class="faq-q" onclick="toggleFaq(this)">What information do you need from me to get started?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>Just your business name, phone number, service area, and a list of your services. If you have photos of your work, even better — but not required. We can start with just the basics and build from there.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">What if I'm not happy with the website?<span class="faq-icon">+</span></div>
+      <div class="faq-q" onclick="toggleFaq(this)">What if I'm not happy with the website?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>We offer unlimited revisions until you're 100% satisfied. We send you a preview before going live, and you can request as many changes as you need. We don't consider the job done until you love it.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">Do you work with all types of tradesmen?<span class="faq-icon">+</span></div>
+      <div class="faq-q" onclick="toggleFaq(this)">Do you work with all types of tradesmen?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>Yes — plumbers, electricians, painters, handymen, roofers, HVAC technicians, landscapers, carpenters, remodelers and more. If you work with your hands and want more customers, we've got you covered. We work with businesses across all 50 states.</p></div>
     </div>
   </div>
@@ -790,7 +804,7 @@
   <p class="cta-sub">Call us today or send a message. We'll tell you exactly what you need — no pressure, no upsells. Just a straight answer and a great website.</p>
   <div class="cta-actions">
     <a href="tel:+17205550138" class="btn-gold">☎ Call (720) 555-0138</a>
-    <a href="mailto:onepagesuccess@gmail.com" class="btn-outline">Send a Message</a>
+    <a href="/cdn-cgi/l/email-protection#3956575c49585e5c4a4c5a5a5c4a4a795e54585055175a5654" class="btn-outline">Send a Message</a>
   </div>
   <p class="cta-note">We work with businesses across the US · <span>One-time $550 · No monthly fees</span></p>
 </section>
@@ -818,21 +832,21 @@
 </footer>
 
 <script>
-  // FAQ accordion
-  document.querySelectorAll('.faq-item').forEach(function(item) {
-    item.querySelector('.faq-q').addEventListener('click', function() {
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-      if (!isOpen) item.classList.add('open');
-    });
-  });
+  function toggleFaq(el) {
+    var item = el.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  }
 
-  // PayPal
   function payWithPayPal() {
     var amount = document.getElementById('paypal-amount').value;
     if (!amount || amount <= 0) { alert('Please enter a valid amount.'); return; }
-    var url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=onepagesuccess@gmail.com&amount=' + amount + '&currency_code=USD&item_name=' + encodeURIComponent('One Page Only - Website Design') + '&no_note=1&no_shipping=1';
-    window.open(url, '_blank');
+    var base = 'https://www.paypal.com/cgi-bin/webscr';
+    var params = '?cmd=_xclick&business=onepagesuccess@gmail.com&currency_code=USD&no_note=1&no_shipping=1';
+    params += '&amount=' + amount;
+    params += '&item_name=' + encodeURIComponent('One Page Only - Website Design');
+    window.open(base + params, '_blank');
   }
 </script>
 </body>
