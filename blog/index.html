@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | One Page Only — Web Design Tips for Tradesmen</title>
+  <meta name="description" content="Practical advice for electricians, plumbers, painters and home service professionals on getting more customers online. Website tips, local SEO, and more." />
+  <link rel="canonical" href="https://www.1pageonly.com/blog" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Blog | One Page Only — Web Design Tips for Tradesmen" />
+  <meta property="og:description" content="Practical advice for electricians, plumbers, painters and home service professionals on getting more customers online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.1pageonly.com/blog" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "One Page Only Blog",
+    "url": "https://www.1pageonly.com/blog",
+    "description": "Web design and local SEO tips for home service professionals across the US.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "One Page Only",
+      "url": "https://www.1pageonly.com"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dark: #131920;
+      --dark2: #181f28;
+      --black: #0d0d0d;
+      --white: #ffffff;
+      --gold: #e8a020;
+      --gold2: #f5b432;
+      --muted: #7a8fa8;
+      --border: rgba(255,255,255,0.07);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(19,25,32,0.97); backdrop-filter: blur(20px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6%; height: 68px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-link { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-link:hover { color: var(--gold); }
+    .nav-link.active { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--black); padding: 0.6rem 1.5rem; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold2); }
+
+    /* HERO */
+    #blog-hero {
+      padding: 140px 6% 80px;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .hero-glow { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(232,160,32,0.06) 0%, transparent 70%); pointer-events: none; }
+    .blog-eyebrow { font-size: 0.72rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; font-weight: 600; display: flex; align-items: center; gap: 1rem; }
+    .blog-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+    .blog-hero-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 7vw, 7rem); line-height: 0.92; letter-spacing: 2px; color: var(--white); }
+    .blog-hero-h1 span { color: var(--gold); }
+    .blog-hero-sub { margin-top: 1.5rem; font-size: 1rem; line-height: 1.85; color: var(--muted); max-width: 560px; font-weight: 300; }
+
+    /* BLOG GRID */
+    #blog-posts { padding: 80px 6%; background: var(--dark2); }
+    .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    @media (max-width: 900px) { .posts-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .posts-grid { grid-template-columns: 1fr; } }
+
+    .post-card {
+      background: var(--dark); border: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      transition: border-color 0.25s, transform 0.25s;
+      cursor: pointer;
+    }
+    .post-card:hover { border-color: rgba(232,160,32,0.35); transform: translateY(-4px); }
+    .post-card.featured { grid-column: span 2; }
+    @media (max-width: 900px) { .post-card.featured { grid-column: span 1; } }
+
+    .post-thumb {
+      width: 100%; aspect-ratio: 16/9;
+      background: var(--dark2); overflow: hidden;
+      position: relative;
+    }
+    .post-thumb-inner {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; position: relative;
+    }
+    .post-thumb-bg { position: absolute; inset: 0; }
+    .post-thumb-emoji { position: relative; z-index: 1; }
+    .post-category {
+      position: absolute; top: 1rem; left: 1rem;
+      background: var(--gold); color: var(--black);
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      padding: 0.25rem 0.75rem; z-index: 2;
+    }
+    .post-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+    .post-meta { font-size: 0.72rem; color: var(--muted); letter-spacing: 1px; margin-bottom: 0.9rem; }
+    .post-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; line-height: 1.05; letter-spacing: 1px; color: var(--white); }
+    .post-card.featured .post-title { font-size: 2.2rem; }
+    .post-excerpt { margin-top: 0.9rem; font-size: 0.85rem; line-height: 1.8; color: var(--muted); font-weight: 300; flex: 1; }
+    .post-read { margin-top: 1.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 0.5rem; }
+    .post-read::after { content: '→'; transition: transform 0.2s; }
+    .post-card:hover .post-read::after { transform: translateX(4px); }
+
+    /* ARTICLE OVERLAY */
+    .article-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: var(--dark);
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .article-overlay.open { transform: translateX(0); }
+    .article-nav {
+      position: sticky; top: 0; background: rgba(19,25,32,0.97);
+      backdrop-filter: blur(20px); padding: 1rem 6%;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border); z-index: 10;
+    }
+    .article-back {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.82rem; font-weight: 600; color: var(--gold);
+      cursor: pointer; background: none; border: none;
+      font-family: 'Manrope', sans-serif; letter-spacing: 1px; text-transform: uppercase;
+      transition: gap 0.2s;
+    }
+    .article-back:hover { gap: 1rem; }
+    .article-cta-small { background: var(--gold); color: var(--black); padding: 0.5rem 1.25rem; font-weight: 700; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+    .article-content { max-width: 760px; margin: 0 auto; padding: 4rem 6% 8rem; }
+    .article-eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; font-weight: 600; }
+    .article-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; letter-spacing: 2px; color: var(--white); }
+    .article-meta { margin-top: 1.5rem; font-size: 0.78rem; color: var(--muted); padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .article-body { margin-top: 3rem; }
+    .article-body p { font-size: 1rem; line-height: 1.95; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; font-weight: 300; }
+    .article-body p strong { color: var(--white); font-weight: 600; }
+    .article-body h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 1px; color: var(--white); margin: 3rem 0 1rem; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--gold); margin: 2rem 0 0.75rem; }
+    .article-body ul { margin: 1rem 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .article-body ul li { font-size: 0.95rem; line-height: 1.75; color: rgba(255,255,255,0.7); padding-left: 1.5rem; position: relative; font-weight: 300; }
+    .article-body ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .article-body blockquote { border-left: 3px solid var(--gold); padding: 1.25rem 2rem; margin: 2rem 0; background: rgba(232,160,32,0.05); }
+    .article-body blockquote p { color: var(--white); font-style: italic; font-size: 1.05rem; margin: 0; }
+    .article-cta-box { margin-top: 4rem; padding: 3rem; background: rgba(232,160,32,0.06); border: 1px solid rgba(232,160,32,0.2); text-align: center; }
+    .article-cta-box h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 1px; color: var(--white); margin-bottom: 0.75rem; }
+    .article-cta-box p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.75rem; font-weight: 300; }
+    .article-cta-box a { background: var(--gold); color: var(--black); padding: 1rem 2.5rem; font-weight: 700; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .article-cta-box a:hover { background: var(--gold2); }
+
+    /* CTA STRIP */
+    #blog-cta {
+      background: var(--dark); padding: 80px 6%; text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .blog-cta-h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 0.95; letter-spacing: 2px; color: var(--white); }
+    .blog-cta-h2 span { color: var(--gold); }
+    .blog-cta-sub { margin-top: 1.25rem; font-size: 1rem; color: var(--muted); max-width: 460px; margin-inline: auto; line-height: 1.8; font-weight: 300; }
+    .blog-cta-btn { display: inline-block; margin-top: 2.5rem; background: var(--gold); color: var(--black); padding: 1.1rem 2.75rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; box-shadow: 0 4px 28px rgba(232,160,32,0.3); }
+    .blog-cta-btn:hover { background: var(--gold2); }
+
+    /* FOOTER */
+    footer { background: var(--black); padding: 2.5rem 6%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border); }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+    .footer-logo span { color: var(--gold); }
+    footer p { font-size: 0.78rem; color: var(--muted); }
+    .footer-phone { font-size: 0.85rem; color: var(--gold); text-decoration: none; font-weight: 600; }
+
+    @media (max-width: 600px) { .nav-link { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">One<span>Page</span>Only</a>
+  <div class="nav-right">
+    <a href="/blog" class="nav-link active">Blog</a>
+    <a href="tel:+17205550138" class="nav-link">☎ (720) 555-0138</a>
+    <a href="/#cta-bottom" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<section id="blog-hero">
+  <div class="hero-glow"></div>
+  <div class="blog-eyebrow">Tips & Advice for Tradesmen</div>
+  <div class="blog-hero-h1">More Customers<br><span>Start Here.</span></div>
+  <p class="blog-hero-sub">Practical advice for electricians, plumbers, painters and home service professionals who want to get found online and get their phones ringing.</p>
+</section>
+
+<section id="blog-posts">
+  <div class="posts-grid">
+
+    <!-- POST 1 - Featured -->
+    <div class="post-card featured" onclick="openArticle('article1')">
+      <div class="post-thumb">
+        <div class="post-thumb-inner">
+          <div class="post-thumb-bg" style="background: linear-gradient(135deg, #0b1e35, #1565c0);"></div>
+          <span class="post-thumb-emoji">🔧</span>
+        </div>
+        <div class="post-category">Must Read</div>
+      </div>
+      <div class="post-body">
+        <div class="post-meta">April 2024 · 6 min read</div>
+        <div class="post-title">Why Every Plumber, Electrician and Painter Needs a Website in 2024</div>
+        <p class="post-excerpt">Most tradesmen still rely on word of mouth. That worked 10 years ago. Today, 70% of customers check a business online before calling — even if they were referred by a friend. Here's what you're losing every week without a website.</p>
+        <span class="post-read">Read Article</span>
+      </div>
+    </div>
+
+    <!-- POST 2 -->
+    <div class="post-card" onclick="openArticle('article2')">
+      <div class="post-thumb">
+        <div class="post-thumb-inner">
+          <div class="post-thumb-bg" style="background: linear-gradient(135deg, #0a1628, #1a3050);"></div>
+          <span class="post-thumb-emoji">📍</span>
+        </div>
+        <div class="post-category">Local SEO</div>
+      </div>
+      <div class="post-body">
+        <div class="post-meta">March 2024 · 5 min read</div>
+        <div class="post-title">How to Show Up on Google When Someone Searches "Plumber Near Me"</div>
+        <p class="post-excerpt">Local SEO explained simply. No jargon. Just practical steps any tradesman can take to rank higher in their city.</p>
+        <span class="post-read">Read Article</span>
+      </div>
+    </div>
+
+    <!-- POST 3 -->
+    <div class="post-card" onclick="openArticle('article3')">
+      <div class="post-thumb">
+        <div class="post-thumb-inner">
+          <div class="post-thumb-bg" style="background: linear-gradient(135deg, #1a0a00, #c4622d);"></div>
+          <span class="post-thumb-emoji">📞</span>
+        </div>
+        <div class="post-category">Conversions</div>
+      </div>
+      <div class="post-body">
+        <div class="post-meta">March 2024 · 4 min read</div>
+        <div class="post-title">5 Reasons Your Website Isn't Getting You Any Calls</div>
+        <p class="post-excerpt">Having a website isn't enough. Most trade business websites fail at the one job they're supposed to do — turn visitors into phone calls. Here's why, and how to fix it.</p>
+        <span class="post-read">Read Article</span>
+      </div>
+    </div>
+
+    <!-- POST 4 -->
+    <div class="post-card" onclick="openArticle('article4')">
+      <div class="post-thumb">
+        <div class="post-thumb-inner">
+          <div class="post-thumb-bg" style="background: linear-gradient(135deg, #050a14, #00d4ff22);"></div>
+          <span class="post-thumb-emoji">⭐</span>
+        </div>
+        <div class="post-category">Reputation</div>
+      </div>
+      <div class="post-body">
+        <div class="post-meta">February 2024 · 4 min read</div>
+        <div class="post-title">How Google Reviews Can Double Your Calls — And How to Get More of Them</div>
+        <p class="post-excerpt">Reviews are the #1 trust signal for local businesses. Customers read them before calling. Here's a simple system for getting more 5-star reviews without feeling awkward about asking.</p>
+        <span class="post-read">Read Article</span>
+      </div>
+    </div>
+
+    <!-- POST 5 -->
+    <div class="post-card" onclick="openArticle('article5')">
+      <div class="post-thumb">
+        <div class="post-thumb-inner">
+          <div class="post-thumb-bg" style="background: linear-gradient(135deg, #0f1c0a, #2e7d32);"></div>
+          <span class="post-thumb-emoji">💰</span>
+        </div>
+        <div class="post-category">Business</div>
+      </div>
+      <div class="post-body">
+        <div class="post-meta">February 2024 · 5 min read</div>
+        <div class="post-title">Stop Paying $50 Per Lead. Here's What Smart Tradesmen Do Instead</div>
+        <p class="post-excerpt">Angi, HomeAdvisor, Thumbtack — they charge you per lead and share it with 4 competitors. There's a smarter way to get customers that costs a fraction of the price.</p>
+        <span class="post-read">Read Article</span>
+      </div>
+    </div>
+
+    <!-- POST 6 -->
+    <div class="post-card" onclick="openArticle('article6')">
+      <div class="post-thumb">
+        <div class="post-thumb-inner">
+          <div class="post-thumb-bg" style="background: linear-gradient(135deg, #1a1a0a, #f5b432);"></div>
+          <span class="post-thumb-emoji">📱</span>
+        </div>
+        <div class="post-category">Mobile</div>
+      </div>
+      <div class="post-body">
+        <div class="post-meta">January 2024 · 3 min read</div>
+        <div class="post-title">Why 70% of Your Future Customers Will Find You on a Phone — Not a Computer</div>
+        <p class="post-excerpt">Mobile search has taken over. If your website doesn't look great on a phone, you're losing jobs every single day. Here's what a mobile-friendly site actually means for a trade business.</p>
+        <span class="post-read">Read Article</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="blog-cta">
+  <div class="blog-cta-h2">Ready to Get<br><span>More Calls?</span></div>
+  <p class="blog-cta-sub">We build simple, professional websites for tradesmen across the US. One-time $550. No monthly fees.</p>
+  <a href="/#cta-bottom" class="blog-cta-btn">Get Your Website — $550</a>
+</section>
+
+<footer>
+  <a href="/" class="footer-logo">One<span>Page</span>Only</a>
+  <p>© 2024 One Page Only · Serving contractors across the US</p>
+  <a href="tel:+17205550138" class="footer-phone">(720) 555-0138</a>
+</footer>
+
+<!-- ARTICLE OVERLAYS -->
+<div class="article-overlay" id="article1">
+  <div class="article-nav">
+    <button class="article-back" onclick="closeArticle('article1')">← Back to Blog</button>
+    <a href="/#cta-bottom" class="article-cta-small">Get Your Website</a>
+  </div>
+  <div class="article-content">
+    <div class="article-eyebrow">Must Read · April 2024 · 6 min read</div>
+    <div class="article-h1">Why Every Plumber, Electrician and Painter Needs a Website in 2024</div>
+    <div class="article-meta">By One Page Only · Web Design for Home Service Professionals</div>
+    <div class="article-body">
+      <p>If you've been in the trades for more than five years, you probably built your business the old-fashioned way — referrals, word of mouth, maybe a few flyers. And it worked. But something has changed, and it's changing fast.</p>
+      <p><strong>70% of customers now check a business online before calling — even when they were referred by a friend.</strong> That means if you don't have a website, or if your website looks outdated, you're losing jobs before you ever get a chance to speak to the customer.</p>
+      <h2>The Referral Problem</h2>
+      <p>Here's a scenario that happens every single day. A homeowner's pipe bursts. Their neighbor says "Call Mike, he's a great plumber." The homeowner pulls out their phone, searches for Mike's Plumbing — and finds nothing. Or worse, finds a website that looks like it was built in 2008.</p>
+      <p>What do they do? They scroll down and call the next plumber they find. One who has a professional website, good reviews, and a clear phone number. You just lost that job — and Mike never even knew it happened.</p>
+      <blockquote><p>"I thought referrals were enough. Then I found out my competitor with a website was getting 6-8 calls a week from Google alone. I was getting zero."</p></blockquote>
+      <h2>What Customers Are Actually Looking For</h2>
+      <p>When someone lands on your website, they're asking three questions in about 8 seconds:</p>
+      <ul>
+        <li>Do you serve my area?</li>
+        <li>Do you do the job I need?</li>
+        <li>Can I trust you?</li>
+      </ul>
+      <p>A good website answers all three instantly. A bad one — or no website at all — sends them straight to your competitor.</p>
+      <h2>The Numbers Don't Lie</h2>
+      <p>According to Google, <strong>76% of people who search for a local business on their phone visit that business within 24 hours.</strong> For service businesses like plumbers and electricians, that means calls. Fast.</p>
+      <p>The average plumber gets 3-5 new calls per week from a properly set up website and Google Business Profile. At an average job value of $300-500, that's $1,000-2,500 in new revenue every single week — from customers who found you online while you were sleeping.</p>
+      <h2>It Doesn't Have to Be Complicated</h2>
+      <p>You don't need a 20-page website. You don't need a blog. You don't need to post on Instagram every day. <strong>You need one clean, professional page</strong> that tells customers who you are, what you do, where you work, and how to call you.</p>
+      <p>That's it. Simple, fast, and effective. And it can be live in 72 hours.</p>
+      <div class="article-cta-box">
+        <h3>Ready to Get More Calls?</h3>
+        <p>We build simple, professional websites for tradesmen across the US. One-time $550. No monthly fees. Live in 72 hours.</p>
+        <a href="/#cta-bottom">Get Your Website Today</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="article2">
+  <div class="article-nav">
+    <button class="article-back" onclick="closeArticle('article2')">← Back to Blog</button>
+    <a href="/#cta-bottom" class="article-cta-small">Get Your Website</a>
+  </div>
+  <div class="article-content">
+    <div class="article-eyebrow">Local SEO · March 2024 · 5 min read</div>
+    <div class="article-h1">How to Show Up on Google When Someone Searches "Plumber Near Me"</div>
+    <div class="article-meta">By One Page Only · Web Design for Home Service Professionals</div>
+    <div class="article-body">
+      <p>Every day, thousands of homeowners in your city type "plumber near me" or "electrician near me" into Google. Most of those searches happen at night or on weekends — when something breaks and they need help fast. The question is: do they find you, or your competitor?</p>
+      <p>Local SEO is the process of making sure your business shows up when people search for your trade in your area. It's not magic — it's a set of simple steps that, done right, can put you on the first page of Google within a few months.</p>
+      <h2>Step 1: Get a Professional Website</h2>
+      <p>Google can't rank a business that doesn't have a website. Your website is the foundation of everything. It needs to clearly state your trade, your city, and your services — using the exact words customers type into Google.</p>
+      <p>For example, a plumber in Denver should have text on their site that says "Licensed plumber in Denver, CO" — not just "We fix pipes." Google reads the words on your site to understand what you do and where you do it.</p>
+      <h2>Step 2: Set Up Your Google Business Profile</h2>
+      <p><strong>This is the single most impactful thing you can do for free.</strong> A Google Business Profile is what shows up in the map section when someone searches for your trade locally. It shows your phone number, hours, reviews, and photos.</p>
+      <ul>
+        <li>Go to business.google.com and claim your business</li>
+        <li>Fill out every field completely — hours, services, photos</li>
+        <li>Add your website URL</li>
+        <li>Start collecting reviews (more on this in another article)</li>
+      </ul>
+      <h2>Step 3: Be Consistent With Your Business Name, Address and Phone</h2>
+      <p>Google checks that your business name, address, and phone number (NAP) are identical everywhere they appear online — your website, Google Business Profile, Facebook page, etc. Even small differences confuse Google and hurt your ranking.</p>
+      <h2>Step 4: Get Reviews</h2>
+      <p>Businesses with more reviews rank higher. It's that simple. After every job, ask your customer to leave a Google review. A simple text message with a direct link works perfectly — and most happy customers are glad to help.</p>
+      <blockquote><p>"We went from page 3 to page 1 in about 6 weeks after setting up our Google Business Profile and getting 8 new reviews."</p></blockquote>
+      <h2>How Long Does It Take?</h2>
+      <p>For a brand new website, expect 2-4 months before you start seeing consistent organic traffic. For Google Business Profile, results can come much faster — sometimes within 2-4 weeks. Patience pays off with SEO. Every month it gets better.</p>
+      <div class="article-cta-box">
+        <h3>We Handle the SEO For You</h3>
+        <p>Every website we build is optimized for local search from day one. We also help you set up your Google Business Profile. One-time $550. No monthly fees.</p>
+        <a href="/#cta-bottom">Get Your Website Today</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="article3">
+  <div class="article-nav">
+    <button class="article-back" onclick="closeArticle('article3')">← Back to Blog</button>
+    <a href="/#cta-bottom" class="article-cta-small">Get Your Website</a>
+  </div>
+  <div class="article-content">
+    <div class="article-eyebrow">Conversions · March 2024 · 4 min read</div>
+    <div class="article-h1">5 Reasons Your Website Isn't Getting You Any Calls</div>
+    <div class="article-meta">By One Page Only · Web Design for Home Service Professionals</div>
+    <div class="article-body">
+      <p>Having a website is a start. But a lot of trade businesses have a website that does absolutely nothing for them. It exists — but it doesn't convert visitors into callers. Here are the 5 most common reasons why, and exactly how to fix each one.</p>
+      <h2>1. Your Phone Number Is Hard to Find</h2>
+      <p>This sounds obvious, but you'd be amazed how many websites bury the phone number at the bottom of the page. <strong>Your phone number should be visible the moment someone lands on your site</strong> — ideally in the top navigation bar, and again as a large clickable button in the hero section.</p>
+      <p>On mobile, that button should dial you automatically with one tap. Every extra step a customer has to take costs you calls.</p>
+      <h2>2. Your Site Loads Too Slowly</h2>
+      <p>If your website takes more than 3 seconds to load, over half of your visitors will leave before it even appears. This is especially true on mobile, where most customers are browsing. A fast-loading site is not optional — it's essential.</p>
+      <h2>3. It Doesn't Look Good on a Phone</h2>
+      <p>70% of local searches happen on mobile devices. If your site isn't optimized for phones — if customers have to pinch and zoom to read it — they will leave immediately and call someone else. Every website we build is designed mobile-first.</p>
+      <h2>4. There's No Clear Call to Action</h2>
+      <p>Visitors need to be told what to do. "Call us for a free estimate" is a call to action. "Welcome to our website, we have been serving the community since 1998" is not. <strong>Every section of your site should guide the visitor toward one action: calling you.</strong></p>
+      <h2>5. It Doesn't Build Trust</h2>
+      <p>Customers call businesses they trust. Trust signals include: a professional design, customer reviews, your license number, photos of your work, and a clear service area. Without these, visitors assume the worst and move on.</p>
+      <blockquote><p>"I redesigned my site with a big call button and added my reviews. Calls went up within the first week. Same traffic, more calls."</p></blockquote>
+      <div class="article-cta-box">
+        <h3>Get a Website That Actually Gets You Calls</h3>
+        <p>We build websites that are fast, mobile-friendly, and designed to convert visitors into callers. One-time $550. Live in 72 hours.</p>
+        <a href="/#cta-bottom">Get Your Website Today</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="article4">
+  <div class="article-nav">
+    <button class="article-back" onclick="closeArticle('article4')">← Back to Blog</button>
+    <a href="/#cta-bottom" class="article-cta-small">Get Your Website</a>
+  </div>
+  <div class="article-content">
+    <div class="article-eyebrow">Reputation · February 2024 · 4 min read</div>
+    <div class="article-h1">How Google Reviews Can Double Your Calls — And How to Get More of Them</div>
+    <div class="article-meta">By One Page Only · Web Design for Home Service Professionals</div>
+    <div class="article-body">
+      <p>When a homeowner searches for a plumber or electrician and sees two options — one with 3 reviews and one with 47 reviews — they call the one with 47. Every time. Reviews are the single most powerful trust signal for local service businesses, and most tradesmen are leaving them on the table.</p>
+      <h2>Why Reviews Matter So Much</h2>
+      <p>Google uses review count and rating as a major factor in local search rankings. More reviews = higher ranking = more visibility = more calls. It's a compounding advantage — the more reviews you have, the more calls you get, the more opportunities you have to get more reviews.</p>
+      <p><strong>Businesses with 10+ Google reviews get 2-3x more clicks than those with fewer than 10.</strong> And businesses with 50+ reviews dominate their local market.</p>
+      <h2>The Simple System for Getting Reviews</h2>
+      <p>The trick is to ask at the right moment — right after you finish a job and the customer is happy. Here's a simple script:</p>
+      <blockquote><p>"Hey, I'm glad everything worked out. If you have a minute, a Google review would really help my business. I'll text you a link right now — it takes about 30 seconds."</p></blockquote>
+      <p>Then send them a direct link to your Google review page. You can get this link from your Google Business Profile dashboard. When customers click it, it takes them directly to the review form — no searching required.</p>
+      <h2>What to Do With Bad Reviews</h2>
+      <p>Always respond to reviews — good and bad. For good reviews, a simple thank you shows you care. For bad reviews, respond calmly and professionally. Offer to make it right. Other customers will see how you handle problems, and it builds trust.</p>
+      <h2>How Many Reviews Do You Need?</h2>
+      <ul>
+        <li>5+ reviews: You start to look credible</li>
+        <li>15+ reviews: You start ranking in the top results locally</li>
+        <li>30+ reviews: You become the dominant choice in your area</li>
+        <li>50+ reviews: Almost untouchable in your local market</li>
+      </ul>
+      <div class="article-cta-box">
+        <h3>Get a Website That Shows Off Your Reviews</h3>
+        <p>Our Pro + SEO plan includes a dedicated reviews section on your website. Show customers why you're the best choice before they even call. One-time $750.</p>
+        <a href="/#cta-bottom">Get Your Website Today</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="article5">
+  <div class="article-nav">
+    <button class="article-back" onclick="closeArticle('article5')">← Back to Blog</button>
+    <a href="/#cta-bottom" class="article-cta-small">Get Your Website</a>
+  </div>
+  <div class="article-content">
+    <div class="article-eyebrow">Business · February 2024 · 5 min read</div>
+    <div class="article-h1">Stop Paying $50 Per Lead. Here's What Smart Tradesmen Do Instead</div>
+    <div class="article-meta">By One Page Only · Web Design for Home Service Professionals</div>
+    <div class="article-body">
+      <p>Angi. HomeAdvisor. Thumbtack. If you've used any of these platforms, you know the drill. You pay $30-80 for a lead, and then you find out that same lead was sent to 4 other contractors. You're competing on price before you've even said hello.</p>
+      <p>It's a race to the bottom, and the platforms win every time.</p>
+      <h2>The Real Cost of Buying Leads</h2>
+      <p>Let's do the math. If you're getting 10 leads a month at $50 each, that's $600 per month — $7,200 per year. And you're probably converting maybe 3 of those 10 leads because the customer is shopping around with everyone else who got the same lead.</p>
+      <p><strong>That's $7,200 per year to convert 3-4 customers per month.</strong> Customers who probably expect the lowest price because they got 5 quotes.</p>
+      <h2>What a Website Does Differently</h2>
+      <p>When a customer finds you through your own website on Google, the dynamic is completely different. They searched, they found you, they liked what they saw, and they called you. They're not comparing you to 4 other people. They chose you.</p>
+      <p>These customers are warmer, more likely to hire you at your real price, and more likely to leave a review afterward. The quality of a lead from your own website is dramatically higher than a paid lead from a directory.</p>
+      <h2>The Math on a Website</h2>
+      <p>A website costs $550 one time. If it gets you just 2 extra jobs per month at an average of $400 per job, that's $800 per month in new revenue. Your website pays for itself in less than one month — and then it keeps working for free, every month, for years.</p>
+      <blockquote><p>"I spent $4,000 on HomeAdvisor leads last year. Got my website in January for $550. By March, I cancelled HomeAdvisor entirely. My website was bringing in more jobs at better prices."</p></blockquote>
+      <h2>The Long Game</h2>
+      <p>Paid leads stop the moment you stop paying. Your website keeps working whether you're on the job, asleep, or on vacation. It's an asset that builds over time — ranking higher, getting more reviews, attracting more customers — while you focus on doing great work.</p>
+      <div class="article-cta-box">
+        <h3>One Payment. Lifetime of Leads.</h3>
+        <p>Stop renting leads. Start owning your pipeline. A professional website for $550, one time. No monthly fees. No lead sharing. Just customers who chose you.</p>
+        <a href="/#cta-bottom">Get Your Website Today</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="article6">
+  <div class="article-nav">
+    <button class="article-back" onclick="closeArticle('article6')">← Back to Blog</button>
+    <a href="/#cta-bottom" class="article-cta-small">Get Your Website</a>
+  </div>
+  <div class="article-content">
+    <div class="article-eyebrow">Mobile · January 2024 · 3 min read</div>
+    <div class="article-h1">Why 70% of Your Future Customers Will Find You on a Phone</div>
+    <div class="article-meta">By One Page Only · Web Design for Home Service Professionals</div>
+    <div class="article-body">
+      <p>Think about the last time you needed a service — a plumber, a handyman, a painter. Did you sit down at a desktop computer to search? Probably not. You grabbed your phone, typed a quick search, and called the first business that looked trustworthy.</p>
+      <p>Your customers are doing exactly the same thing. And if your website isn't built for mobile, they're calling someone else.</p>
+      <h2>What the Numbers Say</h2>
+      <p>According to Google, over 70% of local service searches now happen on mobile devices. For emergency services like plumbers and electricians, that number is even higher — because when something breaks, people grab their phone immediately.</p>
+      <p><strong>If your website isn't mobile-friendly, you're invisible to the majority of your potential customers.</strong></p>
+      <h2>What "Mobile-Friendly" Actually Means</h2>
+      <p>A mobile-friendly website isn't just a desktop website that shrinks down. It's designed from the ground up for small screens. That means:</p>
+      <ul>
+        <li>Text that's readable without zooming</li>
+        <li>Buttons large enough to tap with a thumb</li>
+        <li>A phone number that dials with one tap</li>
+        <li>Fast loading on a mobile data connection</li>
+        <li>No horizontal scrolling</li>
+      </ul>
+      <h2>The One-Tap Call</h2>
+      <p>The most important feature of any mobile-friendly trade website is a click-to-call button. When a customer is ready to call, they should be able to do it in one tap — not hunt for a number, copy it, open their phone app, paste it, and dial. <strong>Every extra step costs you a customer.</strong></p>
+      <p>Every website we build has a prominent click-to-call button that works perfectly on every phone, on every screen size.</p>
+      <blockquote><p>"I didn't realize my old website wasn't mobile friendly until someone told me they couldn't find my number. How many calls did I lose before that?"</p></blockquote>
+      <div class="article-cta-box">
+        <h3>Get a Website Built for Mobile First</h3>
+        <p>Every website we build is designed for phones first. Fast loading, easy to read, one-tap calling. Your customers are on their phones — be there. One-time $550.</p>
+        <a href="/#cta-bottom">Get Your Website Today</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openArticle(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeArticle(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.article-overlay.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+</body>
+</html>
