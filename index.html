@@ -39,6 +39,8 @@
     .nav-right { display: flex; align-items: center; gap: 2rem; }
     .nav-phone { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
     .nav-phone:hover { color: var(--gold); }
+    .nav-blog { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-bottom: 2px solid var(--gold); padding-bottom: 0.1rem; transition: color 0.2s; }
+    .nav-blog:hover { color: var(--gold); }
     .nav-cta { background: var(--gold); color: var(--black); padding: 0.6rem 1.5rem; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: var(--gold2); }
 
@@ -373,7 +375,7 @@
     footer p { font-size: 0.78rem; color: var(--muted); }
     .footer-phone { font-size: 0.85rem; color: var(--gold); text-decoration: none; font-weight: 600; }
 
-    @media (max-width: 600px) { .nav-phone { display: none; } }
+    @media (max-width: 600px) { .nav-phone { display: none; } .nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; } }
   </style>
 </head>
 <body>
@@ -382,7 +384,7 @@
 <nav>
   <div class="logo">One<span>Page</span>Only</div>
   <div class="nav-right">
-    <a href="/blog" class="nav-phone">Blog</a>
+    <a href="/blog" class="nav-blog">Blog</a>
     <a href="tel:+17205550138" class="nav-phone">☎ (720) 555-0138</a>
     <a href="#cta-bottom" class="nav-cta">Get Started</a>
   </div>
