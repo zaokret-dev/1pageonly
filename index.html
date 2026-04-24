@@ -114,7 +114,7 @@
         "name": "How long does it take to get my website live?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We deliver your site for review within 48–72 hours. After you approve it (or request any changes), we go live within 24 hours. Most clients are live within 5 business days from the first call."
+          "text": "We deliver your site for review within 72 hours. After you approve it (or request any changes), we go live within 48 hours. Most clients are live within 5 business days from the first call."
         }
       },
       {
@@ -122,7 +122,7 @@
         "name": "Are there any monthly fees after I pay the one-time fee?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No monthly fees from us — ever. The only ongoing cost is your domain name, which runs about $10–15 per year, paid directly to the domain provider. Hosting is free. No surprises."
+          "text": "No monthly fees — ever. Your one-time payment includes the domain name and hosting for the first year. After that, domain and hosting renew together for approximately $100 per year. No surprises, no hidden fees."
         }
       },
       {
@@ -146,7 +146,7 @@
         "name": "What if I'm not happy with the website?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer unlimited revisions until you're 100% satisfied. We send you a preview before going live, and you can request as many changes as you need. We don't consider the job done until you love it."
+          "text": "We offer unlimited revisions until you're 100% satisfied. We send you a preview before going live, and you can request as many changes as you need. We don't consider the job done until you love it. Please note: once you give final approval and the site goes live, no further changes are included."
         }
       },
       {
@@ -266,18 +266,59 @@
     /* TRADES */
     #trades {
       background: var(--dark2);
-      padding: 1.5rem 6%;
+      padding: 3rem 6%;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-    .trades-label { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; text-align: center; }
-    .trades-list { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+    .trades-label { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; text-align: center; }
+    .trades-list { display: grid; grid-template-columns: repeat(9, 1fr); gap: 0.75rem; justify-content: center; }
+    @media (max-width: 1100px) { .trades-list { grid-template-columns: repeat(5, 1fr); } }
+    @media (max-width: 600px) { .trades-list { grid-template-columns: repeat(3, 1fr); } }
     .trade-pill {
-      padding: 0.45rem 1.1rem; border: 1px solid var(--border);
-      font-size: 0.78rem; color: var(--muted); font-weight: 500;
-      transition: border-color 0.2s, color 0.2s; cursor: default; border-radius: 2px;
+      display: flex; flex-direction: column; align-items: center; gap: 0;
+      border: 1px solid var(--border);
+      font-size: 0.7rem; color: var(--muted); font-weight: 600;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s; cursor: default;
+      overflow: hidden; background: var(--dark);
+      letter-spacing: 0.5px; text-transform: uppercase;
     }
-    .trade-pill:hover { border-color: var(--gold); color: var(--gold); }
+    .trade-pill:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
+    .trade-pill img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; filter: grayscale(30%) brightness(0.85); transition: filter 0.2s; cursor: zoom-in; }
+    .trade-pill:hover img { filter: grayscale(0%) brightness(1.0); }
+    .trade-pill span { padding: 0.5rem 0.3rem; text-align: center; line-height: 1.3; }
+
+    /* LIGHTBOX */
+    #trade-lightbox {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(0,0,0,0.92); backdrop-filter: blur(10px);
+      align-items: center; justify-content: center;
+      cursor: zoom-out;
+    }
+    #trade-lightbox.open { display: flex; }
+    #trade-lightbox-inner {
+      position: relative;
+      width: min(80vw, 80vh);
+      height: min(80vw, 80vh);
+      animation: lbIn 0.2s ease;
+    }
+    @keyframes lbIn { from { opacity:0; transform: scale(0.88); } to { opacity:1; transform: scale(1); } }
+    #trade-lightbox-inner img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    #lb-close {
+      position: fixed; top: 1.5rem; right: 2rem;
+      font-size: 2.5rem; color: white; cursor: pointer; line-height: 1;
+      font-weight: 300; opacity: 0.7; transition: opacity 0.2s;
+      z-index: 1000;
+    }
+    #lb-close:hover { opacity: 1; }
+    #lb-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      padding: 1.5rem 1rem 0.75rem;
+      font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; text-align: center;
+    }
 
     /* SECTIONS */
     section { padding: 110px 6%; }
@@ -530,6 +571,10 @@
     .footer-phone { font-size: 0.85rem; color: var(--gold); text-decoration: none; font-weight: 600; }
 
     @media (max-width: 600px) { .nav-phone { display: none; } .nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; } }
+    .trade-pill--svg { cursor: zoom-in; }
+    .trade-pill--svg svg { transition: filter 0.2s; }
+    .trade-pill--svg:hover svg { filter: brightness(1.2); }
+
   </style>
 </head>
 <body>
@@ -582,15 +627,42 @@
 <div id="trades">
   <div class="trades-label">We work with all home service trades</div>
   <div class="trades-list">
-    <div class="trade-pill">⚡ Electricians</div>
-    <div class="trade-pill">🔧 Plumbers</div>
-    <div class="trade-pill">🖌️ Painters</div>
-    <div class="trade-pill">🪚 Carpenters</div>
-    <div class="trade-pill">❄️ HVAC</div>
-    <div class="trade-pill">🏠 Roofers</div>
-    <div class="trade-pill">🔨 Remodelers</div>
-    <div class="trade-pill">🛠️ Handymen</div>
-    <div class="trade-pill">+ Many More</div>
+    <div class="trade-pill" onclick="openTradeLightbox('⚡ Electricians', 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=300&h=300&fit=crop&auto=format" alt="Electrician" loading="lazy" />
+      <span>⚡ Electricians</span>
+    </div>
+    <div class="trade-pill" onclick="openTradeLightbox('🔧 Plumbers', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop&auto=format" alt="Plumber" loading="lazy" />
+      <span>🔧 Plumbers</span>
+    </div>
+    <div class="trade-pill" onclick="openTradeLightbox('🖌️ Painters', 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=300&h=300&fit=crop&auto=format" alt="Painter" loading="lazy" />
+      <span>🖌️ Painters</span>
+    </div>
+    <div class="trade-pill" onclick="openTradeLightbox('🪚 Carpenters', 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=300&fit=crop&auto=format" alt="Carpenter" loading="lazy" />
+      <span>🪚 Carpenters</span>
+    </div>
+    <div class="trade-pill" onclick="openTradeLightbox('❄️ HVAC', 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=300&h=300&fit=crop&auto=format" alt="HVAC Technician" loading="lazy" />
+      <span>❄️ HVAC</span>
+    </div>
+    <div class="trade-pill" onclick="openTradeLightbox('🏠 Roofers', 'https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?w=300&h=300&fit=crop&auto=format" alt="Roofer" loading="lazy" />
+      <span>🏠 Roofers</span>
+    </div>
+    <div class="trade-pill" onclick="openTradeLightbox('🔨 Remodelers', 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=300&fit=crop&auto=format" alt="Remodeler" loading="lazy" />
+      <span>🔨 Remodelers</span>
+    </div>
+    <div class="trade-pill" onclick="openTradeLightbox('🛠️ Handymen', 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=900&h=900&fit=crop&auto=format')">
+      <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=300&h=300&fit=crop&auto=format" alt="Handyman" loading="lazy" />
+      <span>🛠️ Handymen</span>
+    </div>
+    <div class="trade-pill" style="justify-content:center;aspect-ratio:unset;padding:1rem 0.5rem;background:rgba(232,160,32,0.05);border-color:rgba(232,160,32,0.2);">
+      <span style="font-size:1.5rem; padding: 0 0 0.3rem;">+</span>
+      <span style="color:var(--gold);">Many More</span>
+    </div>
   </div>
 </div>
 
@@ -850,14 +922,16 @@
     <div class="pricing-card">
       <div class="price-label">Starter Website</div>
       <div class="price-num"><sup>$</sup>550</div>
-      <div class="price-period">One-time · No monthly fees · No hidden costs</div>
+      <div class="price-period">One-time · Domain &amp; hosting included (year 1) · No hidden costs</div>
       <ul class="price-list">
         <li>Professional 1-page website</li>
-        <li>Mobile & tablet optimized</li>
+        <li>Mobile &amp; tablet optimized</li>
         <li>Click-to-call button</li>
         <li>Google-ready structure</li>
         <li>Fast loading speed</li>
-        <li>Your domain set up</li>
+        <li>Domain name included (1st year)</li>
+        <li>Hosting included (1st year)</li>
+        <li>After year 1: ~$100/yr for domain &amp; hosting</li>
         <li>Delivered in 72 hours</li>
         <li>Unlimited revisions</li>
       </ul>
@@ -867,7 +941,7 @@
       <div class="featured-badge">Most Popular</div>
       <div class="price-label">Pro + Local SEO</div>
       <div class="price-num"><sup>$</sup>750</div>
-      <div class="price-period">One-time · No monthly fees · No hidden costs</div>
+      <div class="price-period">One-time · Domain &amp; hosting included (year 1) · No hidden costs</div>
       <ul class="price-list">
         <li>Everything in Starter</li>
         <li>Up to 3 pages</li>
@@ -929,11 +1003,11 @@
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How long does it take to get my website live?<span class="faq-icon">+</span></div>
-      <div class="faq-a"><p>We deliver your site for review within 48–72 hours. After you approve it (or request any changes), we go live within 24 hours. Most clients are live within 5 business days from the first call.</p></div>
+      <div class="faq-a"><p>We deliver your site for review within 72 hours. After you approve it (or request any changes), we go live within 48 hours. Most clients are live within 5 business days from the first call.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Are there any monthly fees after I pay the one-time fee?<span class="faq-icon">+</span></div>
-      <div class="faq-a"><p>No monthly fees from us — ever. The only ongoing cost is your domain name, which runs about $10–15 per year, paid directly to the domain provider. Hosting is free. No surprises.</p></div>
+      <div class="faq-a"><p>No monthly fees — ever. Your one-time payment includes the domain name and hosting for the first year. After that, domain and hosting renew together for approximately $100 per year. No surprises, no hidden fees.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How quickly will I start getting calls from my website?<span class="faq-icon">+</span></div>
@@ -945,7 +1019,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What if I'm not happy with the website?<span class="faq-icon">+</span></div>
-      <div class="faq-a"><p>We offer unlimited revisions until you're 100% satisfied. We send you a preview before going live, and you can request as many changes as you need. We don't consider the job done until you love it.</p></div>
+      <div class="faq-a"><p>We offer unlimited revisions until you're 100% satisfied. We send you a preview before going live, and you can request as many changes as you need. We don't consider the job done until you love it. <strong>Please note: once you give final approval and the site goes live, no further changes are included.</strong></p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Do you work with all types of tradesmen?<span class="faq-icon">+</span></div>
@@ -991,6 +1065,15 @@
   </div>
 </footer>
 
+<!-- TRADE LIGHTBOX -->
+<div id="trade-lightbox" onclick="closeTradeLightbox()">
+  <span id="lb-close" onclick="closeTradeLightbox()">×</span>
+  <div id="trade-lightbox-inner" onclick="event.stopPropagation()">
+    <img id="lb-img-main" src="" alt="" />
+    <div id="lb-label"></div>
+  </div>
+</div>
+
 <script>
   function toggleFaq(el) {
     var item = el.parentElement;
@@ -998,6 +1081,44 @@
     document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
     if (!isOpen) item.classList.add('open');
   }
+
+  function openTradeSvgLightbox(label, svgId) {
+    // Clone the SVG from the card and show it enlarged
+    var sourceSvg = document.querySelector('.trade-pill--svg svg');
+    var lb = document.getElementById('trade-lightbox');
+    var img = document.getElementById('lb-img-main');
+    // Hide the img, show cloned SVG instead
+    img.style.display = 'none';
+    var existing = document.getElementById('lb-svg-clone');
+    if (existing) existing.remove();
+    var clone = sourceSvg.cloneNode(true);
+    clone.id = 'lb-svg-clone';
+    clone.style.cssText = 'width:100%;height:100%;display:block;';
+    document.getElementById('trade-lightbox-inner').insertBefore(clone, document.getElementById('lb-label'));
+    document.getElementById('lb-label').textContent = label;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openTradeLightbox(label, src) {
+    document.getElementById('lb-img-main').src = src;
+    document.getElementById('lb-img-main').alt = label;
+    document.getElementById('lb-label').textContent = label;
+    document.getElementById('trade-lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeTradeLightbox() {
+    document.getElementById('trade-lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+    document.getElementById('lb-img-main').style.display = '';
+    var clone = document.getElementById('lb-svg-clone');
+    if (clone) clone.remove();
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeTradeLightbox();
+  });
 
   function payWithPayPal() {
     var amount = document.getElementById('paypal-amount').value;
