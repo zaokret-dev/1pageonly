@@ -488,18 +488,17 @@
     .pricing-note { margin-top: 3rem; text-align: center; font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
     .pricing-note strong { color: var(--white); }
 
-    /* TESTIMONIALS */
-    #testimonials { background: var(--dark2); }
-    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); margin-top: 4rem; }
-    @media (max-width: 768px) { .testi-grid { grid-template-columns: 1fr; } }
-    .testi-card { background: var(--dark2); padding: 2.75rem; border-top: 2px solid transparent; transition: border-color 0.3s; }
-    .testi-card:hover { border-color: var(--gold); }
-    .testi-stars { color: var(--gold); letter-spacing: 2px; margin-bottom: 1.25rem; font-size: 0.95rem; }
-    .testi-text { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.82); font-style: italic; font-weight: 400; }
-    .testi-author { margin-top: 1.75rem; display: flex; align-items: center; gap: 1rem; }
-    .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: rgba(232,160,32,0.12); border: 1px solid rgba(232,160,32,0.25); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; color: var(--gold); flex-shrink: 0; }
-    .testi-name { font-weight: 700; font-size: 0.9rem; color: var(--white); }
-    .testi-role { font-size: 0.75rem; color: var(--muted); margin-top: 0.15rem; }
+    /* PROMISE */
+    #promise { background: var(--dark2); }
+    .promise-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); margin-top: 4rem; }
+    @media (max-width: 768px) { .promise-grid { grid-template-columns: 1fr; margin-top: 2.5rem; } }
+    .promise-card { background: var(--dark2); padding: 2.75rem; border-top: 2px solid transparent; transition: border-color 0.3s; }
+    @media (max-width: 768px) { .promise-card { padding: 2rem 1.25rem; } }
+    .promise-card:hover { border-color: var(--gold); }
+    .promise-icon { width: 48px; height: 48px; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(232,160,32,0.3); background: rgba(232,160,32,0.08); color: var(--gold); }
+    .promise-icon svg { width: 24px; height: 24px; }
+    .promise-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3; }
+    .promise-card p { font-size: 0.98rem; line-height: 1.75; color: var(--muted); }
 
     /* FAQ */
     #faq { background: var(--dark); }
@@ -543,24 +542,6 @@
     .cta-note { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); position: relative; }
     .cta-note span { color: var(--gold); font-weight: 600; }
 
-    /* PAYMENT */
-    #payment { background: var(--dark); padding: 90px 6%; text-align: center; }
-    .payment-box {
-      max-width: 440px; margin: 3.5rem auto 0;
-      border: 1px solid var(--border); padding: 3rem 2.5rem;
-      background: rgba(255,255,255,0.02); transition: border-color 0.3s;
-    }
-    .payment-box:hover { border-color: rgba(232,160,32,0.25); }
-    .payment-label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.5rem; }
-    .amount-wrap { display: flex; align-items: center; border: 1px solid var(--border); margin-bottom: 1.5rem; transition: border-color 0.2s; }
-    .amount-wrap:focus-within { border-color: var(--gold); }
-    .amount-dollar { padding: 0 1.1rem; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--gold); border-right: 1px solid var(--border); }
-    .amount-wrap input { flex: 1; min-width: 0; width: 100%; background: transparent; border: none; outline: none; padding: 1rem 1.1rem; color: var(--white); font-size: 1.3rem; font-weight: 700; font-family: 'Manrope', sans-serif; }
-    .amount-wrap input::placeholder { color: var(--muted); font-weight: 400; }
-    .paypal-btn { width: 100%; background: #0070ba; color: #fff; border: none; cursor: pointer; padding: 1.1rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; transition: background 0.2s; }
-    .paypal-btn:hover { background: #005ea6; }
-    .payment-note { margin-top: 1rem; font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
-
     /* FOOTER */
     footer {
       background: var(--black); padding: 2.5rem 6%;
@@ -575,7 +556,6 @@
     .nav-cta { white-space: nowrap; }
     @media (max-width: 600px) {
       nav { height: 60px; padding: 0 5%; }
-      .payment-box { padding: 2.25rem 1.25rem; }
       .logo { font-size: 1.35rem; letter-spacing: 2px; }
       .nav-right { gap: 1rem; }
       .nav-phone, .nav-blog { display: none; }
@@ -953,34 +933,25 @@
   <p class="pricing-note">Not sure which plan is right for you? <strong>Call us</strong> — we'll give you a straight answer.<br>We work with businesses <strong>across all 50 states.</strong></p>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="sec-eyebrow">What Clients Say</div>
-  <h2 class="sec-h2">Tradesmen Who Got<br><span class="gold">More Calls.</span></h2>
-  <div class="testi-grid">
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"I'd been in plumbing for 12 years — all word of mouth. Within 3 weeks of my site going live, I got 4 calls from people who found me on Google. The site paid for itself in the first week."</p>
-      <div class="testi-author">
-        <div class="testi-avatar">RT</div>
-        <div><div class="testi-name">Ray T.</div><div class="testi-role">Plumber · Denver, CO</div></div>
-      </div>
+<!-- OUR PROMISE -->
+<section id="promise">
+  <div class="sec-eyebrow">Our Promise</div>
+  <h2 class="sec-h2">A Simple Deal.<br><span class="gold">No Surprises.</span></h2>
+  <div class="promise-grid">
+    <div class="promise-card">
+      <span class="promise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <h3>You Approve Before It Goes Live</h3>
+      <p>You get a preview link within 72 hours. Ask for as many changes as you want &mdash; nothing goes live until you say it's right.</p>
     </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"These guys made it dead simple. I called, talked for 15 minutes, and two days later I had a site that actually looked like a real business. My wife couldn't believe it."</p>
-      <div class="testi-author">
-        <div class="testi-avatar">ML</div>
-        <div><div class="testi-name">Mike L.</div><div class="testi-role">Electrician · Phoenix, AZ</div></div>
-      </div>
+    <div class="promise-card">
+      <span class="promise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 6.5c0-1.9-2.2-3-5-3s-5 1.1-5 3.2c0 4.8 10 2.6 10 7.6 0 2.1-2.2 3.2-5 3.2s-5-1.1-5-3"/></svg></span>
+      <h3>No Monthly Fees. Ever.</h3>
+      <p>One payment covers your website, domain and hosting for the first year. After that, about $100 a year to keep it online. That's it.</p>
     </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"I was paying Angi $50 a lead and sharing it with other painters. Now my site brings me leads for free. Best $550 I've ever spent on my business — no question about it."</p>
-      <div class="testi-author">
-        <div class="testi-avatar">DS</div>
-        <div><div class="testi-name">Dan S.</div><div class="testi-role">Painter · Austin, TX</div></div>
-      </div>
+    <div class="promise-card">
+      <span class="promise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+      <h3>Talk to a Real Person</h3>
+      <p>No forms to fill out, no bots, no sales scripts. A 15-minute call with the person who actually builds your site.</p>
     </div>
   </div>
 </section>
@@ -1035,21 +1006,6 @@
   <p class="cta-note">We work with businesses across the US · <span>One-time $550 · No monthly fees</span></p>
 </section>
 
-<!-- PAYMENT -->
-<section id="payment">
-  <div class="sec-eyebrow">Secure Payment</div>
-  <h2 class="sec-h2">Pay for Your Website</h2>
-  <div class="payment-box">
-    <div class="payment-label">Enter Amount (USD)</div>
-    <div class="amount-wrap">
-      <span class="amount-dollar">$</span>
-      <input type="number" id="paypal-amount" min="1" step="0.01" placeholder="550.00" />
-    </div>
-    <button class="paypal-btn" onclick="payWithPayPal()">Pay Securely via PayPal</button>
-    <p class="payment-note">🔒 Secure payment via PayPal · Credit & debit cards accepted · No PayPal account required</p>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">One<span>Page</span>Only</div>
@@ -1074,15 +1030,6 @@
     if (!isOpen) item.classList.add('open');
   }
 
-  function payWithPayPal() {
-    var amount = document.getElementById('paypal-amount').value;
-    if (!amount || amount <= 0) { alert('Please enter a valid amount.'); return; }
-    var base = 'https://www.paypal.com/cgi-bin/webscr';
-    var params = '?cmd=_xclick&business=onepagesuccess@gmail.com&currency_code=USD&no_note=1&no_shipping=1';
-    params += '&amount=' + amount;
-    params += '&item_name=' + encodeURIComponent('One Page Only - Website Design');
-    window.open(base + params, '_blank');
-  }
 </script>
 </body>
 </html>
