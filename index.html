@@ -172,7 +172,7 @@
       --cream: #f8f6f2;
       --gold: #e8a020;
       --gold2: #f5b432;
-      --muted: #7a8fa8;
+      --muted: #a3b2c4;
       --border: rgba(255,255,255,0.07);
     }
     html { scroll-behavior: smooth; }
@@ -198,9 +198,8 @@
 
     /* HERO */
     #hero {
-      min-height: 100vh;
       display: flex; flex-direction: column; justify-content: center;
-      padding: 120px 6% 80px;
+      padding: 130px 6% 90px;
       background: var(--dark);
       position: relative; overflow: hidden;
     }
@@ -254,74 +253,68 @@
       transition: border-color 0.2s, color 0.2s;
     }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-    .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .hero-split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4rem; align-items: center; }
     @media (max-width: 900px) { .hero-split { grid-template-columns: 1fr; gap: 3rem; } }
     .hero-left { display: flex; flex-direction: column; }
-    .hero-right { border-left: 1px solid rgba(232,160,32,0.2); padding-left: 4rem; }
-    @media (max-width: 900px) { .hero-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(232,160,32,0.2); padding-top: 2.5rem; } }
-    .hero-right-box { border: 1px solid rgba(232,160,32,0.25); padding: 2.5rem; background: rgba(232,160,32,0.03); }
-    .hero-note { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); }
+    .hero-lead { margin-top: 2rem; font-size: 1.15rem; line-height: 1.7; color: var(--muted); max-width: 540px; }
+    .hero-lead strong { color: var(--white); font-weight: 600; }
+    .hero-right { display: flex; justify-content: center; }
+    .hero-note { margin-top: 2rem; font-size: 0.9rem; color: var(--muted); }
     .hero-note span { color: var(--gold); font-weight: 600; }
+
+    /* HERO PHONE MOCKUP */
+    .phone {
+      display: block; text-decoration: none;
+      width: 290px; height: 590px; border-radius: 42px; padding: 11px;
+      background: #05080c; border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 6px rgba(232,160,32,0.07), 0 0 120px rgba(232,160,32,0.12);
+      position: relative; transform: rotate(2deg); transition: transform 0.3s;
+    }
+    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone-notch { position: absolute; top: 18px; left: 50%; transform: translateX(-50%); width: 84px; height: 22px; background: #05080c; border-radius: 20px; z-index: 2; }
+    .phone-screen { width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: #0b1e35; display: flex; flex-direction: column; position: relative; }
+    .ps-nav { background: #071524; padding: 40px 16px 12px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1976d2; }
+    .ps-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: 2px; color: #fff; }
+    .ps-logo span { color: #42a5f5; }
+    .ps-call-sm { background: #1976d2; color: #fff; font-size: 0.6rem; font-weight: 700; padding: 5px 9px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ps-hero { padding: 20px 16px 18px; }
+    .ps-tag { display: inline-block; border: 1px solid rgba(66,165,245,0.4); color: #42a5f5; font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; margin-bottom: 12px; }
+    .ps-h1 { font-family: 'Bebas Neue', sans-serif; font-size: 2.3rem; line-height: 0.95; color: #fff; letter-spacing: 1px; }
+    .ps-h1 span { color: #42a5f5; display: block; }
+    .ps-sub { font-size: 0.68rem; line-height: 1.55; color: rgba(255,255,255,0.65); margin-top: 10px; }
+    .ps-btn { margin-top: 14px; background: #1976d2; color: #fff; text-align: center; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 11px; }
+    .ps-btn.ghost { margin-top: 8px; background: transparent; border: 1px solid rgba(255,255,255,0.3); }
+    .ps-trust { background: #1976d2; padding: 8px 16px; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+    .ps-trust span { font-size: 0.55rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ps-svcs { background: #f0f4f8; padding: 12px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; }
+    .ps-svc { background: #fff; border-left: 3px solid #1976d2; padding: 8px; }
+    .ps-svc b { display: block; font-size: 0.62rem; color: #0b1e35; text-transform: uppercase; }
+    .ps-svc i { display: block; font-style: normal; font-size: 0.55rem; color: #6a7a8a; margin-top: 2px; }
+    .phone-caption { text-align: center; margin-top: 1.4rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .phone-caption b { color: var(--gold); }
+    @media (max-width: 900px) {
+      .phone { width: 250px; height: 500px; transform: none; }
+      .ps-nav { padding-top: 36px; }
+      .ps-h1 { font-size: 2rem; }
+      .ps-svcs { display: none; }
+    }
+    @media (max-width: 600px) { .hero-right { display: none; } }
 
     /* TRADES */
     #trades {
       background: var(--dark2);
-      padding: 3rem 6%;
+      padding: 2.25rem 6%;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-    .trades-label { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; text-align: center; }
-    .trades-list { display: grid; grid-template-columns: repeat(9, 1fr); gap: 0.75rem; justify-content: center; }
-    @media (max-width: 1100px) { .trades-list { grid-template-columns: repeat(5, 1fr); } }
-    @media (max-width: 600px) { .trades-list { grid-template-columns: repeat(3, 1fr); } }
-    .trade-pill {
-      display: flex; flex-direction: column; align-items: center; gap: 0;
-      border: 1px solid var(--border);
-      font-size: 0.7rem; color: var(--muted); font-weight: 600;
-      transition: border-color 0.2s, color 0.2s, transform 0.2s; cursor: default;
-      overflow: hidden; background: var(--dark);
-      letter-spacing: 0.5px; text-transform: uppercase;
-    }
-    .trade-pill:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
-    .trade-pill img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; filter: grayscale(30%) brightness(0.85); transition: filter 0.2s; cursor: zoom-in; }
-    .trade-pill:hover img { filter: grayscale(0%) brightness(1.0); }
-    .trade-pill span { padding: 0.5rem 0.3rem; text-align: center; line-height: 1.3; }
-
-    /* LIGHTBOX */
-    #trade-lightbox {
-      display: none; position: fixed; inset: 0; z-index: 999;
-      background: rgba(0,0,0,0.92); backdrop-filter: blur(10px);
-      align-items: center; justify-content: center;
-      cursor: zoom-out;
-    }
-    #trade-lightbox.open { display: flex; }
-    #trade-lightbox-inner {
-      position: relative;
-      width: min(80vw, 80vh);
-      height: min(80vw, 80vh);
-      animation: lbIn 0.2s ease;
-    }
-    @keyframes lbIn { from { opacity:0; transform: scale(0.88); } to { opacity:1; transform: scale(1); } }
-    #trade-lightbox-inner img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-    }
-    #lb-close {
-      position: fixed; top: 1.5rem; right: 2rem;
-      font-size: 2.5rem; color: white; cursor: pointer; line-height: 1;
-      font-weight: 300; opacity: 0.7; transition: opacity 0.2s;
-      z-index: 1000;
-    }
-    #lb-close:hover { opacity: 1; }
-    #lb-label {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.7));
-      padding: 1.5rem 1rem 0.75rem;
-      font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--gold); font-weight: 600; text-align: center;
-    }
+    .trades-label { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; text-align: center; }
+    .trades-list { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; list-style: none; }
+    .trades-list li { border: 1px solid rgba(232,160,32,0.25); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1rem; letter-spacing: 0.5px; }
+    .trades-list li.more { color: var(--gold); border-style: dashed; }
 
     /* SECTIONS */
     section { padding: 110px 6%; }
+    @media (max-width: 768px) { section { padding: 72px 6%; } }
     .sec-eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 600; }
     .sec-h2 {
       font-family: 'Bebas Neue', sans-serif;
@@ -342,9 +335,11 @@
       border-top: 3px solid transparent; transition: border-color 0.3s;
     }
     .problem-card:hover { border-color: var(--gold); }
-    .problem-icon { font-size: 2.2rem; margin-bottom: 1.25rem; display: block; }
+    .problem-icon { width: 48px; height: 48px; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(232,160,32,0.3); background: rgba(232,160,32,0.08); color: var(--gold); }
+    .problem-icon svg { width: 24px; height: 24px; }
+    @media (max-width: 768px) { .problem-card { padding: 2rem 1.5rem; } .problem-cards { margin-top: 2.5rem; } .problem-callout { margin-top: 2.5rem; padding: 2rem 1.25rem; } .problem-callout p { font-size: 1.05rem; } }
     .problem-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.9rem; line-height: 1.3; }
-    .problem-card p { font-size: 0.9rem; line-height: 1.85; color: var(--muted); font-weight: 300; }
+    .problem-card p { font-size: 0.98rem; line-height: 1.75; color: var(--muted); font-weight: 400; }
     .problem-callout {
       margin-top: 4rem; padding: 3rem; text-align: center;
       background: rgba(232,160,32,0.05); border: 1px solid rgba(232,160,32,0.2);
@@ -354,9 +349,8 @@
 
     /* SOLUTION */
     #solution { background: var(--dark); }
-    .solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; margin-top: 4rem; }
-    @media (max-width: 768px) { .solution-grid { grid-template-columns: 1fr; gap: 3rem; } }
-    .solution-text p { font-size: 1rem; line-height: 1.95; color: var(--muted); margin-bottom: 1.25rem; font-weight: 300; }
+    .solution-grid { max-width: 760px; margin-top: 2.5rem; }
+    .solution-text p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.25rem; font-weight: 400; }
     .solution-text p strong { color: var(--white); font-weight: 600; }
     .solution-visual {
       border: 1px solid rgba(232,160,32,0.2);
@@ -373,7 +367,8 @@
     /* FEATURES */
     #features { background: var(--dark2); }
     .features-intro { max-width: 620px; margin-bottom: 4rem; }
-    .features-intro p { font-size: 1rem; line-height: 1.9; color: var(--muted); margin-top: 1.25rem; font-weight: 300; }
+    .features-intro p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-top: 1.25rem; font-weight: 400; }
+    @media (max-width: 768px) { .features-intro { margin-bottom: 2.5rem; } .feature-item { padding: 1.75rem 1.25rem; gap: 1.1rem; } }
     .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
     @media (max-width: 640px) { .features-grid { grid-template-columns: 1fr; } }
     .feature-item {
@@ -389,7 +384,7 @@
       flex-shrink: 0; color: var(--gold); font-size: 1rem; margin-top: 0.1rem;
     }
     .feature-info h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
-    .feature-info p { font-size: 0.85rem; line-height: 1.8; color: var(--muted); font-weight: 300; }
+    .feature-info p { font-size: 0.95rem; line-height: 1.7; color: var(--muted); font-weight: 400; }
     .features-footer {
       margin-top: 3.5rem; padding: 2.25rem 2.5rem; border: 1px solid var(--border);
       text-align: center; background: rgba(232,160,32,0.04);
@@ -406,15 +401,17 @@
     .how-step:hover { border-color: var(--gold); }
     .how-num {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 4rem; color: rgba(232,160,32,0.1); line-height: 1; margin-bottom: 1.5rem;
+      font-size: 4rem; color: rgba(232,160,32,0.45); line-height: 1; margin-bottom: 1rem;
     }
     .how-step h3 { font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 0.6rem; }
-    .how-step p { font-size: 0.85rem; line-height: 1.8; color: var(--muted); font-weight: 300; }
+    .how-step p { font-size: 0.95rem; line-height: 1.7; color: var(--muted); font-weight: 400; }
+    @media (max-width: 768px) { .how-steps { margin-top: 2.5rem; } .how-step { padding: 2rem 0.5rem; } .how-num { font-size: 3rem; } }
 
     /* PORTFOLIO */
     #portfolio { background: var(--dark2); }
     .portfolio-intro { max-width: 620px; margin-bottom: 4rem; }
-    .portfolio-intro p { font-size: 1rem; line-height: 1.9; color: var(--muted); margin-top: 1.25rem; font-weight: 300; }
+    .portfolio-intro p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-top: 1.25rem; font-weight: 400; }
+    @media (max-width: 768px) { .portfolio-intro { margin-bottom: 2.5rem; } }
     .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
     @media (max-width: 900px) { .portfolio-grid { grid-template-columns: 1fr; } }
     .portfolio-card { border: 1px solid var(--border); overflow: hidden; transition: border-color 0.25s, transform 0.25s; }
@@ -434,7 +431,9 @@
     .portfolio-footer { background: var(--dark); padding: 1.1rem 1.4rem; display: flex; justify-content: space-between; align-items: center; }
     .portfolio-name { font-weight: 700; font-size: 0.9rem; color: var(--white); }
     .portfolio-trade { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); background: rgba(232,160,32,0.1); padding: 0.2rem 0.65rem; }
-    .portfolio-tags { font-size: 0.72rem; color: var(--muted); padding: 0 1.4rem 1rem; }
+    .portfolio-tags { font-size: 0.78rem; color: var(--muted); padding: 0 1.4rem 1rem; background: var(--dark); }
+    .portfolio-open { display: block; text-align: center; padding: 0.85rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-top: 1px solid var(--border); background: var(--dark); }
+    .portfolio-open:hover { background: rgba(232,160,32,0.08); }
 
     /* Mini preview CSS — Plumber */
     .prev-plumber { width: 100%; height: 100%; background: #0b1e35; display: flex; flex-direction: column; }
@@ -478,7 +477,8 @@
     .price-num sup { font-size: 3rem; vertical-align: top; margin-top: 1rem; display: inline-block; color: var(--gold); }
     .price-period { font-size: 0.8rem; color: var(--muted); margin-bottom: 2.5rem; }
     .price-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
-    .price-list li { font-size: 0.9rem; color: rgba(255,255,255,0.75); display: flex; gap: 0.85rem; align-items: flex-start; font-weight: 300; }
+    .price-list li { font-size: 0.95rem; color: rgba(255,255,255,0.85); display: flex; gap: 0.85rem; align-items: flex-start; font-weight: 400; }
+    @media (max-width: 768px) { .pricing-card { padding: 2.5rem 1.5rem; } .price-num { font-size: 5.5rem; } .pricing-cards { margin-top: 3rem; } }
     .price-list li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
     .price-btn { display: block; margin-top: 2.75rem; text-align: center; padding: 1.1rem; font-weight: 700; font-size: 0.88rem; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
     .price-btn.solid { background: var(--gold); color: var(--black); }
@@ -495,7 +495,7 @@
     .testi-card { background: var(--dark2); padding: 2.75rem; border-top: 2px solid transparent; transition: border-color 0.3s; }
     .testi-card:hover { border-color: var(--gold); }
     .testi-stars { color: var(--gold); letter-spacing: 2px; margin-bottom: 1.25rem; font-size: 0.95rem; }
-    .testi-text { font-size: 0.95rem; line-height: 1.85; color: rgba(255,255,255,0.7); font-style: italic; font-weight: 300; }
+    .testi-text { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.82); font-style: italic; font-weight: 400; }
     .testi-author { margin-top: 1.75rem; display: flex; align-items: center; gap: 1rem; }
     .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: rgba(232,160,32,0.12); border: 1px solid rgba(232,160,32,0.25); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; color: var(--gold); flex-shrink: 0; }
     .testi-name { font-weight: 700; font-size: 0.9rem; color: var(--white); }
@@ -516,7 +516,8 @@
     .faq-item.open .faq-icon { transform: rotate(45deg); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
     .faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.75rem; }
-    .faq-a p { font-size: 0.9rem; line-height: 1.9; color: var(--muted); font-weight: 300; }
+    .faq-a p { font-size: 0.98rem; line-height: 1.8; color: var(--muted); font-weight: 400; }
+    @media (max-width: 768px) { .faq-intro { margin-bottom: 2rem; } .faq-q { padding: 1.35rem 0; } }
 
     /* CTA BOTTOM */
     #cta-bottom {
@@ -536,7 +537,8 @@
       position: relative;
     }
     .cta-bottom-h2 .gold { color: var(--gold); }
-    .cta-sub { margin-top: 1.5rem; font-size: 1.05rem; color: var(--muted); max-width: 500px; margin-inline: auto; line-height: 1.8; font-weight: 300; position: relative; }
+    .cta-sub { margin-top: 1.5rem; font-size: 1.1rem; color: var(--muted); max-width: 520px; margin-inline: auto; line-height: 1.8; font-weight: 400; position: relative; }
+    @media (max-width: 768px) { #cta-bottom { padding: 80px 6%; } }
     .cta-actions { margin-top: 3.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
     .cta-note { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); position: relative; }
     .cta-note span { color: var(--gold); font-weight: 600; }
@@ -553,7 +555,7 @@
     .amount-wrap { display: flex; align-items: center; border: 1px solid var(--border); margin-bottom: 1.5rem; transition: border-color 0.2s; }
     .amount-wrap:focus-within { border-color: var(--gold); }
     .amount-dollar { padding: 0 1.1rem; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--gold); border-right: 1px solid var(--border); }
-    .amount-wrap input { flex: 1; background: transparent; border: none; outline: none; padding: 1rem 1.1rem; color: var(--white); font-size: 1.3rem; font-weight: 700; font-family: 'Manrope', sans-serif; }
+    .amount-wrap input { flex: 1; min-width: 0; width: 100%; background: transparent; border: none; outline: none; padding: 1rem 1.1rem; color: var(--white); font-size: 1.3rem; font-weight: 700; font-family: 'Manrope', sans-serif; }
     .amount-wrap input::placeholder { color: var(--muted); font-weight: 400; }
     .paypal-btn { width: 100%; background: #0070ba; color: #fff; border: none; cursor: pointer; padding: 1.1rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; transition: background 0.2s; }
     .paypal-btn:hover { background: #005ea6; }
@@ -570,10 +572,30 @@
     footer p { font-size: 0.78rem; color: var(--muted); }
     .footer-phone { font-size: 0.85rem; color: var(--gold); text-decoration: none; font-weight: 600; }
 
-    @media (max-width: 600px) { .nav-phone { display: none; } .nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; } }
-    .trade-pill--svg { cursor: zoom-in; }
-    .trade-pill--svg svg { transition: filter 0.2s; }
-    .trade-pill--svg:hover svg { filter: brightness(1.2); }
+    .nav-cta { white-space: nowrap; }
+    @media (max-width: 600px) {
+      nav { height: 60px; padding: 0 5%; }
+      .payment-box { padding: 2.25rem 1.25rem; }
+      .logo { font-size: 1.35rem; letter-spacing: 2px; }
+      .nav-right { gap: 1rem; }
+      .nav-phone, .nav-blog { display: none; }
+      .nav-cta { padding: 0.55rem 1rem; font-size: 0.72rem; }
+    }
+
+    /* MOBILE STICKY CALL BAR */
+    .call-bar { display: none; }
+    @media (max-width: 768px) {
+      .call-bar {
+        display: grid; grid-template-columns: 1.4fr 1fr; gap: 1px;
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+        background: var(--black); border-top: 1px solid rgba(232,160,32,0.35);
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .call-bar a { text-align: center; padding: 1rem 0.5rem; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+      .call-bar .cb-call { background: var(--gold); color: var(--black); }
+      .call-bar .cb-start { background: var(--dark2); color: var(--white); }
+      body { padding-bottom: 58px; }
+    }
 
   </style>
 </head>
@@ -600,6 +622,7 @@
         Bring You<br>
         <span class="gold">More Calls.</span>
       </h1>
+      <p class="hero-lead">Simple, fast websites for <strong>electricians, plumbers, painters, HVAC, roofers, handymen</strong> and other home service pros &mdash; built to do one thing: <strong>turn visitors into calls.</strong></p>
       <div class="hero-actions">
         <a href="#cta-bottom" class="btn-gold">Get Your Website — $550</a>
         <a href="#portfolio" class="btn-outline">See Examples ↓</a>
@@ -607,63 +630,163 @@
       <p class="hero-note">One-time payment · No monthly fees · <span>We work with businesses across the US</span></p>
     </div>
     <div class="hero-right">
-      <div class="hero-right-box">
-        <p class="hero-sub">
-          We build simple, high-converting websites for
-          <strong>electricians, plumbers, painters, carpenters,
-          HVAC contractors, roofers, remodelers, handymen,</strong>
-          and other home service professionals.
-        </p>
-        <p class="hero-tagline">
-          We specialize in websites that turn visitors into calls.<br>
-          No complicated stuff. Just more customers.
-        </p>
+      <div>
+        <a href="https://zaokret-dev.github.io/1pageonly/plumber" target="_blank" rel="noopener" class="phone" aria-label="Open the BoltWorks Plumbing example site">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="ps-nav"><div class="ps-logo">Bolt<span>Works</span></div><div class="ps-call-sm">&#9742; Call</div></div>
+            <div class="ps-hero">
+              <div class="ps-tag">Denver's Trusted Plumber</div>
+              <div class="ps-h1">No Leak Too Big. <span>No Job Too Small.</span></div>
+              <div class="ps-sub">Licensed &amp; insured plumbing across Denver, Aurora &amp; Lakewood. Water heaters, drains &amp; 24/7 emergency.</div>
+              <div class="ps-btn">&#9742; Call Now</div>
+              <div class="ps-btn ghost">Free Estimate</div>
+            </div>
+            <div class="ps-trust"><span>&#10004; Licensed</span><span>&#10004; Same-Day</span><span>&#10004; Insured</span></div>
+            <div class="ps-svcs">
+              <div class="ps-svc"><b>Water Heaters</b><i>All brands</i></div>
+              <div class="ps-svc"><b>Drain Cleaning</b><i>Any drain, fast</i></div>
+              <div class="ps-svc"><b>Emergency</b><i>24/7 burst pipes</i></div>
+              <div class="ps-svc"><b>Repiping</b><i>Copper &amp; PEX</i></div>
+            </div>
+          </div>
+        </a>
+        <p class="phone-caption">Example site &middot; <b>Tap to open</b></p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-intro">
+    <div class="sec-eyebrow">Example Sites</div>
+    <h2 class="sec-h2">See What Yours<br><span class="gold">Could Look Like.</span></h2>
+    <p>Every site is custom-built for the specific trade and local market — not a generic template with a logo swapped out. Tap any example to open the full site.</p>
+  </div>
+  <div class="portfolio-grid">
+
+    <!-- Plumber -->
+    <div class="portfolio-card">
+      <a href="https://zaokret-dev.github.io/1pageonly/plumber" target="_blank" rel="noopener" class="portfolio-preview">
+        <div class="prev-plumber">
+          <div class="pnav"><div class="plogo">Bolt<span>Works</span></div><div class="pbtn">☎ Call Now</div></div>
+          <div class="phero">
+            <div class="ptag">Denver's Trusted Plumber</div>
+            <div class="ph1">No Leak Too Big. <span>No Job Too Small.</span></div>
+            <div class="psub">Licensed & insured plumbing across Denver, Aurora & Lakewood. Water heaters, drain cleaning & 24/7 emergency.</div>
+            <div class="pacts"><div class="pcta">Free Estimate</div><div class="pghost">☎ (720) 555-0174</div></div>
+          </div>
+          <div class="ptrust"><span>✔ CO Licensed</span><span>⚡ Same-Day</span><span>🛡 Insured</span><span>📋 Free Quote</span></div>
+          <div class="psvcs">
+            <div class="psvc"><div class="psvct">Water Heaters</div><div class="psvcd">All brands, same day</div></div>
+            <div class="psvc"><div class="psvct">Drain Cleaning</div><div class="psvcd">Any drain, fast</div></div>
+            <div class="psvc"><div class="psvct">Emergency</div><div class="psvcd">24/7 burst pipes</div></div>
+            <div class="psvc"><div class="psvct">Repiping</div><div class="psvcd">Copper & PEX</div></div>
+            <div class="psvc"><div class="psvct">Sewer Lines</div><div class="psvcd">Inspect & repair</div></div>
+            <div class="psvc"><div class="psvct">Inspections</div><div class="psvcd">Pre-sale reports</div></div>
+          </div>
+        </div>
+        <div class="preview-overlay"><span>View Full Site</span></div>
+      </a>
+      <div class="portfolio-footer"><div class="portfolio-name">BoltWorks Plumbing — Denver, CO</div><div class="portfolio-trade">Plumber</div></div>
+      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
+      <a class="portfolio-open" href="https://zaokret-dev.github.io/1pageonly/plumber" target="_blank" rel="noopener">Open Full Site &rarr;</a>
+    </div>
+
+    <!-- Electrician -->
+    <div class="portfolio-card">
+      <a href="https://zaokret-dev.github.io/1pageonly/electrician" target="_blank" rel="noopener" class="portfolio-preview">
+        <div style="width:100%;height:100%;background:#050a14;display:flex;flex-direction:column;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.04) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;"></div>
+          <div style="position:relative;background:rgba(5,10,20,0.98);padding:0.55rem 1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(0,212,255,0.2);">
+            <div style="font-weight:800;font-size:0.85rem;letter-spacing:4px;color:#e8f4ff;text-transform:uppercase;">APEX <span style="color:#00d4ff;text-shadow:0 0 10px rgba(0,212,255,0.8);">ELECTRIC</span></div>
+            <div style="color:#00d4ff;padding:0.2rem 0.6rem;font-size:0.46rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(0,212,255,0.4);">FREE ESTIMATE</div>
+          </div>
+          <div style="position:relative;padding:1.2rem 1rem;flex:1;">
+            <div style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(0,212,255,0.2);padding:0.2rem 0.6rem;margin-bottom:0.75rem;">
+              <div style="width:5px;height:5px;border-radius:50%;background:#00d4ff;box-shadow:0 0 6px #00d4ff;"></div>
+              <span style="font-size:0.44rem;letter-spacing:3px;color:#00d4ff;text-transform:uppercase;">Phoenix AZ · Licensed Electrician</span>
+            </div>
+            <div style="font-weight:800;font-size:1.55rem;line-height:0.95;color:#e8f4ff;text-transform:uppercase;">POWER<br><span style="color:#00d4ff;text-shadow:0 0 15px rgba(0,212,255,0.5);">DONE RIGHT.</span><br><span style="-webkit-text-stroke:1px rgba(0,212,255,0.3);color:transparent;">FIRST TIME.</span></div>
+            <div style="font-size:0.5rem;color:#4a6080;margin-top:0.6rem;line-height:1.7;">Licensed & insured electrical contractor. Panel upgrades, EV chargers, rewiring & 24/7 emergency.</div>
+            <div style="margin-top:0.7rem;display:flex;gap:0.5rem;">
+              <div style="background:#00d4ff;color:#050a14;padding:0.22rem 0.65rem;font-size:0.46rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">GET ESTIMATE</div>
+              <div style="border:1px solid rgba(100,130,160,0.4);color:#7a95b0;padding:0.22rem 0.65rem;font-size:0.46rem;">☎ (602) 555-0193</div>
+            </div>
+          </div>
+          <div style="position:relative;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:rgba(0,212,255,0.15);border-top:1px solid rgba(0,212,255,0.2);">
+            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">14+</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Years</div></div>
+            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">1200+</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Jobs</div></div>
+            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">5.0★</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Rating</div></div>
+            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">24/7</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Emergency</div></div>
+          </div>
+          <div style="position:relative;background:#080f1e;border-top:1px solid rgba(0,212,255,0.15);">
+            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;border-bottom:1px solid rgba(0,212,255,0.08);"><span style="font-size:0.48rem;color:#4a6080;">_01</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">Panel Upgrades Phoenix AZ</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
+            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;border-bottom:1px solid rgba(0,212,255,0.08);"><span style="font-size:0.48rem;color:#4a6080;">_02</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">EV Charger Install Phoenix AZ</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
+            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;"><span style="font-size:0.48rem;color:#4a6080;">_03</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">Emergency Electrician 24/7</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
+          </div>
+        </div>
+        <div class="preview-overlay"><span>View Full Site</span></div>
+      </a>
+      <div class="portfolio-footer"><div class="portfolio-name">Apex Electric — Phoenix, AZ</div><div class="portfolio-trade">Electrician</div></div>
+      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
+      <a class="portfolio-open" href="https://zaokret-dev.github.io/1pageonly/electrician" target="_blank" rel="noopener">Open Full Site &rarr;</a>
+    </div>
+
+    <!-- Painter -->
+    <div class="portfolio-card">
+      <a href="https://zaokret-dev.github.io/1pageonly/painter" target="_blank" rel="noopener" class="portfolio-preview">
+        <div style="width:100%;height:100%;background:#faf7f2;display:flex;flex-direction:column;">
+          <div style="background:#faf7f2;padding:0.6rem 1.2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c8bfb5;">
+            <div style="font-size:0.85rem;font-weight:600;letter-spacing:3px;color:#1c1410;text-transform:uppercase;font-style:italic;font-family:Georgia,serif;">Brush<em style="color:#c4622d;">King</em></div>
+            <div style="background:#c4622d;color:#faf7f2;padding:0.2rem 0.6rem;font-size:0.46rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;">Free Estimate</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;flex:1;">
+            <div style="padding:1.2rem;border-right:1px solid #c8bfb5;">
+              <div style="font-size:0.44rem;letter-spacing:5px;text-transform:uppercase;color:#c4622d;margin-bottom:0.7rem;">Austin TX · Licensed Painter</div>
+              <div style="font-size:1.45rem;font-weight:600;color:#1c1410;line-height:1.0;font-family:Georgia,serif;">Fresh Coat.<br><em>Flawless Finish.</em></div>
+              <div style="width:28px;height:1px;background:#c4622d;margin:0.7rem 0;"></div>
+              <div style="font-size:0.48rem;color:#8a7e74;line-height:1.8;font-weight:300;">Licensed & insured painting in Austin, Round Rock & Cedar Park.</div>
+              <div style="margin-top:0.7rem;display:flex;align-items:center;gap:0.6rem;">
+                <div style="background:#c4622d;color:#faf7f2;padding:0.2rem 0.6rem;font-size:0.44rem;letter-spacing:2px;text-transform:uppercase;">Get Estimate</div>
+                <div style="font-size:0.44rem;color:#1c1410;border-bottom:1px solid #c8bfb5;">☎ (512) 555-0174</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f0e8da,#e8d5c0);display:flex;align-items:flex-end;padding:1rem;">
+              <div>
+                <div style="font-size:0.82rem;font-style:italic;color:#3d2b1f;line-height:1.4;font-family:Georgia,serif;">"The difference between ordinary and extraordinary is that little extra."</div>
+                <div style="font-size:0.38rem;letter-spacing:3px;text-transform:uppercase;color:#c4622d;margin-top:0.5rem;">Our Promise</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#f0e8da;padding:0.4rem 1.2rem;display:flex;gap:0.9rem;flex-wrap:wrap;border-top:1px solid #c8bfb5;">
+            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">✔ TX Licensed</span>
+            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">🎨 Free Color Consult</span>
+            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">⭐ 5.0 Google Rating</span>
+          </div>
+          <div style="background:#faf7f2;padding:0.6rem 1.2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.35rem;border-top:1px solid #c8bfb5;">
+            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Interior</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Walls & ceilings</div></div>
+            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Exterior</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Full repaints</div></div>
+            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Cabinets</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Kitchen refresh</div></div>
+          </div>
+        </div>
+        <div class="preview-overlay"><span>View Full Site</span></div>
+      </a>
+      <div class="portfolio-footer"><div class="portfolio-name">BrushKing Painting — Austin, TX</div><div class="portfolio-trade">Painter</div></div>
+      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
+      <a class="portfolio-open" href="https://zaokret-dev.github.io/1pageonly/painter" target="_blank" rel="noopener">Open Full Site &rarr;</a>
+    </div>
+
   </div>
 </section>
 
 <!-- TRADES -->
 <div id="trades">
   <div class="trades-label">We work with all home service trades</div>
-  <div class="trades-list">
-    <div class="trade-pill" onclick="openTradeLightbox('⚡ Electricians', 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=300&h=300&fit=crop&auto=format" alt="Electrician" loading="lazy" />
-      <span>⚡ Electricians</span>
-    </div>
-    <div class="trade-pill" onclick="openTradeLightbox('🔧 Plumbers', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop&auto=format" alt="Plumber" loading="lazy" />
-      <span>🔧 Plumbers</span>
-    </div>
-    <div class="trade-pill" onclick="openTradeLightbox('🖌️ Painters', 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=300&h=300&fit=crop&auto=format" alt="Painter" loading="lazy" />
-      <span>🖌️ Painters</span>
-    </div>
-    <div class="trade-pill" onclick="openTradeLightbox('🪚 Carpenters', 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=300&fit=crop&auto=format" alt="Carpenter" loading="lazy" />
-      <span>🪚 Carpenters</span>
-    </div>
-    <div class="trade-pill" onclick="openTradeLightbox('❄️ HVAC', 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=300&h=300&fit=crop&auto=format" alt="HVAC Technician" loading="lazy" />
-      <span>❄️ HVAC</span>
-    </div>
-    <div class="trade-pill" onclick="openTradeLightbox('🏠 Roofers', 'https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?w=300&h=300&fit=crop&auto=format" alt="Roofer" loading="lazy" />
-      <span>🏠 Roofers</span>
-    </div>
-    <div class="trade-pill" onclick="openTradeLightbox('🔨 Remodelers', 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=300&fit=crop&auto=format" alt="Remodeler" loading="lazy" />
-      <span>🔨 Remodelers</span>
-    </div>
-    <div class="trade-pill" onclick="openTradeLightbox('🛠️ Handymen', 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=900&h=900&fit=crop&auto=format')">
-      <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=300&h=300&fit=crop&auto=format" alt="Handyman" loading="lazy" />
-      <span>🛠️ Handymen</span>
-    </div>
-    <div class="trade-pill" style="justify-content:center;aspect-ratio:unset;padding:1rem 0.5rem;background:rgba(232,160,32,0.05);border-color:rgba(232,160,32,0.2);">
-      <span style="font-size:1.5rem; padding: 0 0 0.3rem;">+</span>
-      <span style="color:var(--gold);">Many More</span>
-    </div>
-  </div>
+  <ul class="trades-list">
+    <li>Electricians</li><li>Plumbers</li><li>Painters</li><li>Carpenters</li><li>HVAC</li><li>Roofers</li><li>Remodelers</li><li>Handymen</li><li class="more">+ Many More</li>
+  </ul>
 </div>
 
 <!-- PROBLEM -->
@@ -672,17 +795,17 @@
   <h2 class="sec-h2">Most Trade Businesses<br>Are <span class="gold">Invisible Online.</span></h2>
   <div class="problem-cards">
     <div class="problem-card">
-      <span class="problem-icon">🔍</span>
+      <span class="problem-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M8.5 11h5"/></svg></span>
       <h3>No Website at All</h3>
       <p>When someone searches for your trade at 10 PM, they can't find you. They call your competitor instead — someone who may be far less experienced and reliable than you.</p>
     </div>
     <div class="problem-card">
-      <span class="problem-icon">📅</span>
+      <span class="problem-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
       <h3>An Outdated Website</h3>
       <p>A website that looks like it was built in 2010 tells customers you're behind the times. First impressions matter — and a bad one costs you the job before you even say a word.</p>
     </div>
     <div class="problem-card">
-      <span class="problem-icon">📵</span>
+      <span class="problem-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/><path d="M3 3l18 18"/></svg></span>
       <h3>A Site That Brings Zero Calls</h3>
       <p>Some sites exist but do nothing. No clear call-to-action, no phone number up front, no reason for a visitor to actually pick up the phone and call you.</p>
     </div>
@@ -701,10 +824,6 @@
       <p>We build <strong>clean, fast, and simple websites</strong> designed to do one thing: <strong>get your phone ringing.</strong></p>
       <p>No unnecessary pages. No confusing menus. No fluff. Just a professional online presence that makes it easy for customers to find you — and call you.</p>
       <p>Every site is optimized for Google, loads fast on mobile, and has a prominent click-to-call button so visitors can reach you in one tap.</p>
-    </div>
-    <div class="solution-visual">
-      <div class="solution-big">Get Your Phone Ringing.</div>
-      <div class="solution-caption">That's the only goal.</div>
     </div>
   </div>
 </section>
@@ -760,9 +879,6 @@
       </div>
     </div>
   </div>
-  <div class="features-footer">
-    <p>Everything you need. <span>Nothing you don't.</span></p>
-  </div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -790,127 +906,6 @@
       <h3>You Go Live</h3>
       <p>We launch your site. You start showing up on Google and getting calls from customers who couldn't find you before.</p>
     </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="portfolio-intro">
-    <div class="sec-eyebrow">Our Work</div>
-    <h2 class="sec-h2">Real Websites.<br><span class="gold">Real Tradesmen.</span></h2>
-    <p>Every site is custom-built for the specific trade and local market — not a generic template with a logo swapped out. Click any example to see the full site.</p>
-  </div>
-  <div class="portfolio-grid">
-
-    <!-- Plumber -->
-    <div class="portfolio-card">
-      <a href="https://zaokret-dev.github.io/1pageonly/plumber" target="_blank" class="portfolio-preview">
-        <div class="prev-plumber">
-          <div class="pnav"><div class="plogo">Bolt<span>Works</span></div><div class="pbtn">☎ Call Now</div></div>
-          <div class="phero">
-            <div class="ptag">Denver's Trusted Plumber</div>
-            <div class="ph1">No Leak Too Big. <span>No Job Too Small.</span></div>
-            <div class="psub">Licensed & insured plumbing across Denver, Aurora & Lakewood. Water heaters, drain cleaning & 24/7 emergency.</div>
-            <div class="pacts"><div class="pcta">Free Estimate</div><div class="pghost">☎ (720) 555-0174</div></div>
-          </div>
-          <div class="ptrust"><span>✔ CO Licensed</span><span>⚡ Same-Day</span><span>🛡 Insured</span><span>📋 Free Quote</span></div>
-          <div class="psvcs">
-            <div class="psvc"><div class="psvct">Water Heaters</div><div class="psvcd">All brands, same day</div></div>
-            <div class="psvc"><div class="psvct">Drain Cleaning</div><div class="psvcd">Any drain, fast</div></div>
-            <div class="psvc"><div class="psvct">Emergency</div><div class="psvcd">24/7 burst pipes</div></div>
-            <div class="psvc"><div class="psvct">Repiping</div><div class="psvcd">Copper & PEX</div></div>
-            <div class="psvc"><div class="psvct">Sewer Lines</div><div class="psvcd">Inspect & repair</div></div>
-            <div class="psvc"><div class="psvct">Inspections</div><div class="psvcd">Pre-sale reports</div></div>
-          </div>
-        </div>
-        <div class="preview-overlay"><span>👆 VIEW FULL SITE</span></div>
-      </a>
-      <div class="portfolio-footer"><div class="portfolio-name">BoltWorks Plumbing — Denver, CO</div><div class="portfolio-trade">Plumber</div></div>
-      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
-    </div>
-
-    <!-- Electrician -->
-    <div class="portfolio-card">
-      <a href="https://zaokret-dev.github.io/1pageonly/electrician" target="_blank" class="portfolio-preview">
-        <div style="width:100%;height:100%;background:#050a14;display:flex;flex-direction:column;position:relative;overflow:hidden;">
-          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.04) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;"></div>
-          <div style="position:relative;background:rgba(5,10,20,0.98);padding:0.55rem 1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(0,212,255,0.2);">
-            <div style="font-weight:800;font-size:0.85rem;letter-spacing:4px;color:#e8f4ff;text-transform:uppercase;">APEX <span style="color:#00d4ff;text-shadow:0 0 10px rgba(0,212,255,0.8);">ELECTRIC</span></div>
-            <div style="color:#00d4ff;padding:0.2rem 0.6rem;font-size:0.46rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(0,212,255,0.4);">FREE ESTIMATE</div>
-          </div>
-          <div style="position:relative;padding:1.2rem 1rem;flex:1;">
-            <div style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(0,212,255,0.2);padding:0.2rem 0.6rem;margin-bottom:0.75rem;">
-              <div style="width:5px;height:5px;border-radius:50%;background:#00d4ff;box-shadow:0 0 6px #00d4ff;"></div>
-              <span style="font-size:0.44rem;letter-spacing:3px;color:#00d4ff;text-transform:uppercase;">Phoenix AZ · Licensed Electrician</span>
-            </div>
-            <div style="font-weight:800;font-size:1.55rem;line-height:0.95;color:#e8f4ff;text-transform:uppercase;">POWER<br><span style="color:#00d4ff;text-shadow:0 0 15px rgba(0,212,255,0.5);">DONE RIGHT.</span><br><span style="-webkit-text-stroke:1px rgba(0,212,255,0.3);color:transparent;">FIRST TIME.</span></div>
-            <div style="font-size:0.5rem;color:#4a6080;margin-top:0.6rem;line-height:1.7;">Licensed & insured electrical contractor. Panel upgrades, EV chargers, rewiring & 24/7 emergency.</div>
-            <div style="margin-top:0.7rem;display:flex;gap:0.5rem;">
-              <div style="background:#00d4ff;color:#050a14;padding:0.22rem 0.65rem;font-size:0.46rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">GET ESTIMATE</div>
-              <div style="border:1px solid rgba(100,130,160,0.4);color:#7a95b0;padding:0.22rem 0.65rem;font-size:0.46rem;">☎ (602) 555-0193</div>
-            </div>
-          </div>
-          <div style="position:relative;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:rgba(0,212,255,0.15);border-top:1px solid rgba(0,212,255,0.2);">
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">14+</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Years</div></div>
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">1200+</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Jobs</div></div>
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">5.0★</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Rating</div></div>
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">24/7</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Emergency</div></div>
-          </div>
-          <div style="position:relative;background:#080f1e;border-top:1px solid rgba(0,212,255,0.15);">
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;border-bottom:1px solid rgba(0,212,255,0.08);"><span style="font-size:0.48rem;color:#4a6080;">_01</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">Panel Upgrades Phoenix AZ</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;border-bottom:1px solid rgba(0,212,255,0.08);"><span style="font-size:0.48rem;color:#4a6080;">_02</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">EV Charger Install Phoenix AZ</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;"><span style="font-size:0.48rem;color:#4a6080;">_03</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">Emergency Electrician 24/7</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
-          </div>
-        </div>
-        <div class="preview-overlay"><span>👆 VIEW FULL SITE</span></div>
-      </a>
-      <div class="portfolio-footer"><div class="portfolio-name">Apex Electric — Phoenix, AZ</div><div class="portfolio-trade">Electrician</div></div>
-      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
-    </div>
-
-    <!-- Painter -->
-    <div class="portfolio-card">
-      <a href="https://zaokret-dev.github.io/1pageonly/painter" target="_blank" class="portfolio-preview">
-        <div style="width:100%;height:100%;background:#faf7f2;display:flex;flex-direction:column;">
-          <div style="background:#faf7f2;padding:0.6rem 1.2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c8bfb5;">
-            <div style="font-size:0.85rem;font-weight:600;letter-spacing:3px;color:#1c1410;text-transform:uppercase;font-style:italic;font-family:Georgia,serif;">Brush<em style="color:#c4622d;">King</em></div>
-            <div style="background:#c4622d;color:#faf7f2;padding:0.2rem 0.6rem;font-size:0.46rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;">Free Estimate</div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;flex:1;">
-            <div style="padding:1.2rem;border-right:1px solid #c8bfb5;">
-              <div style="font-size:0.44rem;letter-spacing:5px;text-transform:uppercase;color:#c4622d;margin-bottom:0.7rem;">Austin TX · Licensed Painter</div>
-              <div style="font-size:1.45rem;font-weight:600;color:#1c1410;line-height:1.0;font-family:Georgia,serif;">Fresh Coat.<br><em>Flawless Finish.</em></div>
-              <div style="width:28px;height:1px;background:#c4622d;margin:0.7rem 0;"></div>
-              <div style="font-size:0.48rem;color:#8a7e74;line-height:1.8;font-weight:300;">Licensed & insured painting in Austin, Round Rock & Cedar Park.</div>
-              <div style="margin-top:0.7rem;display:flex;align-items:center;gap:0.6rem;">
-                <div style="background:#c4622d;color:#faf7f2;padding:0.2rem 0.6rem;font-size:0.44rem;letter-spacing:2px;text-transform:uppercase;">Get Estimate</div>
-                <div style="font-size:0.44rem;color:#1c1410;border-bottom:1px solid #c8bfb5;">☎ (512) 555-0174</div>
-              </div>
-            </div>
-            <div style="background:linear-gradient(135deg,#f0e8da,#e8d5c0);display:flex;align-items:flex-end;padding:1rem;">
-              <div>
-                <div style="font-size:0.82rem;font-style:italic;color:#3d2b1f;line-height:1.4;font-family:Georgia,serif;">"The difference between ordinary and extraordinary is that little extra."</div>
-                <div style="font-size:0.38rem;letter-spacing:3px;text-transform:uppercase;color:#c4622d;margin-top:0.5rem;">Our Promise</div>
-              </div>
-            </div>
-          </div>
-          <div style="background:#f0e8da;padding:0.4rem 1.2rem;display:flex;gap:0.9rem;flex-wrap:wrap;border-top:1px solid #c8bfb5;">
-            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">✔ TX Licensed</span>
-            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">🎨 Free Color Consult</span>
-            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">⭐ 5.0 Google Rating</span>
-          </div>
-          <div style="background:#faf7f2;padding:0.6rem 1.2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.35rem;border-top:1px solid #c8bfb5;">
-            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Interior</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Walls & ceilings</div></div>
-            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Exterior</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Full repaints</div></div>
-            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Cabinets</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Kitchen refresh</div></div>
-          </div>
-        </div>
-        <div class="preview-overlay"><span>👆 VIEW FULL SITE</span></div>
-      </a>
-      <div class="portfolio-footer"><div class="portfolio-name">BrushKing Painting — Austin, TX</div><div class="portfolio-trade">Painter</div></div>
-      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
-    </div>
-
   </div>
 </section>
 
@@ -1035,7 +1030,7 @@
   <p class="cta-sub">Call us today or send a message. We'll tell you exactly what you need — no pressure, no upsells. Just a straight answer and a great website.</p>
   <div class="cta-actions">
     <a href="tel:+17205550138" class="btn-gold">☎ Call (720) 555-0138</a>
-    <a href="/cdn-cgi/l/email-protection#3956575c49585e5c4a4c5a5a5c4a4a795e54585055175a5654" class="btn-outline">Send a Message</a>
+    <a href="mailto:onepagesuccess@gmail.com" class="btn-outline">Send a Message</a>
   </div>
   <p class="cta-note">We work with businesses across the US · <span>One-time $550 · No monthly fees</span></p>
 </section>
@@ -1065,13 +1060,10 @@
   </div>
 </footer>
 
-<!-- TRADE LIGHTBOX -->
-<div id="trade-lightbox" onclick="closeTradeLightbox()">
-  <span id="lb-close" onclick="closeTradeLightbox()">×</span>
-  <div id="trade-lightbox-inner" onclick="event.stopPropagation()">
-    <img id="lb-img-main" src="" alt="" />
-    <div id="lb-label"></div>
-  </div>
+<!-- MOBILE CALL BAR -->
+<div class="call-bar">
+  <a href="tel:+17205550138" class="cb-call">&#9742; Call Now</a>
+  <a href="#cta-bottom" class="cb-start">Get Started</a>
 </div>
 
 <script>
@@ -1081,44 +1073,6 @@
     document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
     if (!isOpen) item.classList.add('open');
   }
-
-  function openTradeSvgLightbox(label, svgId) {
-    // Clone the SVG from the card and show it enlarged
-    var sourceSvg = document.querySelector('.trade-pill--svg svg');
-    var lb = document.getElementById('trade-lightbox');
-    var img = document.getElementById('lb-img-main');
-    // Hide the img, show cloned SVG instead
-    img.style.display = 'none';
-    var existing = document.getElementById('lb-svg-clone');
-    if (existing) existing.remove();
-    var clone = sourceSvg.cloneNode(true);
-    clone.id = 'lb-svg-clone';
-    clone.style.cssText = 'width:100%;height:100%;display:block;';
-    document.getElementById('trade-lightbox-inner').insertBefore(clone, document.getElementById('lb-label'));
-    document.getElementById('lb-label').textContent = label;
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function openTradeLightbox(label, src) {
-    document.getElementById('lb-img-main').src = src;
-    document.getElementById('lb-img-main').alt = label;
-    document.getElementById('lb-label').textContent = label;
-    document.getElementById('trade-lightbox').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeTradeLightbox() {
-    document.getElementById('trade-lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-    document.getElementById('lb-img-main').style.display = '';
-    var clone = document.getElementById('lb-svg-clone');
-    if (clone) clone.remove();
-  }
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeTradeLightbox();
-  });
 
   function payWithPayPal() {
     var amount = document.getElementById('paypal-amount').value;
