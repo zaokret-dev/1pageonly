@@ -193,8 +193,23 @@
     .nav-phone:hover { color: var(--gold); }
     .nav-blog { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-bottom: 2px solid var(--gold); padding-bottom: 0.1rem; transition: color 0.2s; }
     .nav-blog:hover { color: var(--gold); }
-    .nav-pay { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
-    .nav-pay:hover { color: var(--gold); }
+    .nav-pay { color: var(--gold); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: 1.5px solid var(--gold); padding: 0.5rem 1.2rem; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+    .nav-pay:hover { background: var(--gold); color: var(--black); }
+
+    /* PAY ONLINE BANNER */
+    .pay-banner { margin-top: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2.5rem 3rem; background: linear-gradient(135deg, rgba(0,112,186,0.22), rgba(0,112,186,0.08)); border: 2px solid #1e88e5; }
+    .pay-banner-kicker { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: #64b5f6; font-weight: 700; margin-bottom: 0.5rem; }
+    .pay-banner-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: 1; letter-spacing: 1.5px; color: var(--white); }
+    .pay-banner-sub { margin-top: 0.6rem; font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+    .pay-banner-btn { flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.7rem; background: #0070ba; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; padding: 1.35rem 2.6rem; box-shadow: 0 6px 30px rgba(0,112,186,0.45); transition: background 0.2s, transform 0.15s; }
+    .pay-banner-btn:hover { background: #005ea6; transform: translateY(-2px); }
+    .pay-banner-btn svg { width: 22px; height: 22px; }
+    @media (max-width: 768px) {
+      .pay-banner { flex-direction: column; align-items: stretch; text-align: center; padding: 2rem 1.25rem; gap: 1.5rem; }
+      .pay-banner-btn { justify-content: center; font-size: 1.05rem; padding: 1.3rem 1rem; }
+    }
+    .btn-pay { background: #0070ba; color: #fff; padding: 1.1rem 2.25rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; box-shadow: 0 4px 24px rgba(0,112,186,0.4); }
+    .btn-pay:hover { background: #005ea6; }
     .pricing-note a { color: var(--gold); font-weight: 700; text-decoration: none; }
     .footer-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
     .footer-links a.fl { font-size: 0.78rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
@@ -544,6 +559,7 @@
     .cta-bottom-h2 .gold { color: var(--gold); }
     .cta-sub { margin-top: 1.5rem; font-size: 1.1rem; color: var(--muted); max-width: 520px; margin-inline: auto; line-height: 1.8; font-weight: 400; position: relative; }
     @media (max-width: 768px) { #cta-bottom { padding: 80px 6%; } }
+    @media (max-width: 600px) { .cta-actions { flex-direction: column; align-items: stretch; max-width: 340px; margin-inline: auto; } .cta-actions a { text-align: center; } }
     .cta-actions { margin-top: 3.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
     .cta-note { margin-top: 2rem; font-size: 0.8rem; color: var(--muted); position: relative; }
     .cta-note span { color: var(--gold); font-weight: 600; }
@@ -937,7 +953,15 @@
       <a href="#cta-bottom" class="price-btn solid">Get Started</a>
     </div>
   </div>
-  <p class="pricing-note">Not sure which plan is right for you? <strong>Call us</strong> — we'll give you a straight answer.<br>We work with businesses <strong>across all 50 states.</strong><br>Already talked with us? <a href="/pay">Pay online here &rarr;</a></p>
+  <p class="pricing-note">Not sure which plan is right for you? <strong>Call us</strong> — we'll give you a straight answer.<br>We work with businesses <strong>across all 50 states.</strong></p>
+  <div class="pay-banner" id="pay-online">
+    <div>
+      <div class="pay-banner-kicker">Already talked with us?</div>
+      <div class="pay-banner-title">Pay Online in 1 Minute</div>
+      <p class="pay-banner-sub">Secure payment via PayPal &middot; Credit &amp; debit cards accepted &middot; No PayPal account needed</p>
+    </div>
+    <a href="/pay" class="pay-banner-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pay Online</a>
+  </div>
 </section>
 
 <!-- OUR PROMISE -->
@@ -1009,6 +1033,7 @@
   <div class="cta-actions">
     <a href="tel:+17205550138" class="btn-gold">☎ Call (720) 555-0138</a>
     <a href="mailto:info@1pageonly.com" class="btn-outline">Send a Message</a>
+    <a href="/pay" class="btn-pay">&#128274; Pay Online</a>
   </div>
   <p class="cta-note">We work with businesses across the US · <span>One-time $550 · No monthly fees</span></p>
 </section>
