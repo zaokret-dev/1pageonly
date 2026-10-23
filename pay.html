@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment | One Page Only</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0d0d0d;
+      --dark: #131920;
+      --dark2: #181f28;
+      --white: #ffffff;
+      --gold: #e8a020;
+      --gold2: #f5b432;
+      --muted: #a3b2c4;
+      --border: rgba(255,255,255,0.07);
+    }
+    html, body { overflow-x: hidden; width: 100%; }
+    body { font-family: 'Manrope', sans-serif; background: var(--dark); color: var(--white); min-height: 100vh; display: flex; flex-direction: column; }
+
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 0 6%; height: 68px; border-bottom: 1px solid var(--border); }
+    .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--gold); }
+    .nav-phone { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    .nav-phone:hover { color: var(--gold); }
+
+    main { flex: 1; padding: 80px 6% 90px; text-align: center; }
+    .eyebrow { font-size: 0.72rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.25rem; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(3rem, 7vw, 5.5rem); line-height: 0.95; letter-spacing: 2px; }
+    h1 span { color: var(--gold); }
+    .lead { margin: 1.5rem auto 0; max-width: 560px; font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
+
+    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 820px; margin: 3.5rem auto 0; text-align: left; }
+    @media (max-width: 700px) { .plans { grid-template-columns: 1fr; } }
+    .plan { border: 1px solid var(--border); background: var(--dark2); padding: 2.5rem 2rem; display: flex; flex-direction: column; position: relative; }
+    .plan.featured { border-color: var(--gold); }
+    .badge { position: absolute; top: -13px; left: 2rem; background: var(--gold); color: var(--black); font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.3rem 0.9rem; }
+    .plan-name { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    .plan-price { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; line-height: 1; margin: 0.4rem 0 0.5rem; }
+    .plan-price sup { font-size: 2.2rem; color: var(--gold); vertical-align: top; position: relative; top: 0.6rem; }
+    .plan-note { font-size: 0.88rem; line-height: 1.6; color: var(--muted); flex: 1; }
+    .pay-btn { display: block; margin-top: 1.75rem; text-align: center; padding: 1.1rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; background: #0070ba; color: #fff; transition: background 0.2s; }
+    .pay-btn:hover { background: #005ea6; }
+
+    .secure { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+    .help { margin: 3rem auto 0; max-width: 560px; padding: 1.75rem; border: 1px solid rgba(232,160,32,0.25); background: rgba(232,160,32,0.05); font-size: 0.95rem; line-height: 1.7; color: var(--muted); }
+    .help strong { color: var(--white); }
+    .help a { color: var(--gold); font-weight: 600; text-decoration: none; }
+
+    footer { background: var(--black); padding: 2rem 6%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border); }
+    footer p { font-size: 0.8rem; color: var(--muted); }
+    footer a { font-size: 0.8rem; color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 5%; height: 60px; }
+      .logo { font-size: 1.35rem; letter-spacing: 2px; }
+      main { padding: 56px 5% 70px; }
+      .plan { padding: 2.25rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">One<span>Page</span>Only</a>
+  <a href="tel:+17205550138" class="nav-phone">&#9742; (720) 555-0138</a>
+</nav>
+
+<main>
+  <p class="eyebrow">Secure Payment</p>
+  <h1>Pay for Your <span>Website</span></h1>
+  <p class="lead">Choose the plan we agreed on during our call. You'll be taken to PayPal to complete the payment securely.</p>
+
+  <div class="plans">
+    <div class="plan">
+      <div class="plan-name">Starter Website</div>
+      <div class="plan-price"><sup>$</sup>550</div>
+      <p class="plan-note">Professional 1-page website. Domain &amp; hosting included for the first year. One-time payment, no monthly fees.</p>
+      <a class="pay-btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=onepagesuccess%40gmail.com&amp;currency_code=USD&amp;no_note=1&amp;no_shipping=1&amp;amount=550.00&amp;item_name=One%20Page%20Only%20-%20Starter%20Website" target="_blank" rel="noopener">Pay $550 with PayPal</a>
+    </div>
+    <div class="plan featured">
+      <div class="badge">Most Popular</div>
+      <div class="plan-name">Pro + Local SEO</div>
+      <div class="plan-price"><sup>$</sup>750</div>
+      <p class="plan-note">Up to 3 pages, local SEO and Google Business Profile setup. Domain &amp; hosting included for the first year. One-time payment, no monthly fees.</p>
+      <a class="pay-btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=onepagesuccess%40gmail.com&amp;currency_code=USD&amp;no_note=1&amp;no_shipping=1&amp;amount=750.00&amp;item_name=One%20Page%20Only%20-%20Pro%20%2B%20Local%20SEO" target="_blank" rel="noopener">Pay $750 with PayPal</a>
+    </div>
+  </div>
+
+  <p class="secure">&#128274; Secure payment via PayPal &middot; Credit &amp; debit cards accepted &middot; No PayPal account required</p>
+
+  <div class="help">
+    <strong>Haven't talked with us yet?</strong> Please call or email us first, so we can make sure the plan is right for your business.<br>
+    <a href="tel:+17205550138">(720) 555-0138</a> &middot; <a href="mailto:info@1pageonly.com">info@1pageonly.com</a>
+  </div>
+</main>
+
+<footer>
+  <a href="/" class="logo" style="font-size:1.3rem;">One<span>Page</span>Only</a>
+  <p>&copy; 2026 One Page Only &middot; Serving contractors across the US</p>
+  <a href="/privacy">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
