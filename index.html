@@ -193,6 +193,12 @@
     .nav-phone:hover { color: var(--gold); }
     .nav-blog { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-bottom: 2px solid var(--gold); padding-bottom: 0.1rem; transition: color 0.2s; }
     .nav-blog:hover { color: var(--gold); }
+    .nav-pay { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-pay:hover { color: var(--gold); }
+    .pricing-note a { color: var(--gold); font-weight: 700; text-decoration: none; }
+    .footer-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    .footer-links a.fl { font-size: 0.78rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a.fl:hover { color: var(--gold); }
     .nav-cta { background: var(--gold); color: var(--black); padding: 0.6rem 1.5rem; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: var(--gold2); }
 
@@ -558,7 +564,7 @@
       nav { height: 60px; padding: 0 5%; }
       .logo { font-size: 1.35rem; letter-spacing: 2px; }
       .nav-right { gap: 1rem; }
-      .nav-phone, .nav-blog { display: none; }
+      .nav-phone, .nav-blog, .nav-pay { display: none; }
       .nav-cta { padding: 0.55rem 1rem; font-size: 0.72rem; }
     }
 
@@ -586,6 +592,7 @@
   <a href="https://www.1pageonly.com/" class="logo" aria-label="One Page Only - Home">One<span>Page</span>Only</a>
   <div class="nav-right">
     <a href="/blog" class="nav-blog">Blog</a>
+    <a href="/pay" class="nav-pay">Pay Online</a>
     <a href="tel:+17205550138" class="nav-phone" aria-label="Call us at (720) 555-0138">☎ (720) 555-0138</a>
     <a href="#cta-bottom" class="nav-cta">Get Started</a>
   </div>
@@ -930,7 +937,7 @@
       <a href="#cta-bottom" class="price-btn solid">Get Started</a>
     </div>
   </div>
-  <p class="pricing-note">Not sure which plan is right for you? <strong>Call us</strong> — we'll give you a straight answer.<br>We work with businesses <strong>across all 50 states.</strong></p>
+  <p class="pricing-note">Not sure which plan is right for you? <strong>Call us</strong> — we'll give you a straight answer.<br>We work with businesses <strong>across all 50 states.</strong><br>Already talked with us? <a href="/pay">Pay online here &rarr;</a></p>
 </section>
 
 <!-- OUR PROMISE -->
@@ -1010,8 +1017,9 @@
 <footer>
   <div class="footer-logo">One<span>Page</span>Only</div>
   <p>© 2026 One Page Only · Serving contractors across the US</p>
-  <div style="display:flex;gap:1.5rem;align-items:center;">
-    <a href="/privacy" style="font-size:0.78rem;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+  <div class="footer-links">
+    <a href="/pay" class="fl">Pay Online</a>
+    <a href="/privacy" class="fl">Privacy Policy</a>
     <a href="tel:+17205550138" class="footer-phone">(720) 555-0138</a>
   </div>
 </footer>
