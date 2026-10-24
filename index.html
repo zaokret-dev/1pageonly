@@ -584,8 +584,14 @@
       nav { height: 60px; padding: 0 5%; }
       .logo { font-size: 1.35rem; letter-spacing: 2px; }
       .nav-right { gap: 1rem; }
-      .nav-phone, .nav-blog, .nav-pay { display: none; }
+      .nav-phone, .nav-pay { display: none; }
+      .nav-blog { font-size: 0.85rem; }
       .nav-cta { padding: 0.55rem 1rem; font-size: 0.72rem; }
+    }
+    @media (max-width: 360px) {
+      .logo { font-size: 1.15rem; letter-spacing: 1.5px; }
+      .nav-right { gap: 0.8rem; }
+      .nav-cta { padding: 0.5rem 0.75rem; font-size: 0.68rem; }
     }
 
     /* MOBILE STICKY CALL BAR */
@@ -611,7 +617,7 @@
 <nav aria-label="Main navigation">
   <a href="https://1pageonly.com/" class="logo" aria-label="One Page Only - Home">One<span>Page</span>Only</a>
   <div class="nav-right">
-    <a href="/blog" class="nav-blog">Blog</a>
+    <a href="/blog/" class="nav-blog">Blog</a>
     <a href="/pay" class="nav-pay">Pay Online</a>
     <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business" class="nav-phone" aria-label="Email us at info@1pageonly.com">&#9993; info@1pageonly.com</a>
     <a href="#cta-bottom" class="nav-cta">Get Started</a>
@@ -1046,8 +1052,9 @@
   <div class="footer-logo">One<span>Page</span>Only</div>
   <p>© 2026 One Page Only · Serving contractors across the US</p>
   <div class="footer-links">
+    <a href="/blog/" class="fl">Blog</a>
     <a href="/pay" class="fl">Pay Online</a>
-    <a href="/privacy" class="fl">Privacy Policy</a>
+    <a href="/privacy/" class="fl">Privacy Policy</a>
     <a href="mailto:info@1pageonly.com" class="footer-phone">info@1pageonly.com</a>
   </div>
 </footer>
