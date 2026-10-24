@@ -73,6 +73,9 @@
     .footer-links a { font-size: 0.78rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
     footer p { font-size: 0.78rem; color: var(--muted); }
+
+    .nav-link, .nav-cta { white-space: nowrap; }
+    @media (max-width: 900px) { .nav-right a[href^="mailto"] { display: none; } }
   </style>
 </head>
 <body>
@@ -82,7 +85,7 @@
   <div class="nav-right">
     <a href="/blog/" class="nav-blog">Blog</a>
     <a href="/pay" class="nav-link">Pay Online</a>
-    <a href="tel:+17205550138" class="nav-link">☎ (720) 555-0138</a>
+    <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business" class="nav-link">&#9993; info@1pageonly.com</a>
     <a href="/#cta-bottom" class="nav-cta">Get Started</a>
   </div>
 </nav>
@@ -106,7 +109,6 @@
     <div class="contact-box">
       <p><strong>One Page Only</strong></p>
       <p>Email: <a href="mailto:info@1pageonly.com">info@1pageonly.com</a></p>
-      <p>Phone: <a href="tel:+17205550138">(720) 555-0138</a></p>
     </div>
   </div>
 
@@ -199,7 +201,6 @@
     <div class="contact-box">
       <p><strong>One Page Only</strong></p>
       <p>Email: <a href="mailto:info@1pageonly.com">info@1pageonly.com</a></p>
-      <p>Phone: <a href="tel:+17205550138">(720) 555-0138</a></p>
       <p>Website: <a href="https://1pageonly.com/">1pageonly.com</a></p>
     </div>
   </div>
