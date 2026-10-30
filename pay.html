@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Payment | One Page Only</title>
+  <meta name="description" content="Pay for your One Page Only website securely with PayPal — Starter $550 or Pro + Local SEO $750. Prefer an invoice? Email or WhatsApp us." />
   <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Pay for Your Website | One Page Only" />
+  <meta property="og:url" content="https://1pageonly.com/pay" />
+  <meta property="og:image" content="https://1pageonly.com/og-image.jpg" />
   <link rel="canonical" href="https://1pageonly.com/pay" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -51,6 +55,13 @@
     .pay-btn:hover { background: #005ea6; }
 
     .secure { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+    .invoice { margin: 2rem auto 0; max-width: 560px; font-size: 0.98rem; line-height: 1.7; color: var(--muted); }
+    .invoice strong { color: var(--white); }
+    .invoice-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.1rem; }
+    .inv-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 170px; padding: 0.85rem 1.4rem; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border: 1.5px solid var(--gold); color: var(--gold); transition: background 0.2s, color 0.2s; }
+    .inv-btn:hover { background: var(--gold); color: var(--black); }
+    .inv-btn.wa { border-color: #25d366; color: #25d366; }
+    .inv-btn.wa:hover { background: #25d366; color: #0d0d0d; }
     .help { margin: 3rem auto 0; max-width: 560px; padding: 1.75rem; border: 1px solid rgba(232,160,32,0.25); background: rgba(232,160,32,0.05); font-size: 0.95rem; line-height: 1.7; color: var(--muted); }
     .help strong { color: var(--white); }
     .help a { color: var(--gold); font-weight: 600; text-decoration: none; }
@@ -96,18 +107,26 @@
     </div>
   </div>
 
-  <p class="secure">&#128274; Secure payment via PayPal &middot; Credit &amp; debit cards accepted &middot; No PayPal account required</p>
+  <p class="secure">&#128274; Secure payment via PayPal</p>
+
+  <div class="invoice">
+    <strong>Prefer to pay by card without PayPal?</strong> Message us and we'll send you an invoice you can pay by credit or debit card.
+    <div class="invoice-btns">
+      <a class="inv-btn" href="mailto:info@1pageonly.com?subject=Invoice%20request">&#9993; Email Us</a>
+      <a class="inv-btn wa" href="https://wa.me/381658428248?text=Hi%2C%20I%27d%20like%20an%20invoice%20for%20my%20website." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
 
   <div class="help">
-    <strong>Haven't talked with us yet?</strong> Please email us first, so we can make sure the plan is right for your business.<br>
-    <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business">info@1pageonly.com</a>
+    <strong>Haven't talked with us yet?</strong> Please email or WhatsApp us first, so we can make sure the plan is right for your business.<br>
+    <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business">info@1pageonly.com</a> &middot; <a href="https://wa.me/381658428248" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </main>
 
 <footer>
   <a href="/" class="logo" style="font-size:1.3rem;">One<span>Page</span>Only</a>
   <p>&copy; 2026 One Page Only &middot; Serving contractors across the US</p>
-  <a href="/privacy">Privacy Policy</a>
+  <a href="/privacy/">Privacy Policy</a>
 </footer>
 
 </body>

@@ -113,7 +113,7 @@
         "name": "How long does it take to get my website live?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Go Live in Just Five Business Days. We'll send you a preview link within 72 hours. Review it and request any changes — unlimited revisions, no extra charge."
+          "text": "We deliver your site for review within 72 hours. After you approve it (or request any changes), we go live within 48 hours. Most clients are live within 5 business days from the first call."
         }
       },
       {
@@ -129,7 +129,7 @@
         "name": "How quickly will I start getting calls from my website?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It varies, but most clients start seeing organic traffic within 6–10 weeks. If you pair your site with a Google Business Profile (which we can help you set up for just $100), results often come even faster. Some clients receive their first call within the first two weeks."
+          "text": "It varies, but most clients start seeing organic traffic within 6–10 weeks. If you pair your site with a Google Business Profile (included in our Pro plan, or a $100 add-on with Starter), results often come even faster. Some clients receive their first call within the first five weeks."
         }
       },
       {
@@ -533,7 +533,8 @@
       cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 2rem;
       transition: color 0.2s; user-select: none;
     }
-    .faq-q:hover { color: var(--gold); }
+    .faq-q:hover, .faq-q:focus-visible { color: var(--gold); }
+    .faq-q:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
     .faq-icon { font-size: 1.4rem; color: var(--gold); transition: transform 0.3s; flex-shrink: 0; }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
@@ -1005,31 +1006,31 @@
   </div>
   <div class="faq-list">
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Do I need to know anything about websites or technology?<span class="faq-icon">+</span></div>
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">Do I need to know anything about websites or technology?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>Not at all. You know your trade — we handle everything else. All we need from you is a 15-minute phone call. We take care of the design, the setup, and getting you live. Zero technical knowledge required.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How long does it take to get my website live?<span class="faq-icon">+</span></div>
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">How long does it take to get my website live?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>We deliver your site for review within 72 hours. After you approve it (or request any changes), we go live within 48 hours. Most clients are live within 5 business days from the first call.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Are there any monthly fees after I pay the one-time fee?<span class="faq-icon">+</span></div>
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">Are there any monthly fees after I pay the one-time fee?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>No monthly fees — ever. Your one-time payment includes the domain name and hosting for the first year. After that, domain and hosting renew together for approximately $100 per year. No surprises, no hidden fees.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How quickly will I start getting calls from my website?<span class="faq-icon">+</span></div>
-      <div class="faq-a"><p>It varies, but most clients start seeing organic traffic within 6–10 weeks. If you pair your site with a Google Business Profile (which we can help you set up for just $100), results often come even faster. Some clients receive their first call within the first two weeks.</p></div>
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">How quickly will I start getting calls from my website?<span class="faq-icon">+</span></div>
+      <div class="faq-a"><p>It varies, but most clients start seeing organic traffic within 6–10 weeks. If you pair your site with a Google Business Profile (included in our Pro plan, or a $100 add-on with Starter), results often come even faster. Some clients receive their first call within the first five weeks.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What information do you need from me to get started?<span class="faq-icon">+</span></div>
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">What information do you need from me to get started?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>Just your business name, phone number, service area, and a list of your services. If you have photos of your work, even better — but not required. We can start with just the basics and build from there.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What if I'm not happy with the website?<span class="faq-icon">+</span></div>
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">What if I'm not happy with the website?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>We offer unlimited revisions until you're 100% satisfied. We send you a preview before going live, and you can request as many changes as you need. We don't consider the job done until you love it. <strong>Please note: once you give final approval and the site goes live, no further changes are included.</strong></p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Do you work with all types of tradesmen?<span class="faq-icon">+</span></div>
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">Do you work with all types of tradesmen?<span class="faq-icon">+</span></div>
       <div class="faq-a"><p>Yes — plumbers, electricians, painters, handymen, roofers, HVAC technicians, landscapers, carpenters, remodelers and more. If you work with your hands and want more customers, we've got you covered. We work with businesses across all 50 states.</p></div>
     </div>
   </div>
@@ -1069,9 +1070,14 @@
   function toggleFaq(el) {
     var item = el.parentElement;
     var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-    if (!isOpen) item.classList.add('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+    if (!isOpen) { item.classList.add('open'); el.setAttribute('aria-expanded','true'); }
   }
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(q); }
+    });
+  });
 
 </script>
 </body>

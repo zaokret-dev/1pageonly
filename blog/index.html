@@ -12,6 +12,11 @@
   <meta property="og:description" content="Practical advice for electricians, plumbers, painters and home service professionals on getting more customers online." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://1pageonly.com/blog/" />
+  <meta property="og:image" content="https://1pageonly.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://1pageonly.com/og-image.jpg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,7 +78,7 @@
     .hero-glow { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(232,160,32,0.06) 0%, transparent 70%); pointer-events: none; }
     .blog-eyebrow { font-size: 0.72rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; font-weight: 600; display: flex; align-items: center; gap: 1rem; }
     .blog-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
-    .blog-hero-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 7vw, 7rem); line-height: 0.92; letter-spacing: 2px; color: var(--white); }
+    .blog-hero-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 7vw, 7rem); line-height: 0.92; letter-spacing: 2px; color: var(--white); font-weight: 400; }
     .blog-hero-h1 span { color: var(--gold); }
     .blog-hero-sub { margin-top: 1.5rem; font-size: 1rem; line-height: 1.85; color: var(--muted); max-width: 560px; font-weight: 300; }
 
@@ -142,6 +147,7 @@
       font-family: 'Manrope', sans-serif; letter-spacing: 1px; text-transform: uppercase;
       transition: gap 0.2s;
     }
+    .article-back { padding: 0.75rem 0.25rem; min-height: 44px; }
     .article-back:hover { gap: 1rem; }
     .article-cta-small { background: var(--gold); color: var(--black); padding: 0.5rem 1.25rem; font-weight: 700; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
     .article-content { max-width: 760px; margin: 0 auto; padding: 4rem 6% 8rem; }
@@ -193,7 +199,7 @@
 <nav>
   <a href="/" class="logo">One<span>Page</span>Only</a>
   <div class="nav-right">
-    <a href="/blog" class="nav-link active">Blog</a>
+    <a href="/blog/" class="nav-link active">Blog</a>
     <a href="/pay" class="nav-link">Pay Online</a>
     <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business" class="nav-link">&#9993; info@1pageonly.com</a>
     <a href="/#cta-bottom" class="nav-cta">Get Started</a>
@@ -203,7 +209,7 @@
 <section id="blog-hero">
   <div class="hero-glow"></div>
   <div class="blog-eyebrow">Tips & Advice for Tradesmen</div>
-  <div class="blog-hero-h1">More Customers<br><span>Start Here.</span></div>
+  <h1 class="blog-hero-h1">More Customers<br><span>Start Here.</span></h1>
   <p class="blog-hero-sub">Practical advice for electricians, plumbers, painters and home service professionals who want to get found online and get their phones ringing.</p>
 </section>
 
@@ -403,7 +409,7 @@
       <p>For a brand new website, expect 2-4 months before you start seeing consistent organic traffic. For Google Business Profile, results can come much faster — sometimes within 2-4 weeks. Patience pays off with SEO. Every month it gets better.</p>
       <div class="article-cta-box">
         <h3>We Handle the SEO For You</h3>
-        <p>Every website we build is optimized for local search from day one. We also help you set up your Google Business Profile. One-time $550. No monthly fees.</p>
+        <p>Every website we build is optimized for local search from day one. Websites start at $550 one-time, and Google Business Profile setup is included in our Pro + Local SEO plan ($750). No monthly fees.</p>
         <a href="/#cta-bottom">Get Your Website Today</a>
       </div>
     </div>
@@ -471,7 +477,7 @@
       </ul>
       <div class="article-cta-box">
         <h3>Get a Website That Shows Off Your Reviews</h3>
-        <p>Our Pro + SEO plan includes a dedicated reviews section on your website. Show customers why you're the best choice before they even call. One-time $750.</p>
+        <p>Our Pro + Local SEO plan includes a dedicated reviews section on your website. Show customers why you're the best choice before they even call. One-time $750.</p>
         <a href="/#cta-bottom">Get Your Website Today</a>
       </div>
     </div>
@@ -548,22 +554,34 @@
 </div>
 
 <script>
-  function openArticle(id) {
-    document.getElementById(id).classList.add('open');
+  // Each article has its own link (e.g. /blog/#article3) and the phone's Back button closes it.
+  function showArticle(id) {
+    var el = document.getElementById(id);
+    if (!el || !el.classList.contains('article-overlay')) return;
+    document.querySelectorAll('.article-overlay.open').forEach(function(o) { o.classList.remove('open'); });
+    el.classList.add('open'); el.scrollTop = 0;
     document.body.style.overflow = 'hidden';
   }
-  function closeArticle(id) {
-    document.getElementById(id).classList.remove('open');
+  function hideArticles() {
+    document.querySelectorAll('.article-overlay.open').forEach(function(o) { o.classList.remove('open'); });
     document.body.style.overflow = '';
   }
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.article-overlay.open').forEach(function(el) {
-        el.classList.remove('open');
-      });
-      document.body.style.overflow = '';
-    }
+  function openArticle(id) {
+    if (location.hash !== '#' + id) history.pushState({ article: id }, '', '#' + id);
+    showArticle(id);
+  }
+  function closeArticle() {
+    if (history.state && history.state.article) { history.back(); }
+    else { history.replaceState(null, '', location.pathname); hideArticles(); }
+  }
+  window.addEventListener('popstate', function() {
+    var id = location.hash.slice(1);
+    if (id) showArticle(id); else hideArticles();
   });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.querySelector('.article-overlay.open')) closeArticle();
+  });
+  if (location.hash.length > 1) showArticle(location.hash.slice(1));
 </script>
 </body>
 </html>
