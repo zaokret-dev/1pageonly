@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BrushKing Painting | Licensed Painter Austin TX | Free Estimates</title>
   <meta name="description" content="BrushKing Painting — licensed & insured painter in Austin, TX. Interior, exterior, cabinet painting & free color consultation. Call (512) 555-0174." />
-  <link rel="canonical" href="https://www.brushkingpainting.com/" />
-  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://1pageonly.com/painter/" />
+  <meta name="robots" content="noindex, follow" />
   <meta name="geo.region" content="US-TX" />
   <meta name="geo.placename" content="Austin, Texas" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HousePainter","name":"BrushKing Painting","telephone":"+15125550174","description":"Licensed painting contractor in Austin TX. Interior, exterior and cabinet painting.","address":{"@type":"PostalAddress","addressLocality":"Austin","addressRegion":"TX","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"73"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HousePainter","name":"BrushKing Painting","telephone":"+15125550174","description":"Licensed painting contractor in Austin TX. Interior, exterior and cabinet painting.","address":{"@type":"PostalAddress","addressLocality":"Austin","addressRegion":"TX","addressCountry":"US"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -140,6 +140,9 @@
     footer p{font-size:0.65rem;letter-spacing:1px;color:rgba(255,255,255,0.25)}
 
     @media(max-width:600px){.nav-phone{display:none}}
+    html,body{overflow-x:hidden;width:100%}
+    .why-grid > *{min-width:0}
+    @media(max-width:600px){.nav-cta{padding:0.55rem 0.9rem;letter-spacing:1px;white-space:nowrap}.nav-right{gap:1rem}.why-item{padding:2rem 1.1rem}.why-desc{overflow-wrap:break-word}}
   </style>
 </head>
 <body>
@@ -165,7 +168,7 @@
     <div class="hero-stats">
       <div><div class="stat-num">11+</div><div class="stat-label">Years in Austin</div></div>
       <div><div class="stat-num">900+</div><div class="stat-label">Homes Painted</div></div>
-      <div><div class="stat-num">5.0★</div><div class="stat-label">Google Rating</div></div>
+      <div><div class="stat-num">5.0★</div><div class="stat-label">Avg. Rating</div></div>
     </div>
   </div>
   <div class="hero-image">
@@ -220,9 +223,9 @@
     </div>
   </div>
   <div class="reviews-grid">
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"BrushKing painted our entire home interior in 3 days. The prep was immaculate, the color consultation was so helpful, and the finish is absolutely perfect."</p><div class="reviewer"><div class="reviewer-name">Sarah H.</div><div class="reviewer-loc">Austin, TX · Google Review</div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Had our kitchen cabinets painted instead of replaced. Saved $8,000 and they look brand new. The finish is incredibly smooth — you'd never know they weren't factory painted."</p><div class="reviewer"><div class="reviewer-name">Mark P.</div><div class="reviewer-loc">Round Rock, TX · Google Review</div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Exterior repaint on a 2-story home, done in 2 days. On time, professional, and the house looks incredible. My neighbors keep asking who did it."</p><div class="reviewer"><div class="reviewer-name">Lisa T.</div><div class="reviewer-loc">Cedar Park, TX · Google Review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"BrushKing painted our entire home interior in 3 days. The prep was immaculate, the color consultation was so helpful, and the finish is absolutely perfect."</p><div class="reviewer"><div class="reviewer-name">Sarah H.</div><div class="reviewer-loc">Austin, TX · Sample review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Had our kitchen cabinets painted instead of replaced. Saved $8,000 and they look brand new. The finish is incredibly smooth — you'd never know they weren't factory painted."</p><div class="reviewer"><div class="reviewer-name">Mark P.</div><div class="reviewer-loc">Round Rock, TX · Sample review</div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Exterior repaint on a 2-story home, done in 2 days. On time, professional, and the house looks incredible. My neighbors keep asking who did it."</p><div class="reviewer"><div class="reviewer-name">Lisa T.</div><div class="reviewer-loc">Cedar Park, TX · Sample review</div></div></div>
   </div>
 </section>
 
@@ -254,12 +257,13 @@
   <p>© 2024 BrushKing Painting LLC · Austin, TX</p>
   <p>TX License #PC-77 · 543210</p>
 </footer>
+<div style="background:#0d0d0d;color:#c4d0de;font:500 14px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:16px 5%;border-top:3px solid #e8a020;">Demo website by <a href="/" style="color:#e8a020;font-weight:700;text-decoration:none;">One Page Only</a> &mdash; the business, phone numbers, license numbers and reviews on this page are fictional examples. <a href="/#cta-bottom" style="color:#e8a020;font-weight:700;text-decoration:none;white-space:nowrap;">Want a site like this? &rarr;</a></div>
 
 <script>
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.form-submit');
-  btn.textContent = '✔ Request Sent!';
+  btn.textContent = 'Demo form — nothing was sent';
   btn.style.background = '#2ecc71';
   btn.disabled = true;
 }
