@@ -332,8 +332,23 @@
     }
     .trades-label { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; text-align: center; }
     .trades-list { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; list-style: none; }
-    .trades-list li { border: 1px solid rgba(232,160,32,0.25); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1rem; letter-spacing: 0.5px; }
-    .trades-list li.more { color: var(--gold); border-style: dashed; }
+    .trades-list li.more { border: 1px dashed rgba(232,160,32,0.25); color: var(--gold); font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1rem; letter-spacing: 0.5px; }
+    .trades-hint { text-align: center; font-size: 0.8rem; color: var(--gold); margin: -0.6rem 0 1.1rem; }
+    .trade-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; border: 1px solid rgba(232,160,32,0.25); color: var(--white); font: 600 0.85rem 'Manrope', sans-serif; letter-spacing: 0.5px; padding: 0.5rem 0.85rem 0.5rem 1rem; cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+    .trade-btn:hover, .trade-btn:focus-visible { border-color: var(--gold); color: var(--gold); background: rgba(232,160,32,0.06); }
+    .trade-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .trade-cam { width: 15px; height: 15px; color: var(--gold); opacity: 0.85; flex-shrink: 0; }
+    @media (max-width: 600px) { .trade-btn { padding: 0.65rem 0.8rem 0.65rem 0.95rem; } }
+
+    /* TRADE PHOTO LIGHTBOX */
+    #trade-lb { position: fixed; inset: 0; z-index: 300; background: rgba(5,8,12,0.94); display: none; align-items: center; justify-content: center; padding: 64px 4% 40px; cursor: zoom-out; }
+    #trade-lb.open { display: flex; }
+    #trade-lb figure { position: relative; max-width: min(960px, 100%); cursor: default; animation: lbIn 0.2s ease; display: flex; flex-direction: column; align-items: center; }
+    @keyframes lbIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+    #trade-lb img { display: block; width: auto; max-width: 100%; height: auto; max-height: calc(100vh - 150px); background: var(--dark2); border: 1px solid rgba(232,160,32,0.3); }
+    #trade-lb figcaption { margin-top: 0.9rem; text-align: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; letter-spacing: 2px; color: var(--gold); }
+    #trade-lb .lb-close { position: fixed; top: 12px; right: 14px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer; }
+    #trade-lb .lb-close:hover { border-color: var(--gold); color: var(--gold); }
 
     /* SECTIONS */
     section { padding: 110px 6%; }
@@ -798,8 +813,9 @@
 <!-- TRADES -->
 <div id="trades">
   <div class="trades-label">We work with all home service trades</div>
+  <p class="trades-hint">Tap a trade to see it in action</p>
   <ul class="trades-list">
-    <li>Electricians</li><li>Plumbers</li><li>Painters</li><li>Carpenters</li><li>HVAC</li><li>Roofers</li><li>Remodelers</li><li>Handymen</li><li class="more">+ Many More</li>
+    <li><button type="button" class="trade-btn" data-trade="electrician" data-label="Electricians" aria-label="See photo: Electricians">Electricians<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="plumber" data-label="Plumbers" aria-label="See photo: Plumbers">Plumbers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="painter" data-label="Painters" aria-label="See photo: Painters">Painters<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="carpenter" data-label="Carpenters" aria-label="See photo: Carpenters">Carpenters<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="hvac" data-label="HVAC" aria-label="See photo: HVAC">HVAC<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="roofer" data-label="Roofers" aria-label="See photo: Roofers">Roofers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="remodeler" data-label="Remodelers" aria-label="See photo: Remodelers">Remodelers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="handyman" data-label="Handymen" aria-label="See photo: Handymen">Handymen<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li class="more">+ Many More</li>
   </ul>
 </div>
 
@@ -1060,6 +1076,15 @@
   </div>
 </footer>
 
+<!-- TRADE PHOTO LIGHTBOX -->
+<div id="trade-lb" role="dialog" aria-modal="true" aria-label="Trade photo">
+  <button type="button" class="lb-close" aria-label="Close photo">&times;</button>
+  <figure>
+    <img id="trade-lb-img" src="" alt="" />
+    <figcaption id="trade-lb-cap"></figcaption>
+  </figure>
+</div>
+
 <!-- MOBILE CALL BAR -->
 <div class="call-bar">
   <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business" class="cb-call">&#9993; Email Us</a>
@@ -1073,6 +1098,33 @@
     document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
     if (!isOpen) { item.classList.add('open'); el.setAttribute('aria-expanded','true'); }
   }
+  // Trade photos: tap a trade name to open its photo; close with X, tap outside, Escape or phone Back button.
+  (function() {
+    var lb = document.getElementById('trade-lb'), img = document.getElementById('trade-lb-img'), cap = document.getElementById('trade-lb-cap'), lastBtn = null;
+    function show(btn) {
+      img.src = '/images/trades/' + btn.dataset.trade + '.webp';
+      img.alt = btn.dataset.label + ' at work';
+      cap.textContent = btn.dataset.label;
+      lb.classList.add('open'); document.body.style.overflow = 'hidden';
+      lb.querySelector('.lb-close').focus();
+    }
+    function hide() {
+      lb.classList.remove('open'); document.body.style.overflow = '';
+      if (lastBtn) lastBtn.focus();
+    }
+    function close() {
+      if (history.state && history.state.tradePhoto) history.back(); else hide();
+    }
+    document.querySelectorAll('.trade-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        lastBtn = btn; history.pushState({ tradePhoto: btn.dataset.trade }, ''); show(btn);
+      });
+      btn.addEventListener('mouseenter', function() { new Image().src = '/images/trades/' + btn.dataset.trade + '.webp'; }, { once: true });
+    });
+    lb.addEventListener('click', function(e) { if (e.target === lb || e.target.closest('.lb-close')) close(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+    window.addEventListener('popstate', function() { if (lb.classList.contains('open')) hide(); });
+  })();
   document.querySelectorAll('.faq-q').forEach(function(q) {
     q.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(q); }
