@@ -333,6 +333,9 @@
     .trades-label { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; text-align: center; }
     .trades-list { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; list-style: none; }
     .trades-list li.more { border: 1px dashed rgba(232,160,32,0.25); color: var(--gold); font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1rem; letter-spacing: 0.5px; }
+    .trades-link { text-align: center; margin-top: 1.4rem; font-size: 0.92rem; color: var(--muted); }
+    .trades-link a { color: var(--gold); font-weight: 700; text-decoration: none; }
+    .trades-link a:hover { text-decoration: underline; }
     .trades-hint { text-align: center; font-size: 0.8rem; color: var(--gold); margin: -0.6rem 0 1.1rem; }
     .trade-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; border: 1px solid rgba(232,160,32,0.25); color: var(--white); font: 600 0.85rem 'Manrope', sans-serif; letter-spacing: 0.5px; padding: 0.5rem 0.85rem 0.5rem 1rem; cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s; }
     .trade-btn:hover, .trade-btn:focus-visible { border-color: var(--gold); color: var(--gold); background: rgba(232,160,32,0.06); }
@@ -817,6 +820,7 @@
   <ul class="trades-list">
     <li><button type="button" class="trade-btn" data-trade="electrician" data-label="Electricians" aria-label="See photo: Electricians">Electricians<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="plumber" data-label="Plumbers" aria-label="See photo: Plumbers">Plumbers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="painter" data-label="Painters" aria-label="See photo: Painters">Painters<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="carpenter" data-label="Carpenters" aria-label="See photo: Carpenters">Carpenters<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="hvac" data-label="HVAC" aria-label="See photo: HVAC">HVAC<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="roofer" data-label="Roofers" aria-label="See photo: Roofers">Roofers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="remodeler" data-label="Remodelers" aria-label="See photo: Remodelers">Remodelers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="handyman" data-label="Handymen" aria-label="See photo: Handymen">Handymen<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li class="more">+ Many More</li>
   </ul>
+  <p class="trades-link">Plumber? <a href="/websites-for-plumbers/">See websites built for plumbing businesses &rarr;</a></p>
 </div>
 
 <!-- PROBLEM -->
@@ -985,7 +989,7 @@
     <div>
       <div class="pay-banner-kicker">Already talked with us?</div>
       <div class="pay-banner-title">Pay Online in 1 Minute</div>
-      <p class="pay-banner-sub">Secure payment via PayPal &middot; Credit &amp; debit cards accepted &middot; No PayPal account needed</p>
+      <p class="pay-banner-sub">Secure payment via PayPal &middot; Prefer an invoice? Email or WhatsApp us and we'll send one</p>
     </div>
     <a href="/pay" class="pay-banner-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pay Online</a>
   </div>
@@ -1069,6 +1073,7 @@
   <div class="footer-logo">One<span>Page</span>Only</div>
   <p>© 2026 One Page Only · Serving contractors across the US</p>
   <div class="footer-links">
+    <a href="/websites-for-plumbers/" class="fl">For Plumbers</a>
     <a href="/blog/" class="fl">Blog</a>
     <a href="/pay" class="fl">Pay Online</a>
     <a href="/privacy/" class="fl">Privacy Policy</a>
