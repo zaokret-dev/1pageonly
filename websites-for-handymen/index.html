@@ -535,6 +535,16 @@
     .example-note { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); }
     .other-trades { margin-top: 2.5rem; font-size: 0.95rem; color: var(--muted); }
     .other-trades a { color: var(--gold); font-weight: 700; text-decoration: none; }
+    .trade-nav { background: var(--dark2); border-top: 1px solid var(--border); padding: 2.75rem 6%; text-align: center; }
+    .trade-nav-label { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+    .trade-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+    .trade-nav a { display: inline-block; border: 1px solid rgba(232,160,32,0.25); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 0.55rem 1rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .trade-nav a:hover { border-color: var(--gold); color: var(--gold); }
+    .trade-nav a[aria-current] { border-color: var(--gold); color: var(--gold); }
+    .trade-hero-photo { margin: 0; width: 100%; max-width: 520px; }
+    .trade-hero-photo img { display: block; width: 100%; height: auto; border: 1px solid rgba(232,160,32,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 120px rgba(232,160,32,0.10); }
+    .trade-hero-photo figcaption { text-align: center; margin-top: 1.1rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .trade-hero-photo figcaption b { color: var(--gold); }
     .trade-hero-photo { margin: 0; width: 100%; max-width: 520px; }
     .trade-hero-photo img { display: block; width: 100%; height: auto; border: 1px solid rgba(232,160,32,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 120px rgba(232,160,32,0.10); }
     .trade-hero-photo.portrait { max-width: 360px; }
@@ -669,126 +679,34 @@
 <!-- EXAMPLE -->
 <section id="example">
   <div class="portfolio-intro">
-    <div class="sec-eyebrow">Example Sites</div>
-    <h2 class="sec-h2">See the Quality<br><span class="gold">You'll Get.</span></h2>
-    <p>There's no sample handyman site published yet &mdash; below are three we designed for other trades. Yours would lead with your full job list and one-tap booking.</p>
+    <div class="sec-eyebrow">Example Handyman Website</div>
+    <h2 class="sec-h2">Friendly and<br><span class="gold">Easy to Book.</span></h2>
+    <p>Tinker &amp; Tack is a pretend Boise handyman whose first-person site shows how a one-person business can feel personal and dependable.</p>
   </div>
-  <div class="portfolio-grid">
-
-    <!-- Plumber -->
+  <div class="example-wrap">
+  <div class="single-example">
     <div class="portfolio-card">
-      <a href="/plumber/" target="_blank" rel="noopener" class="portfolio-preview">
-        <div class="prev-plumber">
-          <div class="pnav"><div class="plogo">Bolt<span>Works</span></div><div class="pbtn">☎ Call Now</div></div>
-          <div class="phero">
-            <div class="ptag">Denver's Trusted Plumber</div>
-            <div class="ph1">No Leak Too Big. <span>No Job Too Small.</span></div>
-            <div class="psub">Licensed & insured plumbing across Denver, Aurora & Lakewood. Water heaters, drain cleaning & 24/7 emergency.</div>
-            <div class="pacts"><div class="pcta">Free Estimate</div><div class="pghost">☎ (720) 555-0174</div></div>
-          </div>
-          <div class="ptrust"><span>✔ CO Licensed</span><span>⚡ Same-Day</span><span>🛡 Insured</span><span>📋 Free Quote</span></div>
-          <div class="psvcs">
-            <div class="psvc"><div class="psvct">Water Heaters</div><div class="psvcd">All brands, same day</div></div>
-            <div class="psvc"><div class="psvct">Drain Cleaning</div><div class="psvcd">Any drain, fast</div></div>
-            <div class="psvc"><div class="psvct">Emergency</div><div class="psvcd">24/7 burst pipes</div></div>
-            <div class="psvc"><div class="psvct">Repiping</div><div class="psvcd">Copper & PEX</div></div>
-            <div class="psvc"><div class="psvct">Sewer Lines</div><div class="psvcd">Inspect & repair</div></div>
-            <div class="psvc"><div class="psvct">Inspections</div><div class="psvcd">Pre-sale reports</div></div>
-          </div>
-        </div>
+      <a href="/handyman/" target="_blank" rel="noopener" class="portfolio-preview">
+        <img src="/images/demos/handyman.webp" alt="Preview of the Tinker &amp; Tack Home Repair example website" width="800" height="521" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top;" />
         <div class="preview-overlay"><span>View Full Site</span></div>
       </a>
-      <div class="portfolio-footer"><div class="portfolio-name">BoltWorks Plumbing — Denver, CO</div><div class="portfolio-trade">Plumber</div></div>
+      <div class="portfolio-footer"><div class="portfolio-name">Tinker &amp; Tack Home Repair — Boise, ID</div><div class="portfolio-trade">Handyman</div></div>
       <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
-      <a class="portfolio-open" href="/plumber/" target="_blank" rel="noopener">Open Full Site &rarr;</a>
+      <a class="portfolio-open" href="/handyman/" target="_blank" rel="noopener">Open Full Site &rarr;</a>
     </div>
-
-    <!-- Electrician -->
-    <div class="portfolio-card">
-      <a href="/electrician/" target="_blank" rel="noopener" class="portfolio-preview">
-        <div style="width:100%;height:100%;background:#050a14;display:flex;flex-direction:column;position:relative;overflow:hidden;">
-          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.04) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;"></div>
-          <div style="position:relative;background:rgba(5,10,20,0.98);padding:0.55rem 1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(0,212,255,0.2);">
-            <div style="font-weight:800;font-size:0.85rem;letter-spacing:4px;color:#e8f4ff;text-transform:uppercase;">APEX <span style="color:#00d4ff;text-shadow:0 0 10px rgba(0,212,255,0.8);">ELECTRIC</span></div>
-            <div style="color:#00d4ff;padding:0.2rem 0.6rem;font-size:0.46rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(0,212,255,0.4);">FREE ESTIMATE</div>
-          </div>
-          <div style="position:relative;padding:1.2rem 1rem;flex:1;">
-            <div style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(0,212,255,0.2);padding:0.2rem 0.6rem;margin-bottom:0.75rem;">
-              <div style="width:5px;height:5px;border-radius:50%;background:#00d4ff;box-shadow:0 0 6px #00d4ff;"></div>
-              <span style="font-size:0.44rem;letter-spacing:3px;color:#00d4ff;text-transform:uppercase;">Phoenix AZ · Licensed Electrician</span>
-            </div>
-            <div style="font-weight:800;font-size:1.55rem;line-height:0.95;color:#e8f4ff;text-transform:uppercase;">POWER<br><span style="color:#00d4ff;text-shadow:0 0 15px rgba(0,212,255,0.5);">DONE RIGHT.</span><br><span style="-webkit-text-stroke:1px rgba(0,212,255,0.3);color:transparent;">FIRST TIME.</span></div>
-            <div style="font-size:0.5rem;color:#4a6080;margin-top:0.6rem;line-height:1.7;">Licensed & insured electrical contractor. Panel upgrades, EV chargers, rewiring & 24/7 emergency.</div>
-            <div style="margin-top:0.7rem;display:flex;gap:0.5rem;">
-              <div style="background:#00d4ff;color:#050a14;padding:0.22rem 0.65rem;font-size:0.46rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">GET ESTIMATE</div>
-              <div style="border:1px solid rgba(100,130,160,0.4);color:#7a95b0;padding:0.22rem 0.65rem;font-size:0.46rem;">☎ (602) 555-0193</div>
-            </div>
-          </div>
-          <div style="position:relative;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:rgba(0,212,255,0.15);border-top:1px solid rgba(0,212,255,0.2);">
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">14+</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Years</div></div>
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">1200+</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Jobs</div></div>
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">5.0★</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Rating</div></div>
-            <div style="background:#0d1829;padding:0.55rem 0.5rem;text-align:center;"><div style="font-size:0.95rem;font-weight:800;color:#00d4ff;">24/7</div><div style="font-size:0.37rem;color:#4a6080;text-transform:uppercase;margin-top:0.15rem;">Emergency</div></div>
-          </div>
-          <div style="position:relative;background:#080f1e;border-top:1px solid rgba(0,212,255,0.15);">
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;border-bottom:1px solid rgba(0,212,255,0.08);"><span style="font-size:0.48rem;color:#4a6080;">_01</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">Panel Upgrades Phoenix AZ</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;border-bottom:1px solid rgba(0,212,255,0.08);"><span style="font-size:0.48rem;color:#4a6080;">_02</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">EV Charger Install Phoenix AZ</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.38rem 1rem;"><span style="font-size:0.48rem;color:#4a6080;">_03</span><span style="font-size:0.46rem;color:#e8f4ff;font-weight:600;text-transform:uppercase;">Emergency Electrician 24/7</span><span style="margin-left:auto;font-size:0.6rem;color:#00d4ff;">→</span></div>
-          </div>
-        </div>
-        <div class="preview-overlay"><span>View Full Site</span></div>
-      </a>
-      <div class="portfolio-footer"><div class="portfolio-name">Apex Electric — Phoenix, AZ</div><div class="portfolio-trade">Electrician</div></div>
-      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
-      <a class="portfolio-open" href="/electrician/" target="_blank" rel="noopener">Open Full Site &rarr;</a>
-    </div>
-
-    <!-- Painter -->
-    <div class="portfolio-card">
-      <a href="/painter/" target="_blank" rel="noopener" class="portfolio-preview">
-        <div style="width:100%;height:100%;background:#faf7f2;display:flex;flex-direction:column;">
-          <div style="background:#faf7f2;padding:0.6rem 1.2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c8bfb5;">
-            <div style="font-size:0.85rem;font-weight:600;letter-spacing:3px;color:#1c1410;text-transform:uppercase;font-style:italic;font-family:Georgia,serif;">Brush<em style="color:#c4622d;">King</em></div>
-            <div style="background:#c4622d;color:#faf7f2;padding:0.2rem 0.6rem;font-size:0.46rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;">Free Estimate</div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;flex:1;">
-            <div style="padding:1.2rem;border-right:1px solid #c8bfb5;">
-              <div style="font-size:0.44rem;letter-spacing:5px;text-transform:uppercase;color:#c4622d;margin-bottom:0.7rem;">Austin TX · Licensed Painter</div>
-              <div style="font-size:1.45rem;font-weight:600;color:#1c1410;line-height:1.0;font-family:Georgia,serif;">Fresh Coat.<br><em>Flawless Finish.</em></div>
-              <div style="width:28px;height:1px;background:#c4622d;margin:0.7rem 0;"></div>
-              <div style="font-size:0.48rem;color:#8a7e74;line-height:1.8;font-weight:300;">Licensed & insured painting in Austin, Round Rock & Cedar Park.</div>
-              <div style="margin-top:0.7rem;display:flex;align-items:center;gap:0.6rem;">
-                <div style="background:#c4622d;color:#faf7f2;padding:0.2rem 0.6rem;font-size:0.44rem;letter-spacing:2px;text-transform:uppercase;">Get Estimate</div>
-                <div style="font-size:0.44rem;color:#1c1410;border-bottom:1px solid #c8bfb5;">☎ (512) 555-0174</div>
-              </div>
-            </div>
-            <div style="background:linear-gradient(135deg,#f0e8da,#e8d5c0);display:flex;align-items:flex-end;padding:1rem;">
-              <div>
-                <div style="font-size:0.82rem;font-style:italic;color:#3d2b1f;line-height:1.4;font-family:Georgia,serif;">"The difference between ordinary and extraordinary is that little extra."</div>
-                <div style="font-size:0.38rem;letter-spacing:3px;text-transform:uppercase;color:#c4622d;margin-top:0.5rem;">Our Promise</div>
-              </div>
-            </div>
-          </div>
-          <div style="background:#f0e8da;padding:0.4rem 1.2rem;display:flex;gap:0.9rem;flex-wrap:wrap;border-top:1px solid #c8bfb5;">
-            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">✔ TX Licensed</span>
-            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">🎨 Free Color Consult</span>
-            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">⭐ 5.0 Rating</span>
-          </div>
-          <div style="background:#faf7f2;padding:0.6rem 1.2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.35rem;border-top:1px solid #c8bfb5;">
-            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Interior</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Walls & ceilings</div></div>
-            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Exterior</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Full repaints</div></div>
-            <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Cabinets</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Kitchen refresh</div></div>
-          </div>
-        </div>
-        <div class="preview-overlay"><span>View Full Site</span></div>
-      </a>
-      <div class="portfolio-footer"><div class="portfolio-name">BrushKing Painting — Austin, TX</div><div class="portfolio-trade">Painter</div></div>
-      <div class="portfolio-tags">Local SEO · Click-to-Call · Mobile Ready · Fast Loading</div>
-      <a class="portfolio-open" href="/painter/" target="_blank" rel="noopener">Open Full Site &rarr;</a>
-    </div>
-
   </div>
-  <p class="example-note">Sample businesses &mdash; the names, phone numbers and reviews on the example sites are fictional.</p>
+  <div class="example-points">
+    <h3>Why customers would call Gus</h3>
+    <ul>
+      <li><b>Friendly, personal tone</b> &mdash; written by the owner, so customers know exactly who's coming.</li>
+      <li><b>To-do list hero</b> &mdash; shows a whole list getting done in a single visit.</li>
+      <li><b>Eight everyday jobs</b> &mdash; mounting, drywall, doors, fixtures, assembly and more.</li>
+      <li><b>Upfront rates</b> &mdash; quick fix, half day or a flat quote &mdash; no surprises.</li>
+      <li><b>Send-your-list form</b> &mdash; customers paste their whole to-do list into one box.</li>
+    </ul>
+  </div>
+  </div>
+  <p class="example-note">Sample business &mdash; the name, phone numbers, license numbers and reviews on the example site are fictional.</p>
 </section>
 
 <!-- HOW IT WORKS -->

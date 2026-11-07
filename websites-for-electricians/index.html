@@ -535,6 +535,16 @@
     .example-note { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); }
     .other-trades { margin-top: 2.5rem; font-size: 0.95rem; color: var(--muted); }
     .other-trades a { color: var(--gold); font-weight: 700; text-decoration: none; }
+    .trade-nav { background: var(--dark2); border-top: 1px solid var(--border); padding: 2.75rem 6%; text-align: center; }
+    .trade-nav-label { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+    .trade-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+    .trade-nav a { display: inline-block; border: 1px solid rgba(232,160,32,0.25); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 0.55rem 1rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .trade-nav a:hover { border-color: var(--gold); color: var(--gold); }
+    .trade-nav a[aria-current] { border-color: var(--gold); color: var(--gold); }
+    .trade-hero-photo { margin: 0; width: 100%; max-width: 520px; }
+    .trade-hero-photo img { display: block; width: 100%; height: auto; border: 1px solid rgba(232,160,32,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 120px rgba(232,160,32,0.10); }
+    .trade-hero-photo figcaption { text-align: center; margin-top: 1.1rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .trade-hero-photo figcaption b { color: var(--gold); }
     .trade-hero-photo { margin: 0; width: 100%; max-width: 520px; }
     .trade-hero-photo img { display: block; width: 100%; height: auto; border: 1px solid rgba(232,160,32,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 120px rgba(232,160,32,0.10); }
     .trade-hero-photo.portrait { max-width: 360px; }
@@ -670,8 +680,8 @@
 <section id="example">
   <div class="portfolio-intro">
     <div class="sec-eyebrow">Example Electrician Website</div>
-    <h2 class="sec-h2">See What Your Site<br><span class="gold">Could Look Like.</span></h2>
-    <p>Apex Electric is a sample site we designed to show what a electrical website from One Page Only looks like. Tap it to open the full site.</p>
+    <h2 class="sec-h2">A Site Wired<br><span class="gold">for Calls.</span></h2>
+    <p>Apex Electric is a made-up Phoenix contractor, but every part of its site is built the way we'd build yours. Open it and look around.</p>
   </div>
   <div class="example-wrap">
   <div class="single-example">
@@ -716,7 +726,7 @@
     </div>
   </div>
   <div class="example-points">
-    <h3>What to notice on the example</h3>
+    <h3>Details worth a closer look</h3>
     <ul>
       <li><b>Stats bar under the headline</b> &mdash; years in business, jobs completed, rating and 24/7 availability at a glance.</li>
       <li><b>Numbered service list</b> &mdash; panel upgrades, EV chargers, rewiring and more, each with a short line of detail.</li>
@@ -726,7 +736,7 @@
     </ul>
   </div>
   </div>
-  <p class="example-note">Sample business &mdash; the name, phone numbers and reviews on the example site are fictional.</p>
+  <p class="example-note">Sample business &mdash; the name, phone numbers, license numbers and reviews on the example site are fictional.</p>
 </section>
 
 <!-- HOW IT WORKS -->

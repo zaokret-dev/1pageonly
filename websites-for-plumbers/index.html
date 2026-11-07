@@ -541,6 +541,10 @@
     .trade-nav a { display: inline-block; border: 1px solid rgba(232,160,32,0.25); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 0.55rem 1rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
     .trade-nav a:hover { border-color: var(--gold); color: var(--gold); }
     .trade-nav a[aria-current] { border-color: var(--gold); color: var(--gold); }
+    .trade-hero-photo { margin: 0; width: 100%; max-width: 520px; }
+    .trade-hero-photo img { display: block; width: 100%; height: auto; border: 1px solid rgba(232,160,32,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 120px rgba(232,160,32,0.10); }
+    .trade-hero-photo figcaption { text-align: center; margin-top: 1.1rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .trade-hero-photo figcaption b { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -576,29 +580,10 @@
       <p class="hero-note">One-time payment · No monthly fees · <span>Plumbers across the US</span></p>
     </div>
     <div class="hero-right">
-      <div>
-        <a href="/plumber/" target="_blank" rel="noopener" class="phone" aria-label="Open the BoltWorks Plumbing example site">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="ps-nav"><div class="ps-logo">Bolt<span>Works</span></div><div class="ps-call-sm">&#9742; Call</div></div>
-            <div class="ps-hero">
-              <div class="ps-tag">Denver's Trusted Plumber</div>
-              <div class="ps-h1">No Leak Too Big. <span>No Job Too Small.</span></div>
-              <div class="ps-sub">Licensed &amp; insured plumbing across Denver, Aurora &amp; Lakewood. Water heaters, drains &amp; 24/7 emergency.</div>
-              <div class="ps-btn">&#9742; Call Now</div>
-              <div class="ps-btn ghost">Free Estimate</div>
-            </div>
-            <div class="ps-trust"><span>&#10004; Licensed</span><span>&#10004; Same-Day</span><span>&#10004; Insured</span></div>
-            <div class="ps-svcs">
-              <div class="ps-svc"><b>Water Heaters</b><i>All brands</i></div>
-              <div class="ps-svc"><b>Drain Cleaning</b><i>Any drain, fast</i></div>
-              <div class="ps-svc"><b>Emergency</b><i>24/7 burst pipes</i></div>
-              <div class="ps-svc"><b>Repiping</b><i>Copper &amp; PEX</i></div>
-            </div>
-          </div>
-        </a>
-        <p class="phone-caption">Example plumbing site &middot; <b>Tap to open</b></p>
-      </div>
+      <figure class="trade-hero-photo">
+        <img src="/images/trades/plumber.webp" alt="Plumber fixing pipes under a sink" width="1000" height="750" loading="lazy" />
+        <figcaption>Plumbers &middot; <b>we build websites for you</b></figcaption>
+      </figure>
     </div>
   </div>
 </section>
