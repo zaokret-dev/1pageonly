@@ -333,7 +333,9 @@
     .trades-label { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; text-align: center; }
     .trades-list { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; list-style: none; }
     .trades-list li.more { border: 1px dashed rgba(232,160,32,0.25); color: var(--gold); font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1rem; letter-spacing: 0.5px; }
-    .trades-link { text-align: center; margin-top: 1.4rem; font-size: 0.92rem; color: var(--muted); }
+    .trades-link { text-align: center; margin-top: 1.6rem; font-size: 0.92rem; line-height: 2; color: var(--muted); }
+    .trades-link strong { color: var(--white); font-weight: 600; }
+    .trades-link span { color: rgba(232,160,32,0.4); margin: 0 0.15rem; }
     .trades-link a { color: var(--gold); font-weight: 700; text-decoration: none; }
     .trades-link a:hover { text-decoration: underline; }
     .trades-hint { text-align: center; font-size: 0.8rem; color: var(--gold); margin: -0.6rem 0 1.1rem; }
@@ -795,7 +797,7 @@
           <div style="background:#f0e8da;padding:0.4rem 1.2rem;display:flex;gap:0.9rem;flex-wrap:wrap;border-top:1px solid #c8bfb5;">
             <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">✔ TX Licensed</span>
             <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">🎨 Free Color Consult</span>
-            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">⭐ 5.0 Google Rating</span>
+            <span style="font-size:0.4rem;letter-spacing:2px;text-transform:uppercase;color:#3d2b1f;">⭐ 5.0 Rating</span>
           </div>
           <div style="background:#faf7f2;padding:0.6rem 1.2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.35rem;border-top:1px solid #c8bfb5;">
             <div style="padding:0.35rem;border-top:2px solid #c4622d;"><div style="font-size:0.44rem;font-weight:600;color:#1c1410;text-transform:uppercase;">Interior</div><div style="font-size:0.38rem;color:#8a7e74;margin-top:0.08rem;">Walls & ceilings</div></div>
@@ -820,7 +822,7 @@
   <ul class="trades-list">
     <li><button type="button" class="trade-btn" data-trade="electrician" data-label="Electricians" aria-label="See photo: Electricians">Electricians<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="plumber" data-label="Plumbers" aria-label="See photo: Plumbers">Plumbers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="painter" data-label="Painters" aria-label="See photo: Painters">Painters<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="carpenter" data-label="Carpenters" aria-label="See photo: Carpenters">Carpenters<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="hvac" data-label="HVAC" aria-label="See photo: HVAC">HVAC<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="roofer" data-label="Roofers" aria-label="See photo: Roofers">Roofers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="remodeler" data-label="Remodelers" aria-label="See photo: Remodelers">Remodelers<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li><button type="button" class="trade-btn" data-trade="handyman" data-label="Handymen" aria-label="See photo: Handymen">Handymen<svg class="trade-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></button></li><li class="more">+ Many More</li>
   </ul>
-  <p class="trades-link">Plumber? <a href="/websites-for-plumbers/">See websites built for plumbing businesses &rarr;</a></p>
+  <p class="trades-link"><strong>Websites built for your trade:</strong><br><a href="/websites-for-plumbers/">Plumbers</a> <span>&middot;</span> <a href="/websites-for-electricians/">Electricians</a> <span>&middot;</span> <a href="/websites-for-painters/">Painters</a> <span>&middot;</span> <a href="/websites-for-carpenters/">Carpenters</a> <span>&middot;</span> <a href="/websites-for-hvac-contractors/">HVAC</a> <span>&middot;</span> <a href="/websites-for-roofers/">Roofers</a> <span>&middot;</span> <a href="/websites-for-remodelers/">Remodelers</a> <span>&middot;</span> <a href="/websites-for-handymen/">Handymen</a></p>
 </div>
 
 <!-- PROBLEM -->
@@ -1073,7 +1075,6 @@
   <div class="footer-logo">One<span>Page</span>Only</div>
   <p>© 2026 One Page Only · Serving contractors across the US</p>
   <div class="footer-links">
-    <a href="/websites-for-plumbers/" class="fl">For Plumbers</a>
     <a href="/blog/" class="fl">Blog</a>
     <a href="/pay" class="fl">Pay Online</a>
     <a href="/privacy/" class="fl">Privacy Policy</a>

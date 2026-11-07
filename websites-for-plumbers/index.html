@@ -535,6 +535,12 @@
     .example-note { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); }
     .other-trades { margin-top: 2.5rem; font-size: 0.95rem; color: var(--muted); }
     .other-trades a { color: var(--gold); font-weight: 700; text-decoration: none; }
+    .trade-nav { background: var(--dark2); border-top: 1px solid var(--border); padding: 2.75rem 6%; text-align: center; }
+    .trade-nav-label { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+    .trade-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+    .trade-nav a { display: inline-block; border: 1px solid rgba(232,160,32,0.25); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 0.55rem 1rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .trade-nav a:hover { border-color: var(--gold); color: var(--gold); }
+    .trade-nav a[aria-current] { border-color: var(--gold); color: var(--gold); }
   </style>
 </head>
 <body>
@@ -722,7 +728,6 @@
   </div>
   </div>
   <p class="example-note">Sample business &mdash; the name, phone numbers and reviews on the example site are fictional.</p>
-  <p class="other-trades">Not a plumber? <a href="/#portfolio">See examples for other trades &rarr;</a></p>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -850,6 +855,21 @@
   </div>
   <p class="cta-note">Plumbers across the US · <span>One-time $550 · No monthly fees</span></p>
 </section>
+
+<!-- WEBSITES BY TRADE -->
+<div class="trade-nav" role="navigation" aria-label="Websites by trade">
+  <p class="trade-nav-label">Websites for every home service trade</p>
+  <ul>
+    <li><a href="/websites-for-plumbers/" aria-current="page">Plumbers</a></li>
+    <li><a href="/websites-for-electricians/">Electricians</a></li>
+    <li><a href="/websites-for-painters/">Painters</a></li>
+    <li><a href="/websites-for-carpenters/">Carpenters</a></li>
+    <li><a href="/websites-for-hvac-contractors/">HVAC Contractors</a></li>
+    <li><a href="/websites-for-roofers/">Roofers</a></li>
+    <li><a href="/websites-for-remodelers/">Remodelers</a></li>
+    <li><a href="/websites-for-handymen/">Handymen</a></li>
+  </ul>
+</div>
 
 <!-- FOOTER -->
 <footer>
