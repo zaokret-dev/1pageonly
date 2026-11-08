@@ -556,7 +556,19 @@
     .trade-nav a { display: inline-block; border: 1px solid rgba(232,160,32,0.25); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 0.55rem 1rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
     .trade-nav a:hover { border-color: var(--gold); color: var(--gold); }
     .trade-nav a[aria-current] { border-color: var(--gold); color: var(--gold); }
-  </style>
+  
+.addon { margin-top: 2rem; border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 2.5rem 3rem; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; }
+.addon-title { font-size: 1.5rem; margin: 0.6rem 0 0.8rem; line-height: 1.2; }
+.addon-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin: 0; }
+.addon-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.addon-price { border: 1px solid var(--border); padding: 1.4rem 1rem; text-align: center; display: flex; flex-direction: column; gap: 0.4rem; }
+.addon-num { font-size: 2.2rem; font-weight: 800; line-height: 1; color: var(--gold); }
+.addon-num sup { font-size: 0.5em; vertical-align: super; }
+.addon-num small { font-size: 0.4em; font-weight: 600; color: var(--muted); margin-left: 2px; }
+.addon-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+@media (max-width: 760px) { .addon { grid-template-columns: 1fr; padding: 2rem 1.25rem; gap: 1.5rem; } }
+@media (max-width: 360px) { .addon-prices { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 
@@ -769,13 +781,23 @@
         <li>Everything in Starter</li>
         <li>Up to 3 pages</li>
         <li>Advanced local SEO setup</li>
-        <li>Google Business Profile setup</li>
         <li>Local keyword targeting</li>
         <li>Photo gallery section</li>
         <li>Customer reviews section</li>
         <li>Priority 48-hour preview</li>
       </ul>
       <a href="#cta-bottom" class="price-btn solid">Get Started</a>
+    </div>
+  </div>
+  <div class="addon" id="google-business-profile">
+    <div class="addon-info">
+      <div class="price-label">Optional Add-On &middot; With Either Plan</div>
+      <h3 class="addon-title">Google Business Profile</h3>
+      <p class="addon-text">Want us to handle your Google Business Profile too? We set it up for you so your business can appear in Google Maps results &mdash; and, if you like, we keep managing it month to month.</p>
+    </div>
+    <div class="addon-prices">
+      <div class="addon-price"><span class="addon-num"><sup>$</sup>350</span><span class="addon-desc">One-time setup</span></div>
+      <div class="addon-price"><span class="addon-num"><sup>$</sup>200<small>/mo</small></span><span class="addon-desc">Optional monthly management</span></div>
     </div>
   </div>
   <p class="pricing-note">Not sure which plan is right for you? <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business">Email us</a> — we'll give you a straight answer.<br>We work with businesses <strong>across all 50 states.</strong></p>
@@ -810,7 +832,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">How do homeowners find an HVAC company online?<span class="faq-icon">+</span></div>
-      <div class="faq-a"><p>When the system fails, most people grab a phone and search for the repair plus &ldquo;near me&rdquo; or their town. Your website is written to match those searches. The map results that appear first are driven largely by your Google Business Profile, reviews and proximity, and the Pro + Local SEO plan covers setting that profile up. Rankings are earned over time &mdash; anyone promising guaranteed top spots isn't being straight with you.</p></div>
+      <div class="faq-a"><p>When the system fails, most people grab a phone and search for the repair plus &ldquo;near me&rdquo; or their town. Your website is written to match those searches. The map results that appear first are driven largely by your Google Business Profile, reviews and proximity, and we offer setting that profile up as an optional extra. Rankings are earned over time &mdash; anyone promising guaranteed top spots isn't being straight with you.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">I work on both homes and light commercial buildings. Can the site cover both?<span class="faq-icon">+</span></div>

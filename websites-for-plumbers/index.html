@@ -545,7 +545,19 @@
     .trade-hero-photo img { display: block; width: 100%; height: auto; border: 1px solid rgba(232,160,32,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 120px rgba(232,160,32,0.10); }
     .trade-hero-photo figcaption { text-align: center; margin-top: 1.1rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
     .trade-hero-photo figcaption b { color: var(--gold); }
-  </style>
+  
+.addon { margin-top: 2rem; border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 2.5rem 3rem; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; }
+.addon-title { font-size: 1.5rem; margin: 0.6rem 0 0.8rem; line-height: 1.2; }
+.addon-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin: 0; }
+.addon-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.addon-price { border: 1px solid var(--border); padding: 1.4rem 1rem; text-align: center; display: flex; flex-direction: column; gap: 0.4rem; }
+.addon-num { font-size: 2.2rem; font-weight: 800; line-height: 1; color: var(--gold); }
+.addon-num sup { font-size: 0.5em; vertical-align: super; }
+.addon-num small { font-size: 0.4em; font-weight: 600; color: var(--muted); margin-left: 2px; }
+.addon-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+@media (max-width: 760px) { .addon { grid-template-columns: 1fr; padding: 2rem 1.25rem; gap: 1.5rem; } }
+@media (max-width: 360px) { .addon-prices { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 
@@ -775,13 +787,23 @@
         <li>Everything in Starter</li>
         <li>Up to 3 pages</li>
         <li>Advanced local SEO setup</li>
-        <li>Google Business Profile setup</li>
         <li>Local keyword targeting</li>
         <li>Photo gallery section</li>
         <li>Customer reviews section</li>
         <li>Priority 48-hour preview</li>
       </ul>
       <a href="#cta-bottom" class="price-btn solid">Get Started</a>
+    </div>
+  </div>
+  <div class="addon" id="google-business-profile">
+    <div class="addon-info">
+      <div class="price-label">Optional Add-On &middot; With Either Plan</div>
+      <h3 class="addon-title">Google Business Profile</h3>
+      <p class="addon-text">Want us to handle your Google Business Profile too? We set it up for you so your business can appear in Google Maps results &mdash; and, if you like, we keep managing it month to month.</p>
+    </div>
+    <div class="addon-prices">
+      <div class="addon-price"><span class="addon-num"><sup>$</sup>350</span><span class="addon-desc">One-time setup</span></div>
+      <div class="addon-price"><span class="addon-num"><sup>$</sup>200<small>/mo</small></span><span class="addon-desc">Optional monthly management</span></div>
     </div>
   </div>
   <p class="pricing-note">Not sure which plan is right for you? <a href="mailto:info@1pageonly.com?subject=Website%20for%20my%20business">Email us</a> — we'll give you a straight answer.<br>We work with businesses <strong>across all 50 states.</strong></p>
@@ -808,7 +830,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">Will my site show up when people search "plumber near me"?<span class="faq-icon">+</span></div>
-      <div class="faq-a"><p>Every site is built for local search from day one: your city and service area, your services and your phone number are written the way Google expects for a local plumber. The "near me" map results are driven mostly by your Google Business Profile and your reviews, which is why the Pro + Local SEO plan includes Google Business Profile setup. No honest company can guarantee a #1 ranking &mdash; but we make sure nothing on your website is holding you back.</p></div>
+      <div class="faq-a"><p>Every site is built for local search from day one: your city and service area, your services and your phone number are written the way Google expects for a local plumber. The "near me" map results are driven mostly by your Google Business Profile and your reviews, which is why we also offer Google Business Profile setup as an optional add-on. No honest company can guarantee a #1 ranking &mdash; but we make sure nothing on your website is holding you back.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">I offer 24/7 emergency service. Can the website make that obvious?<span class="faq-icon">+</span></div>
