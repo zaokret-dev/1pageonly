@@ -16,16 +16,22 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --dark: #131920; --dark2: #181f28; --black: #0d0d0d;
-      --white: #ffffff; --gold: #e8a020; --gold2: #f5b432;
-      --muted: #a3b2c4; --border: rgba(255,255,255,0.07);
+      --black: #0F2340;
+      --dark: #DAE8F8;
+      --dark2: #C7DBF2;
+      --white: #0F2340;
+      --gold: #B04408;
+      --gold2: #C9500A;
+      --btn: #C9500A;
+      --muted: #4A5B73;
+      --border: rgba(15,35,64,0.16);
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Manrope', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
 
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(19,25,32,0.97); backdrop-filter: blur(20px);
+      background: rgba(218,232,248,0.97); backdrop-filter: blur(20px);
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 6%; height: 68px; border-bottom: 1px solid var(--border);
     }
@@ -36,7 +42,7 @@
     .nav-link:hover { color: var(--gold); }
     .nav-blog { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-bottom: 2px solid var(--gold); padding-bottom: 0.1rem; transition: color 0.2s; }
     .nav-blog:hover { color: var(--gold); }
-    .nav-cta { background: var(--gold); color: var(--black); padding: 0.6rem 1.5rem; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta { background: var(--btn); color: #fff; padding: 0.6rem 1.5rem; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: var(--gold2); }
     @media (max-width: 600px) { .nav-link { display: none; } .nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; } }
 
@@ -54,13 +60,13 @@
     .policy-section { margin-bottom: 3.5rem; }
     h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 1px; color: var(--white); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
     h3 { font-size: 1rem; font-weight: 700; color: var(--gold); margin: 1.75rem 0 0.6rem; }
-    p { font-size: 0.92rem; line-height: 1.9; color: rgba(255,255,255,0.65); margin-bottom: 1rem; font-weight: 300; }
+    p { font-size: 0.92rem; line-height: 1.9; color: var(--muted); margin-bottom: 1rem; font-weight: 300; }
     p strong { color: var(--white); font-weight: 600; }
     ul { margin: 0.75rem 0 1rem 0; display: flex; flex-direction: column; gap: 0.5rem; }
-    ul li { font-size: 0.9rem; line-height: 1.75; color: rgba(255,255,255,0.6); padding-left: 1.5rem; position: relative; font-weight: 300; }
+    ul li { font-size: 0.9rem; line-height: 1.75; color: var(--muted); padding-left: 1.5rem; position: relative; font-weight: 300; }
     ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
-    .highlight-box { background: rgba(232,160,32,0.05); border: 1px solid rgba(232,160,32,0.2); padding: 1.75rem 2rem; margin: 2rem 0; }
-    .highlight-box p { margin: 0; color: rgba(255,255,255,0.75); }
+    .highlight-box { background: rgba(176,68,8,0.05); border: 1px solid rgba(176,68,8,0.2); padding: 1.75rem 2rem; margin: 2rem 0; }
+    .highlight-box p { margin: 0; color: var(--white); }
     .contact-box { background: var(--dark2); border: 1px solid var(--border); padding: 2rem; margin-top: 1rem; }
     .contact-box p { margin: 0.25rem 0; }
     .contact-box a { color: var(--gold); text-decoration: none; }
@@ -77,7 +83,16 @@
     .nav-link, .nav-cta { white-space: nowrap; }
     @media (max-width: 900px) { .nav-right a[href^="mailto"] { display: none; } }
       @media (max-width: 380px) { nav { padding: 0 4%; } .logo { font-size: 1.3rem; letter-spacing: 2px; } .nav-right { gap: 0.9rem; } .nav-cta { padding: 0.5rem 0.75rem; } }
-</style>
+
+    /* LIGHT THEME (blue + orange) */
+    footer, .call-bar { --white: #ffffff; --muted: #b3c2d6; --border: rgba(255,255,255,0.1); }
+    .call-bar { --dark2: #0F2340; }
+    footer { --gold: #F08A3C; }
+    .call-bar .cb-call { background: var(--btn); color: #fff; }
+    .how-num { color: rgba(176,68,8,0.75) !important; }
+    .inv-btn.wa { color: #167A3E; border-color: #167A3E; }
+    ul { list-style: none; padding-left: 0; }
+  </style>
 </head>
 <body>
 
